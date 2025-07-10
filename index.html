@@ -381,7 +381,7 @@
 
                 // Проверяем обязательные поля венозного застоя
                 if (!document.getElementById('zastoi1').value || document.getElementById('zastoi1').value.trim() === '') {
-                    errors.push('КПВ');
+                    errors.push('ЛА');
                     errorFieldIds.push('zastoi1');
                 }
                 if (!document.getElementById('zastoi2').value || document.getElementById('zastoi2').value.trim() === '') {
@@ -457,7 +457,7 @@
                     numericErrors.push('МЖП и ЗСЛЖ');
                 }
                 if (isNaN(zastoi[0]) || isNaN(zastoi[1])) {
-                    numericErrors.push('КПВ и ПВЛА');
+                    numericErrors.push('ЛА и ПВЛА');
                 }
                 if (isNaN(potokMK[0]) || isNaN(potokMK[1])) {
                     numericErrors.push('скорости митрального клапана');
