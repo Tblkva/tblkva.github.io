@@ -639,4 +639,76 @@ body {
 .section-checkbox:focus {
     outline: 2px solid var(--bg-yellow);
     outline-offset: 2px;
+}
+
+/* Стили для анамнеза */
+.anamnesis-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid rgba(255, 171, 91, 0.2);
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.anamnesis-item:hover {
+    border-color: rgba(255, 171, 91, 0.4);
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.anamnesis-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.anamnesis-header input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.1);
+    accent-color: var(--bg-yellow);
+}
+
+.anamnesis-header label {
+    font-weight: 600;
+    color: var(--bg-yellow);
+    font-size: 1em;
+    cursor: pointer;
+    margin: 0;
+}
+
+.anamnesis-input {
+    margin-top: 10px;
+}
+
+.anamnesis-input input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 2px solid rgba(255, 171, 91, 0.3);
+    border-radius: 6px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    background: rgba(0, 0, 0, 0.2);
+    color: var(--color-white);
+}
+
+.anamnesis-input input:focus {
+    outline: none;
+    border-color: var(--bg-yellow);
+    box-shadow: 0 0 0 3px rgba(255, 171, 91, 0.1);
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.anamnesis-input input::placeholder {
+    color: rgba(255, 171, 91, 0.6);
+}
+
+.anamnesis-default {
+    color: var(--color-gray-light);
+    font-style: italic;
+    font-size: 0.9em;
+    padding: 8px 12px;
+    background: rgba(255, 171, 91, 0.05);
+    border-radius: 4px;
+    border-left: 3px solid rgba(255, 171, 91, 0.3);
 } 

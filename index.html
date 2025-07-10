@@ -136,6 +136,95 @@
                 </div>
             </div>
 
+            <div class="calculation-section" id="section-anamnesis">
+                <div class="section-header" onclick="toggleSection('section-anamnesis')">
+                    <input type="checkbox" class="section-checkbox" id="checkbox-anamnesis" onchange="toggleSectionContent('section-anamnesis')">
+                    <div>
+                        <h4 class="section-title">Анамнез (со слов владельца)</h4>
+                        <div class="section-description">Жалобы и клинические признаки</div>
+                    </div>
+                </div>
+                <div class="section-content" id="content-anamnesis">
+                    <div class="anamnesis-item">
+                        <div class="anamnesis-header">
+                            <input type="checkbox" id="anamnesis-complaints" onchange="toggleAnamnesisInput('complaints')">
+                            <label for="anamnesis-complaints">Жалобы на состояние</label>
+                        </div>
+                        <div class="anamnesis-input" id="input-complaints" style="display: none;">
+                            <input type="text" id="complaints-text" placeholder="Опишите жалобы">
+                        </div>
+                        <div class="anamnesis-default" id="default-complaints">
+                            Жалоб на состояние нет
+                        </div>
+                    </div>
+
+                    <div class="anamnesis-item">
+                        <div class="anamnesis-header">
+                            <input type="checkbox" id="anamnesis-cough" onchange="toggleAnamnesisInput('cough')">
+                            <label for="anamnesis-cough">Кашель</label>
+                        </div>
+                        <div class="anamnesis-input" id="input-cough" style="display: none;">
+                            <input type="text" id="cough-text" placeholder="Опишите кашель">
+                        </div>
+                        <div class="anamnesis-default" id="default-cough">
+                            Кашель отрицают
+                        </div>
+                    </div>
+
+                    <div class="anamnesis-item">
+                        <div class="anamnesis-header">
+                            <input type="checkbox" id="anamnesis-dyspnea" onchange="toggleAnamnesisInput('dyspnea')">
+                            <label for="anamnesis-dyspnea">Одышка</label>
+                        </div>
+                        <div class="anamnesis-input" id="input-dyspnea" style="display: none;">
+                            <input type="text" id="dyspnea-text" placeholder="Опишите одышку">
+                        </div>
+                        <div class="anamnesis-default" id="default-dyspnea">
+                            Одышку отрицают
+                        </div>
+                    </div>
+
+                    <div class="anamnesis-item">
+                        <div class="anamnesis-header">
+                            <input type="checkbox" id="anamnesis-syncope" onchange="toggleAnamnesisInput('syncope')">
+                            <label for="anamnesis-syncope">Обмороки</label>
+                        </div>
+                        <div class="anamnesis-input" id="input-syncope" style="display: none;">
+                            <input type="text" id="syncope-text" placeholder="Опишите обмороки">
+                        </div>
+                        <div class="anamnesis-default" id="default-syncope">
+                            Обмороки отрицают
+                        </div>
+                    </div>
+
+                    <div class="anamnesis-item">
+                        <div class="anamnesis-header">
+                            <input type="checkbox" id="anamnesis-seizures" onchange="toggleAnamnesisInput('seizures')">
+                            <label for="anamnesis-seizures">Судороги</label>
+                        </div>
+                        <div class="anamnesis-input" id="input-seizures" style="display: none;">
+                            <input type="text" id="seizures-text" placeholder="Опишите судороги">
+                        </div>
+                        <div class="anamnesis-default" id="default-seizures">
+                            Судороги отрицают
+                        </div>
+                    </div>
+
+                    <div class="anamnesis-item">
+                        <div class="anamnesis-header">
+                            <input type="checkbox" id="anamnesis-activity" onchange="toggleAnamnesisInput('activity')">
+                            <label for="anamnesis-activity">Физическая активность</label>
+                        </div>
+                        <div class="anamnesis-input" id="input-activity" style="display: none;">
+                            <input type="text" id="activity-text" placeholder="Опишите проблемы с активностью">
+                        </div>
+                        <div class="anamnesis-default" id="default-activity">
+                            С физической активностью проблем не замечено
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <button class="calculate-btn" onclick="calculate()">Рассчитать</button>
         </div>
 
@@ -204,6 +293,22 @@
                     ];
                     potokAO = reppoint(document.getElementById('potokAO').value.split(' '));
                     potokLA = reppoint(document.getElementById('potokLA').value.split(' '));
+                }
+
+                // Получаем данные анамнеза
+                let anamnesisData = {};
+                if (document.getElementById('checkbox-anamnesis').checked) {
+                    const anamnesisItems = ['complaints', 'cough', 'dyspnea', 'syncope', 'seizures', 'activity'];
+                    anamnesisItems.forEach(item => {
+                        const checkbox = document.getElementById('anamnesis-' + item);
+                        if (checkbox.checked) {
+                            const input = document.getElementById(item + '-text');
+                            anamnesisData[item] = input.value.trim() || 'Указано';
+                        } else {
+                            const defaultText = document.getElementById('default-' + item);
+                            anamnesisData[item] = defaultText.textContent.trim();
+                        }
+                    });
                 }
 
                 // Проверяем обязательные поля
@@ -305,6 +410,25 @@
                     }
                 }
 
+                // Проверяем секцию "Анамнез"
+                if (document.getElementById('checkbox-anamnesis').checked) {
+                    const anamnesisItems = ['complaints', 'cough', 'dyspnea', 'syncope', 'seizures', 'activity'];
+                    anamnesisItems.forEach(item => {
+                        const checkbox = document.getElementById('anamnesis-' + item);
+                        if (checkbox.checked) {
+                            const input = document.getElementById(item + '-text');
+                            if (!input.value || input.value.trim() === '') {
+                                errors.push(item === 'complaints' ? 'Жалобы' : 
+                                          item === 'cough' ? 'Кашель' :
+                                          item === 'dyspnea' ? 'Одышка' :
+                                          item === 'syncope' ? 'Обмороки' :
+                                          item === 'seizures' ? 'Судороги' : 'Физическая активность');
+                                errorFieldIds.push(item + '-text');
+                            }
+                        }
+                    });
+                }
+
                 if (errors.length > 0) {
                     showError(`Пожалуйста, заполните следующие поля: ${errors.join(', ')}`, errorFieldIds);
                     return;
@@ -374,9 +498,9 @@
 EPSS: ${epss[0]} мм
 
 Крупные сосуды:
-Вена: ${zastoi[0]} мм
-ПВЛА: ${zastoi[1]} мм
-В/А соотношение: ${va.toFixed(2)}`;
+Легочная вена (ЛВ): ${zastoi[0]} мм
+Правая ветвь легочной артерии (ПВЛА): ${zastoi[1]} мм
+ЛВ/ПВЛА соотношение: ${va.toFixed(2)}`;
                 
                 if (document.getElementById('checkbox-valves').checked) {
                     results += `
@@ -402,6 +526,18 @@ EPSS: ${epss[0]} мм
 • Створки: норма
 • Скорость кровотока: ${potokLA[0]} м/с
 • Регургитация: не выявлена`;
+                }
+
+                if (document.getElementById('checkbox-anamnesis').checked) {
+                    results += `
+
+Анамнез (со слов владельца):
+Жалобы на состояние: ${anamnesisData.complaints}
+Кашель: ${anamnesisData.cough}
+Одышка: ${anamnesisData.dyspnea}
+Обмороки: ${anamnesisData.syncope}
+Судороги: ${anamnesisData.seizures}
+Физическая активность: ${anamnesisData.activity}`;
                 }
 
                 // Показываем результаты
@@ -468,6 +604,22 @@ EPSS: ${epss[0]} мм
             } else {
                 section.classList.remove('active');
                 content.classList.remove('show');
+            }
+        }
+
+        function toggleAnamnesisInput(type) {
+            const checkbox = document.getElementById('anamnesis-' + type);
+            const input = document.getElementById('input-' + type);
+            const defaultText = document.getElementById('default-' + type);
+            
+            if (checkbox.checked) {
+                input.style.display = 'block';
+                defaultText.style.display = 'none';
+                input.querySelector('input').focus();
+            } else {
+                input.style.display = 'none';
+                defaultText.style.display = 'block';
+                input.querySelector('input').value = '';
             }
         }
 
