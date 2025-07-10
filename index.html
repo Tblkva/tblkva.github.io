@@ -17,7 +17,7 @@
     <div class="container">
         <div class="header">
             <h1>Калькулятор для эхокардиографии</h1>
-            <p>Версия 0.64 - Расчеты для эхокардиографии</p>
+            <p>Версия 0.65 - Расчеты для эхокардиографии</p>
             <div class="contact-links">
                 <span>Для связи:</span>
                 <a href="https://github.com/Tblkva" target="_blank" rel="noopener noreferrer">GitHub</a>
@@ -29,6 +29,10 @@
         <div class="form-section">
             <div class="section-divider">
                 <h3>Обязательные параметры:</h3>
+                <div class="button-group">
+                    <button class="calculate-btn" onclick="calculate()">Рассчитать</button>
+                    <button class="clear-btn" onclick="clearSavedData()">Очистить данные</button>
+                </div>
             </div>
             <div class="input-group">
                 <label for="hr">Частота сердечных сокращений (уд/мин):</label>
@@ -225,7 +229,10 @@
                 </div>
             </div>
 
-            <button class="calculate-btn" onclick="calculate()">Рассчитать</button>
+            <div class="button-group">
+                <button class="calculate-btn" onclick="calculate()">Рассчитать</button>
+                <button class="clear-btn" onclick="clearSavedData()">Очистить данные</button>
+            </div>
         </div>
 
         <div class="results" id="results">
@@ -674,8 +681,100 @@ EPSS: ${epss[0]} мм
             document.body.removeChild(textArea);
         }
 
+        // Функции для сохранения и загрузки данных
+        function saveFormData() {
+            const formData = {};
+            
+            // Сохраняем все поля ввода
+            const inputs = document.querySelectorAll('input[type="text"]');
+            inputs.forEach(input => {
+                if (input.value.trim() !== '') {
+                    formData[input.id] = input.value;
+                }
+            });
+            
+            // Сохраняем состояние чекбоксов
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(checkbox => {
+                formData[checkbox.id] = checkbox.checked;
+            });
+            
+            localStorage.setItem('echocardiogramData', JSON.stringify(formData));
+        }
+
+        function loadFormData() {
+            const savedData = localStorage.getItem('echocardiogramData');
+            if (savedData) {
+                const formData = JSON.parse(savedData);
+                
+                // Восстанавливаем поля ввода
+                Object.keys(formData).forEach(key => {
+                    const element = document.getElementById(key);
+                    if (element && element.type === 'text') {
+                        element.value = formData[key];
+                    }
+                });
+                
+                // Восстанавливаем чекбоксы и их состояние
+                Object.keys(formData).forEach(key => {
+                    const element = document.getElementById(key);
+                    if (element && element.type === 'checkbox') {
+                        element.checked = formData[key];
+                        // Активируем соответствующие секции
+                        if (key.startsWith('checkbox-')) {
+                            const sectionId = key.replace('checkbox-', 'section-');
+                            toggleSectionContent(sectionId);
+                        }
+                        // Активируем поля анамнеза
+                        if (key.startsWith('anamnesis-')) {
+                            const type = key.replace('anamnesis-', '');
+                            toggleAnamnesisInput(type);
+                        }
+                    }
+                });
+            }
+        }
+
+        function clearSavedData() {
+            localStorage.removeItem('echocardiogramData');
+            // Очищаем все поля
+            const inputs = document.querySelectorAll('input[type="text"]');
+            inputs.forEach(input => {
+                input.value = '';
+            });
+            
+            // Сбрасываем чекбоксы
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(checkbox => {
+                checkbox.checked = false;
+            });
+            
+            // Скрываем секции
+            document.querySelectorAll('.section-content').forEach(content => {
+                content.classList.remove('show');
+            });
+            
+            document.querySelectorAll('.calculation-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Скрываем поля анамнеза
+            document.querySelectorAll('.anamnesis-input').forEach(input => {
+                input.style.display = 'none';
+            });
+            
+            document.querySelectorAll('.anamnesis-default').forEach(defaultText => {
+                defaultText.style.display = 'block';
+            });
+            
+            showSuccess('Данные очищены!');
+        }
+
         // Добавляем обработчики для полей ввода
         document.addEventListener('DOMContentLoaded', function() {
+            // Загружаем сохраненные данные при загрузке страницы
+            loadFormData();
+            
             const inputs = document.querySelectorAll('input');
             inputs.forEach(input => {
                 // Обработчик Enter для расчета
@@ -690,7 +789,16 @@ EPSS: ${epss[0]} мм
                     if (this.classList.contains('input-error')) {
                         this.classList.remove('input-error');
                     }
+                    // Сохраняем данные при каждом изменении
+                    saveFormData();
                 });
+                
+                // Сохраняем данные при изменении чекбоксов
+                if (input.type === 'checkbox') {
+                    input.addEventListener('change', function() {
+                        saveFormData();
+                    });
+                }
             });
         });
     </script>

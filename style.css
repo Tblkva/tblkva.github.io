@@ -89,7 +89,7 @@ body {
 .header {
     background: var(--gradient-blue-3);
     color: var(--color-white);
-    padding: 30px;
+    padding: 25px;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -107,26 +107,26 @@ body {
 }
 
 .header h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
+    font-size: 2.2em;
+    margin-bottom: 8px;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
     position: relative;
     z-index: 1;
 }
 
 .header p {
-    font-size: 1.1em;
+    font-size: 1em;
     opacity: 0.9;
     position: relative;
     z-index: 1;
 }
 
 .contact-links {
-    margin-top: 15px;
+    margin-top: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px;
+    gap: 12px;
     flex-wrap: wrap;
     position: relative;
     z-index: 1;
@@ -159,52 +159,52 @@ body {
 }
 
 /* Секция формы */
-.form-section {
-    padding: 30px;
-    background: rgba(0, 0, 0, 0.2);
-}
+        .form-section {
+            padding: 25px;
+            background: rgba(0, 0, 0, 0.2);
+        }
 
-/* Разделители секций */
-.section-divider {
-    margin: 30px 0 20px 0;
-    padding: 15px;
-    background: rgba(255, 171, 91, 0.1);
-    border-radius: 8px;
-    border-left: 4px solid var(--bg-yellow);
-    position: relative;
-}
+        /* Разделители секций */
+        .section-divider {
+            margin: 25px 0 15px 0;
+            padding: 12px;
+            background: rgba(255, 171, 91, 0.1);
+            border-radius: 6px;
+            border-left: 3px solid var(--bg-yellow);
+            position: relative;
+        }
 
-.section-divider h3 {
-    color: var(--bg-yellow);
-    margin: 0;
-    font-size: 1.2em;
-    font-weight: bold;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-}
+        .section-divider h3 {
+            color: var(--bg-yellow);
+            margin: 0;
+            font-size: 1.1em;
+            font-weight: bold;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+        }
 
 /* Группы ввода */
-.input-group {
-    margin-bottom: 25px;
-}
+        .input-group {
+            margin-bottom: 18px;
+        }
 
-.input-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
-    color: var(--color-gray-light);
-    font-size: 1.1em;
-}
+        .input-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: var(--color-gray-light);
+            font-size: 1em;
+        }
 
-.input-group input {
-    width: 100%;
-    padding: 12px 15px;
-    border: 2px solid rgba(255, 171, 91, 0.3);
-    border-radius: 8px;
-    font-size: 16px;
-    transition: all 0.3s ease;
-    background: rgba(0, 0, 0, 0.2);
-    color: var(--color-white);
-}
+        .input-group input {
+            width: 100%;
+            padding: 10px 12px;
+            border: 2px solid rgba(255, 171, 91, 0.3);
+            border-radius: 6px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            background: rgba(0, 0, 0, 0.2);
+            color: var(--color-white);
+        }
 
 .input-group input:focus {
     outline: none;
@@ -225,47 +225,47 @@ body {
 }
 
 /* Секции расчетов */
-.calculation-section {
-    border: 2px solid rgba(255, 171, 91, 0.3);
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 20px;
-    background: rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-}
+        .calculation-section {
+            border: 2px solid rgba(255, 171, 91, 0.3);
+            border-radius: 6px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background: rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
 
-.calculation-section.active {
-    border-color: var(--bg-yellow);
-    background: rgba(255, 171, 91, 0.05);
-    box-shadow: 0 4px 16px rgba(255, 171, 91, 0.1);
-}
+        .calculation-section.active {
+            border-color: var(--bg-yellow);
+            background: rgba(255, 171, 91, 0.05);
+            box-shadow: 0 3px 12px rgba(255, 171, 91, 0.1);
+        }
 
-.section-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-    cursor: pointer;
-}
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            cursor: pointer;
+        }
 
-.section-checkbox {
-    margin-right: 10px;
-    transform: scale(1.2);
-    accent-color: var(--bg-yellow);
-}
+        .section-checkbox {
+            margin-right: 8px;
+            transform: scale(1.1);
+            accent-color: var(--bg-yellow);
+        }
 
-.section-title {
-    font-weight: 600;
-    color: var(--bg-yellow);
-    font-size: 1.1em;
-    margin: 0;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-}
+        .section-title {
+            font-weight: 600;
+            color: var(--bg-yellow);
+            font-size: 1em;
+            margin: 0;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+        }
 
-.section-description {
-    color: var(--color-gray-light);
-    font-size: 0.9em;
-    margin-top: 5px;
-}
+        .section-description {
+            color: var(--color-gray-light);
+            font-size: 0.85em;
+            margin-top: 3px;
+        }
 
 .section-content {
     display: none;
@@ -273,6 +273,21 @@ body {
 
 .section-content.show {
     display: block;
+}
+
+/* Группа кнопок */
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.button-group .calculate-btn {
+    flex: 2;
+}
+
+.button-group .clear-btn {
+    flex: 1;
 }
 
 /* Кнопки */
@@ -291,6 +306,26 @@ body {
     box-shadow: 0 4px 16px rgba(81, 145, 255, 0.3);
     position: relative;
     overflow: hidden;
+}
+
+.clear-btn {
+    padding: 15px;
+    background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+    color: var(--color-white);
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 16px rgba(108, 117, 125, 0.3);
+}
+
+.clear-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(108, 117, 125, 0.4);
+    background: linear-gradient(135deg, #5a6268 0%, #343a40 100%);
 }
 
 .calculate-btn::before {
@@ -500,8 +535,14 @@ body {
         font-size: 16px; /* Предотвращает зум на iOS */
     }
     
+    .button-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
     .calculate-btn,
-    .copy-btn {
+    .copy-btn,
+    .clear-btn {
         padding: 12px;
         font-size: 1.1em;
     }
@@ -641,74 +682,74 @@ body {
     outline-offset: 2px;
 }
 
-/* Стили для анамнеза */
-.anamnesis-item {
-    margin-bottom: 20px;
-    padding: 15px;
-    border: 1px solid rgba(255, 171, 91, 0.2);
-    border-radius: 8px;
-    background: rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-}
+        /* Стили для анамнеза */
+        .anamnesis-item {
+            margin-bottom: 15px;
+            padding: 12px;
+            border: 1px solid rgba(255, 171, 91, 0.2);
+            border-radius: 6px;
+            background: rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
 
-.anamnesis-item:hover {
-    border-color: rgba(255, 171, 91, 0.4);
-    background: rgba(0, 0, 0, 0.15);
-}
+        .anamnesis-item:hover {
+            border-color: rgba(255, 171, 91, 0.4);
+            background: rgba(0, 0, 0, 0.15);
+        }
 
-.anamnesis-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    cursor: pointer;
-}
+        .anamnesis-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            cursor: pointer;
+        }
 
-.anamnesis-header input[type="checkbox"] {
-    margin-right: 10px;
-    transform: scale(1.1);
-    accent-color: var(--bg-yellow);
-}
+        .anamnesis-header input[type="checkbox"] {
+            margin-right: 8px;
+            transform: scale(1.05);
+            accent-color: var(--bg-yellow);
+        }
 
-.anamnesis-header label {
-    font-weight: 600;
-    color: var(--bg-yellow);
-    font-size: 1em;
-    cursor: pointer;
-    margin: 0;
-}
+        .anamnesis-header label {
+            font-weight: 600;
+            color: var(--bg-yellow);
+            font-size: 0.95em;
+            cursor: pointer;
+            margin: 0;
+        }
 
-.anamnesis-input {
-    margin-top: 10px;
-}
+        .anamnesis-input {
+            margin-top: 8px;
+        }
 
-.anamnesis-input input {
-    width: 100%;
-    padding: 10px 12px;
-    border: 2px solid rgba(255, 171, 91, 0.3);
-    border-radius: 6px;
-    font-size: 14px;
-    transition: all 0.3s ease;
-    background: rgba(0, 0, 0, 0.2);
-    color: var(--color-white);
-}
+        .anamnesis-input input {
+            width: 100%;
+            padding: 8px 10px;
+            border: 2px solid rgba(255, 171, 91, 0.3);
+            border-radius: 4px;
+            font-size: 13px;
+            transition: all 0.3s ease;
+            background: rgba(0, 0, 0, 0.2);
+            color: var(--color-white);
+        }
 
-.anamnesis-input input:focus {
-    outline: none;
-    border-color: var(--bg-yellow);
-    box-shadow: 0 0 0 3px rgba(255, 171, 91, 0.1);
-    background: rgba(0, 0, 0, 0.3);
-}
+        .anamnesis-input input:focus {
+            outline: none;
+            border-color: var(--bg-yellow);
+            box-shadow: 0 0 0 3px rgba(255, 171, 91, 0.1);
+            background: rgba(0, 0, 0, 0.3);
+        }
 
-.anamnesis-input input::placeholder {
-    color: rgba(255, 171, 91, 0.6);
-}
+        .anamnesis-input input::placeholder {
+            color: rgba(255, 171, 91, 0.6);
+        }
 
-.anamnesis-default {
-    color: var(--color-gray-light);
-    font-style: italic;
-    font-size: 0.9em;
-    padding: 8px 12px;
-    background: rgba(255, 171, 91, 0.05);
-    border-radius: 4px;
-    border-left: 3px solid rgba(255, 171, 91, 0.3);
-} 
+        .anamnesis-default {
+            color: var(--color-gray-light);
+            font-style: italic;
+            font-size: 0.85em;
+            padding: 6px 10px;
+            background: rgba(255, 171, 91, 0.05);
+            border-radius: 3px;
+            border-left: 2px solid rgba(255, 171, 91, 0.3);
+        } 
