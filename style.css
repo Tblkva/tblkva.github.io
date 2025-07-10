@@ -351,7 +351,7 @@ body {
     background: rgba(0, 0, 0, 0.4);
     padding: 20px;
     border-radius: 8px;
-    border: 2px solid rgba(255, 171, 91, 0.2);
+    border: 2px solid rgba(255, 171, 91, 0.3);
     font-family: 'Courier New', monospace;
     font-size: 14px;
     line-height: 1.8;
@@ -361,23 +361,7 @@ body {
     overflow-y: auto;
     color: var(--color-gray-light);
     position: relative;
-}
-
-.results-text::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 8px;
-    padding: 2px;
-    background: var(--gradient-border);
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask-composite: exclude;
-    pointer-events: none;
+    box-shadow: 0 4px 16px rgba(255, 171, 91, 0.1);
 }
 
 /* Сообщения */

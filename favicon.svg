@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <linearGradient id="heartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff4444;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#ff6b6b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffab5b;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Фон -->
+  <rect width="32" height="32" rx="6" fill="#1a1a2e"/>
+  
+  <!-- Сердце -->
+  <path d="M16 8c-1.5-2-4-2.5-6-1.5-2 .5-3.5 2.5-3.5 4.5 0 3 2.5 6 6 8.5 3.5-2.5 6-5.5 6-8.5 0-2-1.5-4-3.5-4.5-2-.5-4.5-.5-6 1.5z" 
+        fill="url(#heartGradient)" 
+        stroke="#ffffff" 
+        stroke-width="0.5"/>
+  
+  <!-- ЭКГ линия -->
+  <path d="M8 24 L10 22 L12 24 L14 20 L16 24 L18 22 L20 24 L22 20 L24 24" 
+        stroke="#ffab5b" 
+        stroke-width="1.5" 
+        fill="none" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"/>
+</svg> 

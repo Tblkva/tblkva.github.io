@@ -4,13 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Калькулятор для эхокардиографии</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.svg">
+    <link rel="apple-touch-icon" href="favicon.svg">
+    <link rel="shortcut icon" href="favicon.svg">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <div class="header">
             <h1>Калькулятор для эхокардиографии</h1>
-            <p>Версия 0.63 - Расчеты для эхокардиографии</p>
+            <p>Версия 0.64 - Расчеты для эхокардиографии</p>
             <div class="contact-links">
                 <span>Для связи:</span>
                 <a href="https://github.com/Tblkva" target="_blank" rel="noopener noreferrer">GitHub</a>
@@ -343,38 +350,58 @@
                 const va = zastoi[0] / zastoi[1];
                 const laAo = la[0] / lpAo[2];
 
-                // Формируем результаты в формате оригинального Python скрипта
-                let results = `ЧСС: ${hr} /мин;
-Левое предсердие: ${lpAo[0]} мм;
-Аорта: ${lpAo[2]} мм;
-Соотношение Левого предсердия к Аорте: ${lpAo1.toFixed(2)}; FSлп: ${fslp.toFixed(2)}%;
-ЛА: ${la[0]} мм; ЛА/Ао: ${laAo.toFixed(2)};
-КДР: ${socrfunc[0]} мм; КДРн: ${kdrn.toFixed(2)};
-КCР: ${socrfunc[1]} мм; КCРн: ${ksrn.toFixed(2)};
-FS: ${fs.toFixed(2)}%;
-FE: ${fe.toFixed(2)}%;
-МЖП: ${stenki[0]} мм; ЗСЛЖ: ${stenki[1]} мм;
-EPSS: ${epss[0]} мм;
-Вена: ${zastoi[0]} мм; ПВЛА: ${zastoi[1]} мм; В/А: ${va.toFixed(2)};`;
+                // Формируем результаты в формате эхокардиографического заключения
+                let results = `ЭХОКАРДИОГРАФИЧЕСКОЕ ЗАКЛЮЧЕНИЕ
+
+Частота сердечных сокращений (ЧСС): ${hr} уд/мин
+
+Левое предсердие (ЛП): ${lpAo[0]} мм
+Аорта (Ао): ${lpAo[2]} мм
+Соотношение ЛП/Ао: ${lpAo1.toFixed(2)}
+Фракция укорочения левого предсердия (FSлп): ${fslp.toFixed(2)}%
+Легочная артерия (ЛА): ${la[0]} мм
+Соотношение ЛА/Ао: ${laAo.toFixed(2)}
+
+Конечный диастолический размер (КДР): ${socrfunc[0]} мм
+Нормализованный КДР (КДРн): ${kdrn.toFixed(2)}
+Конечный систолический размер (КСР): ${socrfunc[1]} мм
+Нормализованный КСР (КСРн): ${ksrn.toFixed(2)}
+Фракция укорочения (FS): ${fs.toFixed(2)}%
+Фракция выброса (FE): ${fe.toFixed(2)}%
+
+Межжелудочковая перегородка (МЖП): ${stenki[0]} мм
+Задняя стенка левого желудочка (ЗСЛЖ): ${stenki[1]} мм
+EPSS: ${epss[0]} мм
+
+Крупные сосуды:
+Вена: ${zastoi[0]} мм
+ПВЛА: ${zastoi[1]} мм
+В/А соотношение: ${va.toFixed(2)}`;
                 
                 if (document.getElementById('checkbox-valves').checked) {
                     results += `
-Митральный клапан.
-Створки: ;
-Скорость кровотока: E: ${potokMK[0]} м/с, А: ${potokMK[1]} м/с;
-Регургитация: ;
-Трикуспидальный клапан.
-Створки: ;
-Скорость кровотока: E: ${potokTK[0]} м/с, А: ${potokTK[1]} м/с;
-Регургитация: ;
-Аортальный клапан.
-Створки: ;
-Скорость кровотока: ${potokAO[0]} м/с;
-Регургитация: ;
-Клапан лёгочной артерии.
-Створки: ;
-Скорость кровотока: ${potokLA[0]} м/с;
-Регургитация: ;`;
+
+Клапанный аппарат:
+
+Митральный клапан:
+• Створки: норма
+• Скорость кровотока: E: ${potokMK[0]} м/с, А: ${potokMK[1]} м/с
+• Регургитация: не выявлена
+
+Трикуспидальный клапан:
+• Створки: норма
+• Скорость кровотока: E: ${potokTK[0]} м/с, А: ${potokTK[1]} м/с
+• Регургитация: не выявлена
+
+Аортальный клапан:
+• Створки: норма
+• Скорость кровотока: ${potokAO[0]} м/с
+• Регургитация: не выявлена
+
+Клапан легочной артерии:
+• Створки: норма
+• Скорость кровотока: ${potokLA[0]} м/с
+• Регургитация: не выявлена`;
                 }
 
                 // Показываем результаты
