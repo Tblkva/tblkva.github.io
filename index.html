@@ -180,6 +180,77 @@
             margin-bottom: 15px;
             border-left: 4px solid #27ae60;
         }
+
+        .input-error {
+            border-color: #e74c3c !important;
+            box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1) !important;
+        }
+
+        .input-error:focus {
+            border-color: #e74c3c !important;
+            box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.2) !important;
+        }
+
+        .section-divider {
+            margin: 30px 0 20px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #4facfe;
+        }
+
+        .section-divider h3 {
+            color: #333;
+            margin: 0;
+            font-size: 1.2em;
+        }
+
+        .calculation-section {
+            border: 2px solid #e1e5e9;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            background: #fafbfc;
+        }
+
+        .calculation-section.active {
+            border-color: #4facfe;
+            background: #f0f8ff;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            cursor: pointer;
+        }
+
+        .section-checkbox {
+            margin-right: 10px;
+            transform: scale(1.2);
+            accent-color: #4facfe;
+        }
+
+        .section-title {
+            font-weight: 600;
+            color: #333;
+            font-size: 1.1em;
+            margin: 0;
+        }
+
+        .section-description {
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+
+        .section-content {
+            display: none;
+        }
+
+        .section-content.show {
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -191,7 +262,7 @@
 
         <div class="form-section">
             <div class="input-group">
-                <label for="hr">ЧСС (уд/мин):</label>
+                <label for="hr">Частота сердечных сокращений (уд/мин):</label>
                 <input type="text" id="hr" placeholder="Введите ЧСС">
             </div>
 
@@ -200,81 +271,133 @@
                 <input type="text" id="weight" placeholder="Введите вес в кг">
             </div>
 
-            <div class="input-group">
-                <label>ЛПдиаст, ЛПсист и Ао (мм):</label>
-                <div style="display: flex; gap: 10px;">
-                    <input type="text" id="lpAo1" placeholder="ЛПдиаст" style="flex: 1;">
-                    <input type="text" id="lpAo2" placeholder="ЛПсист" style="flex: 1;">
-                    <input type="text" id="lpAo3" placeholder="Ао" style="flex: 1;">
+            <div class="section-divider">
+                <h3>Выберите необходимые расчеты:</h3>
+            </div>
+
+            <div class="calculation-section" id="section-sizes">
+                <div class="section-header" onclick="toggleSection('section-sizes')">
+                    <input type="checkbox" class="section-checkbox" id="checkbox-sizes" onchange="toggleSectionContent('section-sizes')">
+                    <div>
+                        <h4 class="section-title">Размеры сердца</h4>
+                        <div class="section-description">Левое предсердие, аорта, легочная артерия</div>
+                    </div>
+                </div>
+                <div class="section-content" id="content-sizes">
+                    <div class="input-group">
+                        <label>Левое предсердие (мм):</label>
+                        <div style="display: flex; gap: 10px;">
+                            <input type="text" id="lpAo1" placeholder="В диастолу" style="flex: 1;">
+                            <input type="text" id="lpAo2" placeholder="В систолу" style="flex: 1;">
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label>Аорта (мм):</label>
+                        <div style="display: flex; gap: 10px;">
+                            <input type="text" id="lpAo3" placeholder="Введите размер" style="flex: 1;">
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="la">Легочная артерия (мм):</label>
+                        <input type="text" id="la" placeholder="Введите размер">
+                    </div>
                 </div>
             </div>
 
-            <div class="input-group">
-                <label for="la">ЛА (мм):</label>
-                <input type="text" id="la" placeholder="Введите размер ЛА">
-            </div>
+            <div class="calculation-section" id="section-function">
+                <div class="section-header" onclick="toggleSection('section-function')">
+                    <input type="checkbox" class="section-checkbox" id="checkbox-function" onchange="toggleSectionContent('section-function')">
+                    <div>
+                        <h4 class="section-title">Функция сердца</h4>
+                        <div class="section-description">КДР, КСР, КДО, КСО, МЖП, ЗСЛЖ, EPSS</div>
+                    </div>
+                </div>
+                <div class="section-content" id="content-function">
+                    <div class="input-group">
+                        <label>Конечные диастолический и систолический размеры(мм):</label>
+                        <div style="display: flex; gap: 10px;">
+                            <input type="text" id="socrfunc1" placeholder="КДР" style="flex: 1;">
+                            <input type="text" id="socrfunc2" placeholder="КСР" style="flex: 1;">
+                        </div>
+                    </div>
 
-            <div class="input-group">
-                <label>КДР и КСР (мм):</label>
-                <div style="display: flex; gap: 10px;">
-                    <input type="text" id="socrfunc1" placeholder="КДР" style="flex: 1;">
-                    <input type="text" id="socrfunc2" placeholder="КСР" style="flex: 1;">
+                    <div class="input-group">
+                        <label>Конечные диастолический и систолический объемы(мл):</label>
+                        <div style="display: flex; gap: 10px;">
+                            <input type="text" id="lvVibros1" placeholder="КДО" style="flex: 1;">
+                            <input type="text" id="lvVibros2" placeholder="КСО" style="flex: 1;">
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Межжелудочковая перегородка и задняя стенка левого желудочка(мм):</label>
+                        <div style="display: flex; gap: 10px;">
+                            <input type="text" id="stenki1" placeholder="МЖП" style="flex: 1;">
+                            <input type="text" id="stenki2" placeholder="ЗСЛЖ" style="flex: 1;">
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="epss">EPSS (мм):</label>
+                        <input type="text" id="epss" placeholder="Введите EPSS">
+                    </div>
                 </div>
             </div>
 
-            <div class="input-group">
-                <label>КДО и КСО (мл):</label>
-                <div style="display: flex; gap: 10px;">
-                    <input type="text" id="lvVibros1" placeholder="КДО" style="flex: 1;">
-                    <input type="text" id="lvVibros2" placeholder="КСО" style="flex: 1;">
+            <div class="calculation-section" id="section-venous">
+                <div class="section-header" onclick="toggleSection('section-venous')">
+                    <input type="checkbox" class="section-checkbox" id="checkbox-venous" onchange="toggleSectionContent('section-venous')">
+                    <div>
+                        <h4 class="section-title">Венозный застой</h4>
+                        <div class="section-description">КПВ, ПВЛА</div>
+                    </div>
+                </div>
+                <div class="section-content" id="content-venous">
+                    <div class="input-group">
+                        <label>Каудальная полая вена и правая ветвь легочной артерии (мм):</label>
+                        <div style="display: flex; gap: 10px;">
+                            <input type="text" id="zastoi1" placeholder="КПВ" style="flex: 1;">
+                            <input type="text" id="zastoi2" placeholder="ПВЛА" style="flex: 1;">
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="input-group">
-                <label>МЖП и ЗСЛЖ (мм):</label>
-                <div style="display: flex; gap: 10px;">
-                    <input type="text" id="stenki1" placeholder="МЖП" style="flex: 1;">
-                    <input type="text" id="stenki2" placeholder="ЗСЛЖ" style="flex: 1;">
+            <div class="calculation-section" id="section-valves">
+                <div class="section-header" onclick="toggleSection('section-valves')">
+                    <input type="checkbox" class="section-checkbox" id="checkbox-valves" onchange="toggleSectionContent('section-valves')">
+                    <div>
+                        <h4 class="section-title">Клапанный аппарат</h4>
+                        <div class="section-description">Митральный, трикуспидальный, аортальный клапаны, клапан легочной артерии</div>
+                    </div>
                 </div>
-            </div>
+                <div class="section-content" id="content-valves">
+                    <div class="input-group">
+                        <label>E и A для МК (м/с):</label>
+                        <div style="display: flex; gap: 10px;">
+                            <input type="text" id="potokMK1" placeholder="E" style="flex: 1;">
+                            <input type="text" id="potokMK2" placeholder="A" style="flex: 1;">
+                        </div>
+                    </div>
 
-            <div class="input-group">
-                <label for="epss">EPSS (мм):</label>
-                <input type="text" id="epss" placeholder="Введите EPSS">
-            </div>
+                    <div class="input-group">
+                        <label>E и A для ТК (м/с):</label>
+                        <div style="display: flex; gap: 10px;">
+                            <input type="text" id="potokTK1" placeholder="E" style="flex: 1;">
+                            <input type="text" id="potokTK2" placeholder="A" style="flex: 1;">
+                        </div>
+                    </div>
 
-            <div class="input-group">
-                <label>КПВ и ПВЛА (мм):</label>
-                <div style="display: flex; gap: 10px;">
-                    <input type="text" id="zastoi1" placeholder="КПВ" style="flex: 1;">
-                    <input type="text" id="zastoi2" placeholder="ПВЛА" style="flex: 1;">
+                    <div class="input-group">
+                        <label for="potokAO">Скорость потока для АО (м/с):</label>
+                        <input type="text" id="potokAO" placeholder="Введите скорость потока">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="potokLA">Скорость потока для ЛА (м/с):</label>
+                        <input type="text" id="potokLA" placeholder="Введите скорость потока">
+                    </div>
                 </div>
-            </div>
-
-            <div class="input-group">
-                <label>E и A для МК (м/с):</label>
-                <div style="display: flex; gap: 10px;">
-                    <input type="text" id="potokMK1" placeholder="E" style="flex: 1;">
-                    <input type="text" id="potokMK2" placeholder="A" style="flex: 1;">
-                </div>
-            </div>
-
-            <div class="input-group">
-                <label>E и A для ТК (м/с):</label>
-                <div style="display: flex; gap: 10px;">
-                    <input type="text" id="potokTK1" placeholder="E" style="flex: 1;">
-                    <input type="text" id="potokTK2" placeholder="A" style="flex: 1;">
-                </div>
-            </div>
-
-            <div class="input-group">
-                <label for="potokAO">Скорость потока для АО (м/с):</label>
-                <input type="text" id="potokAO" placeholder="Введите скорость потока">
-            </div>
-
-            <div class="input-group">
-                <label for="potokLA">Скорость потока для ЛА (м/с):</label>
-                <input type="text" id="potokLA" placeholder="Введите скорость потока">
             </div>
 
             <button class="calculate-btn" onclick="calculate()">Рассчитать</button>
@@ -299,51 +422,200 @@
 
         function calculate() {
             try {
-                // Получаем значения из полей ввода
+                // Получаем обязательные значения
                 const hr = document.getElementById('hr').value;
                 const weight = reppoint(document.getElementById('weight').value.split(' '));
-                const lpAo = [
-                    parseFloat(document.getElementById('lpAo1').value.replace(',', '.')),
-                    parseFloat(document.getElementById('lpAo2').value.replace(',', '.')),
-                    parseFloat(document.getElementById('lpAo3').value.replace(',', '.'))
-                ];
-                const la = reppoint(document.getElementById('la').value.split(' '));
-                const socrfunc = [
-                    parseFloat(document.getElementById('socrfunc1').value.replace(',', '.')),
-                    parseFloat(document.getElementById('socrfunc2').value.replace(',', '.'))
-                ];
-                const lvVibros = [
-                    parseFloat(document.getElementById('lvVibros1').value.replace(',', '.')),
-                    parseFloat(document.getElementById('lvVibros2').value.replace(',', '.'))
-                ];
-                const stenki = [
-                    parseFloat(document.getElementById('stenki1').value.replace(',', '.')),
-                    parseFloat(document.getElementById('stenki2').value.replace(',', '.'))
-                ];
-                const epss = reppoint(document.getElementById('epss').value.split(' '));
-                const zastoi = [
-                    parseFloat(document.getElementById('zastoi1').value.replace(',', '.')),
-                    parseFloat(document.getElementById('zastoi2').value.replace(',', '.'))
-                ];
-                const potokMK = [
-                    parseFloat(document.getElementById('potokMK1').value.replace(',', '.')),
-                    parseFloat(document.getElementById('potokMK2').value.replace(',', '.'))
-                ];
-                const potokTK = [
-                    parseFloat(document.getElementById('potokTK1').value.replace(',', '.')),
-                    parseFloat(document.getElementById('potokTK2').value.replace(',', '.'))
-                ];
-                const potokAO = reppoint(document.getElementById('potokAO').value.split(' '));
-                const potokLA = reppoint(document.getElementById('potokLA').value.split(' '));
+                
+                // Получаем значения из выбранных секций
+                let lpAo = [0, 0, 0], la = [0], socrfunc = [0, 0], lvVibros = [0, 0], stenki = [0, 0], epss = [0];
+                let zastoi = [0, 0], potokMK = [0, 0], potokTK = [0, 0], potokAO = [0], potokLA = [0];
+                
+                // Размеры сердца
+                if (document.getElementById('checkbox-sizes').checked) {
+                    lpAo = [
+                        parseFloat(document.getElementById('lpAo1').value.replace(',', '.')),
+                        parseFloat(document.getElementById('lpAo2').value.replace(',', '.')),
+                        parseFloat(document.getElementById('lpAo3').value.replace(',', '.'))
+                    ];
+                    la = reppoint(document.getElementById('la').value.split(' '));
+                }
+                
+                // Функция сердца
+                if (document.getElementById('checkbox-function').checked) {
+                    socrfunc = [
+                        parseFloat(document.getElementById('socrfunc1').value.replace(',', '.')),
+                        parseFloat(document.getElementById('socrfunc2').value.replace(',', '.'))
+                    ];
+                    lvVibros = [
+                        parseFloat(document.getElementById('lvVibros1').value.replace(',', '.')),
+                        parseFloat(document.getElementById('lvVibros2').value.replace(',', '.'))
+                    ];
+                    stenki = [
+                        parseFloat(document.getElementById('stenki1').value.replace(',', '.')),
+                        parseFloat(document.getElementById('stenki2').value.replace(',', '.'))
+                    ];
+                    epss = reppoint(document.getElementById('epss').value.split(' '));
+                }
+                
+                // Венозный застой
+                if (document.getElementById('checkbox-venous').checked) {
+                    zastoi = [
+                        parseFloat(document.getElementById('zastoi1').value.replace(',', '.')),
+                        parseFloat(document.getElementById('zastoi2').value.replace(',', '.'))
+                    ];
+                }
+                
+                // Клапанный аппарат
+                if (document.getElementById('checkbox-valves').checked) {
+                    potokMK = [
+                        parseFloat(document.getElementById('potokMK1').value.replace(',', '.')),
+                        parseFloat(document.getElementById('potokMK2').value.replace(',', '.'))
+                    ];
+                    potokTK = [
+                        parseFloat(document.getElementById('potokTK1').value.replace(',', '.')),
+                        parseFloat(document.getElementById('potokTK2').value.replace(',', '.'))
+                    ];
+                    potokAO = reppoint(document.getElementById('potokAO').value.split(' '));
+                    potokLA = reppoint(document.getElementById('potokLA').value.split(' '));
+                }
 
-                // Проверяем, что все поля заполнены
-                if (!hr || weight.length === 0 || isNaN(lpAo[0]) || isNaN(lpAo[1]) || isNaN(lpAo[2]) || 
-                    la.length === 0 || isNaN(socrfunc[0]) || isNaN(socrfunc[1]) || 
-                    isNaN(lvVibros[0]) || isNaN(lvVibros[1]) || isNaN(stenki[0]) || isNaN(stenki[1]) || 
-                    epss.length === 0 || isNaN(zastoi[0]) || isNaN(zastoi[1]) || 
-                    isNaN(potokMK[0]) || isNaN(potokMK[1]) || isNaN(potokTK[0]) || isNaN(potokTK[1]) || 
-                    potokAO.length === 0 || potokLA.length === 0) {
-                    showError('Пожалуйста, заполните все поля корректно');
+                // Проверяем обязательные поля
+                const errors = [];
+                const errorFieldIds = [];
+                
+                if (!hr || hr.trim() === '') {
+                    errors.push('ЧСС');
+                    errorFieldIds.push('hr');
+                }
+                if (!document.getElementById('weight').value || document.getElementById('weight').value.trim() === '') {
+                    errors.push('Вес');
+                    errorFieldIds.push('weight');
+                }
+
+                // Проверяем секцию "Размеры сердца"
+                if (document.getElementById('checkbox-sizes').checked) {
+                    if (!document.getElementById('lpAo1').value || document.getElementById('lpAo1').value.trim() === '') {
+                        errors.push('Левое предсердие (диастола)');
+                        errorFieldIds.push('lpAo1');
+                    }
+                    if (!document.getElementById('lpAo2').value || document.getElementById('lpAo2').value.trim() === '') {
+                        errors.push('Левое предсердие (систола)');
+                        errorFieldIds.push('lpAo2');
+                    }
+                    if (!document.getElementById('lpAo3').value || document.getElementById('lpAo3').value.trim() === '') {
+                        errors.push('Аорта');
+                        errorFieldIds.push('lpAo3');
+                    }
+                    if (!document.getElementById('la').value || document.getElementById('la').value.trim() === '') {
+                        errors.push('Легочная артерия');
+                        errorFieldIds.push('la');
+                    }
+                }
+
+                // Проверяем секцию "Функция сердца"
+                if (document.getElementById('checkbox-function').checked) {
+                    if (!document.getElementById('socrfunc1').value || document.getElementById('socrfunc1').value.trim() === '') {
+                        errors.push('КДР');
+                        errorFieldIds.push('socrfunc1');
+                    }
+                    if (!document.getElementById('socrfunc2').value || document.getElementById('socrfunc2').value.trim() === '') {
+                        errors.push('КСР');
+                        errorFieldIds.push('socrfunc2');
+                    }
+                    if (!document.getElementById('lvVibros1').value || document.getElementById('lvVibros1').value.trim() === '') {
+                        errors.push('КДО');
+                        errorFieldIds.push('lvVibros1');
+                    }
+                    if (!document.getElementById('lvVibros2').value || document.getElementById('lvVibros2').value.trim() === '') {
+                        errors.push('КСО');
+                        errorFieldIds.push('lvVibros2');
+                    }
+                    if (!document.getElementById('stenki1').value || document.getElementById('stenki1').value.trim() === '') {
+                        errors.push('МЖП');
+                        errorFieldIds.push('stenki1');
+                    }
+                    if (!document.getElementById('stenki2').value || document.getElementById('stenki2').value.trim() === '') {
+                        errors.push('ЗСЛЖ');
+                        errorFieldIds.push('stenki2');
+                    }
+                    if (!document.getElementById('epss').value || document.getElementById('epss').value.trim() === '') {
+                        errors.push('EPSS');
+                        errorFieldIds.push('epss');
+                    }
+                }
+
+                // Проверяем секцию "Венозный застой"
+                if (document.getElementById('checkbox-venous').checked) {
+                    if (!document.getElementById('zastoi1').value || document.getElementById('zastoi1').value.trim() === '') {
+                        errors.push('КПВ');
+                        errorFieldIds.push('zastoi1');
+                    }
+                    if (!document.getElementById('zastoi2').value || document.getElementById('zastoi2').value.trim() === '') {
+                        errors.push('ПВЛА');
+                        errorFieldIds.push('zastoi2');
+                    }
+                }
+
+                // Проверяем секцию "Клапанный аппарат"
+                if (document.getElementById('checkbox-valves').checked) {
+                    if (!document.getElementById('potokMK1').value || document.getElementById('potokMK1').value.trim() === '') {
+                        errors.push('Митральный клапан (E)');
+                        errorFieldIds.push('potokMK1');
+                    }
+                    if (!document.getElementById('potokMK2').value || document.getElementById('potokMK2').value.trim() === '') {
+                        errors.push('Митральный клапан (A)');
+                        errorFieldIds.push('potokMK2');
+                    }
+                    if (!document.getElementById('potokTK1').value || document.getElementById('potokTK1').value.trim() === '') {
+                        errors.push('Трикуспидальный клапан (E)');
+                        errorFieldIds.push('potokTK1');
+                    }
+                    if (!document.getElementById('potokTK2').value || document.getElementById('potokTK2').value.trim() === '') {
+                        errors.push('Трикуспидальный клапан (A)');
+                        errorFieldIds.push('potokTK2');
+                    }
+                    if (!document.getElementById('potokAO').value || document.getElementById('potokAO').value.trim() === '') {
+                        errors.push('Аортальный клапан');
+                        errorFieldIds.push('potokAO');
+                    }
+                    if (!document.getElementById('potokLA').value || document.getElementById('potokLA').value.trim() === '') {
+                        errors.push('Клапан легочной артерии');
+                        errorFieldIds.push('potokLA');
+                    }
+                }
+
+                if (errors.length > 0) {
+                    showError(`Пожалуйста, заполните следующие поля: ${errors.join(', ')}`, errorFieldIds);
+                    return;
+                }
+
+                // Проверяем корректность числовых значений
+                const numericErrors = [];
+                
+                if (isNaN(lpAo[0]) || isNaN(lpAo[1]) || isNaN(lpAo[2])) {
+                    numericErrors.push('размеры левого предсердия и аорты');
+                }
+                if (isNaN(socrfunc[0]) || isNaN(socrfunc[1])) {
+                    numericErrors.push('КДР и КСР');
+                }
+                if (isNaN(lvVibros[0]) || isNaN(lvVibros[1])) {
+                    numericErrors.push('КДО и КСО');
+                }
+                if (isNaN(stenki[0]) || isNaN(stenki[1])) {
+                    numericErrors.push('МЖП и ЗСЛЖ');
+                }
+                if (isNaN(zastoi[0]) || isNaN(zastoi[1])) {
+                    numericErrors.push('КПВ и ПВЛА');
+                }
+                if (isNaN(potokMK[0]) || isNaN(potokMK[1])) {
+                    numericErrors.push('скорости митрального клапана');
+                }
+                if (isNaN(potokTK[0]) || isNaN(potokTK[1])) {
+                    numericErrors.push('скорости трикуспидального клапана');
+                }
+
+                if (numericErrors.length > 0) {
+                    showError(`Пожалуйста, введите корректные числовые значения для: ${numericErrors.join(', ')}`);
                     return;
                 }
 
@@ -358,19 +630,34 @@
                 const laAo = la[0] / lpAo[2];
 
                 // Формируем результаты в формате оригинального Python скрипта
-                const results = `******************************
-ЧСС: ${hr} /мин;
+                let results = `ЧСС: ${hr} /мин;`;
+                
+                // Добавляем результаты только из выбранных секций
+                if (document.getElementById('checkbox-sizes').checked) {
+                    results += `
 Левое предсердие: ${lpAo[0]} мм;
 Аорта: ${lpAo[2]} мм;
 Соотношение Левого предсердия к Аорте: ${lpAo1.toFixed(2)}; FSлп: ${fslp.toFixed(2)}%;
-ЛА: ${la[0]} мм; ЛА/Ао: ${laAo.toFixed(2)};
+ЛА: ${la[0]} мм; ЛА/Ао: ${laAo.toFixed(2)};`;
+                }
+                
+                if (document.getElementById('checkbox-function').checked) {
+                    results += `
 КДР: ${socrfunc[0]} мм; КДРн: ${kdrn.toFixed(2)};
 КCР: ${socrfunc[1]} мм; КCРн: ${ksrn.toFixed(2)};
 FS: ${fs.toFixed(2)}%;
 FE: ${fe.toFixed(2)}%;
 МЖП: ${stenki[0]} мм; ЗСЛЖ: ${stenki[1]} мм;
-EPSS: ${epss[0]} мм;
-Вена: ${zastoi[0]} мм; ПВЛА: ${zastoi[1]} мм; В/А: ${va.toFixed(2)};
+EPSS: ${epss[0]} мм;`;
+                }
+                
+                if (document.getElementById('checkbox-venous').checked) {
+                    results += `
+Вена: ${zastoi[0]} мм; ПВЛА: ${zastoi[1]} мм; В/А: ${va.toFixed(2)};`;
+                }
+                
+                if (document.getElementById('checkbox-valves').checked) {
+                    results += `
 Митральный клапан.
 Створки: ;
 Скорость кровотока: E: ${potokMK[0]} м/с, А: ${potokMK[1]} м/с;
@@ -386,15 +673,15 @@ EPSS: ${epss[0]} мм;
 Клапан лёгочной артерии.
 Створки: ;
 Скорость кровотока: ${potokLA[0]} м/с;
-Регургитация: ;
-******************************
-******************************`;
+Регургитация: ;`;
+                }
 
                 // Показываем результаты
                 document.getElementById('results-content').textContent = results;
                 document.getElementById('results').classList.add('show');
                 document.getElementById('copy-btn').style.display = 'block';
                 hideError();
+                clearInputErrors();
                 showSuccess('Расчеты выполнены успешно!');
 
             } catch (error) {
@@ -402,10 +689,58 @@ EPSS: ${epss[0]} мм;
             }
         }
 
-        function showError(message) {
+        function showError(message, errorFields = []) {
             document.getElementById('error-message').textContent = message;
             document.getElementById('error-message').style.display = 'block';
             document.getElementById('success-message').style.display = 'none';
+            
+            // Убираем предыдущие ошибки
+            clearInputErrors();
+            
+            // Подсвечиваем поля с ошибками
+            if (errorFields.length > 0) {
+                errorFields.forEach(fieldId => {
+                    const field = document.getElementById(fieldId);
+                    if (field) {
+                        field.classList.add('input-error');
+                    }
+                });
+            }
+        }
+
+        function clearInputErrors() {
+            const inputs = document.querySelectorAll('input');
+            inputs.forEach(input => {
+                input.classList.remove('input-error');
+            });
+        }
+
+        function toggleSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            const checkbox = document.getElementById('checkbox-' + sectionId.split('-')[1]);
+            const content = document.getElementById('content-' + sectionId.split('-')[1]);
+            
+            if (checkbox.checked) {
+                section.classList.add('active');
+                content.classList.add('show');
+            } else {
+                section.classList.remove('active');
+                content.classList.remove('show');
+            }
+        }
+
+        function toggleSectionContent(sectionId) {
+            const section = document.getElementById(sectionId);
+            const checkbox = document.getElementById('checkbox-' + sectionId.split('-')[1]);
+            const content = document.getElementById('content-' + sectionId.split('-')[1]);
+            
+            if (checkbox.checked) {
+                section.classList.add('active');
+                content.classList.add('show');
+            } else {
+                section.classList.remove('active');
+                content.classList.remove('show');
+            }
         }
 
         function showSuccess(message) {
@@ -459,13 +794,21 @@ EPSS: ${epss[0]} мм;
             document.body.removeChild(textArea);
         }
 
-        // Добавляем обработчик Enter для полей ввода
+        // Добавляем обработчики для полей ввода
         document.addEventListener('DOMContentLoaded', function() {
             const inputs = document.querySelectorAll('input');
             inputs.forEach(input => {
+                // Обработчик Enter для расчета
                 input.addEventListener('keypress', function(e) {
                     if (e.key === 'Enter') {
                         calculate();
+                    }
+                });
+                
+                // Очистка ошибок при вводе
+                input.addEventListener('input', function() {
+                    if (this.classList.contains('input-error')) {
+                        this.classList.remove('input-error');
                     }
                 });
             });
