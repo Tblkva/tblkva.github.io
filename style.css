@@ -682,74 +682,198 @@ body {
     outline-offset: 2px;
 }
 
-        /* Стили для анамнеза */
-        .anamnesis-item {
-            margin-bottom: 15px;
-            padding: 12px;
-            border: 1px solid rgba(255, 171, 91, 0.2);
-            border-radius: 6px;
-            background: rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-        }
+/* Стили для анамнеза */
+.anamnesis-item {
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid rgba(255, 171, 91, 0.2);
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
 
-        .anamnesis-item:hover {
-            border-color: rgba(255, 171, 91, 0.4);
-            background: rgba(0, 0, 0, 0.15);
-        }
+.anamnesis-item:hover {
+    border-color: rgba(255, 171, 91, 0.4);
+    background: rgba(0, 0, 0, 0.15);
+}
 
-        .anamnesis-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 8px;
-            cursor: pointer;
-        }
+.anamnesis-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
 
-        .anamnesis-header input[type="checkbox"] {
-            margin-right: 8px;
-            transform: scale(1.05);
-            accent-color: var(--bg-yellow);
-        }
+.anamnesis-header input[type="checkbox"] {
+    margin-right: 8px;
+    transform: scale(1.05);
+    accent-color: var(--bg-yellow);
+}
 
-        .anamnesis-header label {
-            font-weight: 600;
-            color: var(--bg-yellow);
-            font-size: 0.95em;
-            cursor: pointer;
-            margin: 0;
-        }
+.anamnesis-header label {
+    font-weight: 600;
+    color: var(--bg-yellow);
+    font-size: 0.95em;
+    cursor: pointer;
+    margin: 0;
+}
 
-        .anamnesis-input {
-            margin-top: 8px;
-        }
+.anamnesis-input {
+    margin-top: 8px;
+}
 
-        .anamnesis-input input {
-            width: 100%;
-            padding: 8px 10px;
-            border: 2px solid rgba(255, 171, 91, 0.3);
-            border-radius: 4px;
-            font-size: 13px;
-            transition: all 0.3s ease;
-            background: rgba(0, 0, 0, 0.2);
-            color: var(--color-white);
-        }
+.anamnesis-input input {
+    width: 100%;
+    padding: 8px 10px;
+    border: 2px solid rgba(255, 171, 91, 0.3);
+    border-radius: 4px;
+    font-size: 13px;
+    transition: all 0.3s ease;
+    background: rgba(0, 0, 0, 0.2);
+    color: var(--color-white);
+}
 
-        .anamnesis-input input:focus {
-            outline: none;
-            border-color: var(--bg-yellow);
-            box-shadow: 0 0 0 3px rgba(255, 171, 91, 0.1);
-            background: rgba(0, 0, 0, 0.3);
-        }
+.anamnesis-input input:focus {
+    outline: none;
+    border-color: var(--bg-yellow);
+    box-shadow: 0 0 0 3px rgba(255, 171, 91, 0.1);
+    background: rgba(0, 0, 0, 0.3);
+}
 
-        .anamnesis-input input::placeholder {
-            color: rgba(255, 171, 91, 0.6);
-        }
+.anamnesis-input input::placeholder {
+    color: rgba(255, 171, 91, 0.6);
+}
 
-        .anamnesis-default {
-            color: var(--color-gray-light);
-            font-style: italic;
-            font-size: 0.85em;
-            padding: 6px 10px;
-            background: rgba(255, 171, 91, 0.05);
-            border-radius: 3px;
-            border-left: 2px solid rgba(255, 171, 91, 0.3);
-        } 
+.anamnesis-default {
+    color: var(--color-gray-light);
+    font-style: italic;
+    font-size: 0.85em;
+    padding: 6px 10px;
+    background: rgba(255, 171, 91, 0.05);
+    border-radius: 3px;
+    border-left: 2px solid rgba(255, 171, 91, 0.3);
+}
+
+/* Переключатель режимов калькулятора (общий / кошки / собаки) */
+.short-block {
+    padding: 16px 20px;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.gradient-stroke {
+    border-bottom: 1px solid rgba(255, 171, 91, 0.3);
+}
+
+.pets-tabs-block {
+    border-top: 1px solid rgba(255, 171, 91, 0.15);
+}
+
+.short-block-wrapper {
+    max-width: 100%;
+}
+
+.short-block-body {
+    overflow: visible;
+    position: relative;
+}
+
+.pets-tabs {
+    display: flex;
+    align-items: stretch;
+    gap: 10px;
+}
+
+.pets-tab-nav-btn {
+    padding: 8px 10px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 6px;
+    border: 1px solid rgba(255, 171, 91, 0.4);
+    color: var(--color-white);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.pets-tab-nav-btn:hover {
+    background: rgba(255, 171, 91, 0.15);
+}
+
+.pets-tab-dropdown {
+    position: relative;
+    flex: 1;
+    min-width: 180px;
+}
+
+.pets-tab-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 171, 91, 0.5);
+    background: rgba(0, 0, 0, 0.4);
+    color: var(--color-white);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.pets-tab-btn:hover {
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.pets-tab-btn-content {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pets-tab-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin-top: 6px;
+    background: rgba(0, 0, 0, 0.95);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 171, 91, 0.5);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    z-index: 20;
+}
+
+.pets-tab-dropdown-menu.hidden {
+    display: none;
+}
+
+.pets-tab-dropdown-item {
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    color: var(--color-white);
+    font-size: 0.95em;
+    transition: all 0.15s ease;
+}
+
+.pets-tab-dropdown-item:hover {
+    background: rgba(255, 171, 91, 0.15);
+}
+
+.pets-tab-dropdown-item.active {
+    background: rgba(255, 171, 91, 0.25);
+}
+
+.stub-screen {
+    padding: 25px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.stub-screen h2 {
+    margin-bottom: 10px;
+    color: var(--bg-yellow);
+}
+
+.stub-screen p {
+    color: var(--color-gray-light);
+    line-height: 1.6;
+}

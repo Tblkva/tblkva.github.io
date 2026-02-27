@@ -1,0 +1,5870 @@
+{
+  "file": "C:\\Users\\Tykwa\\Desktop\\tblkva.github.io\\собака\\ЭхоКГ протокол стандарт_СОБАКА.xlsx",
+  "sheets": [
+    {
+      "title": "Лист1",
+      "max_row": 113,
+      "max_column": 17,
+      "rows": [
+        [
+          {
+            "coord": "A1",
+            "value": "Ветеринарная клиника "
+          },
+          {
+            "coord": "B1",
+            "value": null
+          },
+          {
+            "coord": "C1",
+            "value": null
+          },
+          {
+            "coord": "D1",
+            "value": null
+          },
+          {
+            "coord": "E1",
+            "value": null
+          },
+          {
+            "coord": "F1",
+            "value": null
+          },
+          {
+            "coord": "G1",
+            "value": null
+          },
+          {
+            "coord": "H1",
+            "value": null
+          },
+          {
+            "coord": "I1",
+            "value": null
+          },
+          {
+            "coord": "J1",
+            "value": null
+          },
+          {
+            "coord": "K1",
+            "value": null
+          },
+          {
+            "coord": "L1",
+            "value": null
+          },
+          {
+            "coord": "M1",
+            "value": null
+          },
+          {
+            "coord": "N1",
+            "value": null
+          },
+          {
+            "coord": "O1",
+            "value": null
+          },
+          {
+            "coord": "P1",
+            "value": null
+          },
+          {
+            "coord": "Q1",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A2",
+            "value": "УЛЬТРАЗВУКОВОЕ ИССЛЕДОВАНИЕ СЕРДЦА (ЭХОКАРДИОГРАФИЯ)"
+          },
+          {
+            "coord": "B2",
+            "value": null
+          },
+          {
+            "coord": "C2",
+            "value": null
+          },
+          {
+            "coord": "D2",
+            "value": null
+          },
+          {
+            "coord": "E2",
+            "value": null
+          },
+          {
+            "coord": "F2",
+            "value": null
+          },
+          {
+            "coord": "G2",
+            "value": null
+          },
+          {
+            "coord": "H2",
+            "value": null
+          },
+          {
+            "coord": "I2",
+            "value": null
+          },
+          {
+            "coord": "J2",
+            "value": null
+          },
+          {
+            "coord": "K2",
+            "value": null
+          },
+          {
+            "coord": "L2",
+            "value": null
+          },
+          {
+            "coord": "M2",
+            "value": null
+          },
+          {
+            "coord": "N2",
+            "value": null
+          },
+          {
+            "coord": "O2",
+            "value": null
+          },
+          {
+            "coord": "P2",
+            "value": null
+          },
+          {
+            "coord": "Q2",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A4",
+            "value": "ФИО владельца"
+          },
+          {
+            "coord": "B4",
+            "value": null
+          },
+          {
+            "coord": "C4",
+            "value": null
+          },
+          {
+            "coord": "D4",
+            "value": null
+          },
+          {
+            "coord": "E4",
+            "value": null
+          },
+          {
+            "coord": "F4",
+            "value": null
+          },
+          {
+            "coord": "G4",
+            "value": null
+          },
+          {
+            "coord": "H4",
+            "value": null
+          },
+          {
+            "coord": "I4",
+            "value": null
+          },
+          {
+            "coord": "J4",
+            "value": null
+          },
+          {
+            "coord": "K4",
+            "value": null
+          },
+          {
+            "coord": "L4",
+            "value": null
+          },
+          {
+            "coord": "M4",
+            "value": null
+          },
+          {
+            "coord": "N4",
+            "value": null
+          },
+          {
+            "coord": "O4",
+            "value": null
+          },
+          {
+            "coord": "P4",
+            "value": null
+          },
+          {
+            "coord": "Q4",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A5",
+            "value": "Вид"
+          },
+          {
+            "coord": "B5",
+            "value": "собака"
+          },
+          {
+            "coord": "C5",
+            "value": null
+          },
+          {
+            "coord": "D5",
+            "value": "Кличка"
+          },
+          {
+            "coord": "E5",
+            "value": null
+          },
+          {
+            "coord": "F5",
+            "value": null
+          },
+          {
+            "coord": "G5",
+            "value": null
+          },
+          {
+            "coord": "H5",
+            "value": null
+          },
+          {
+            "coord": "I5",
+            "value": null
+          },
+          {
+            "coord": "J5",
+            "value": null
+          },
+          {
+            "coord": "K5",
+            "value": null
+          },
+          {
+            "coord": "L5",
+            "value": null
+          },
+          {
+            "coord": "M5",
+            "value": null
+          },
+          {
+            "coord": "N5",
+            "value": null
+          },
+          {
+            "coord": "O5",
+            "value": null
+          },
+          {
+            "coord": "P5",
+            "value": null
+          },
+          {
+            "coord": "Q5",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A6",
+            "value": "Порода"
+          },
+          {
+            "coord": "B6",
+            "value": null
+          },
+          {
+            "coord": "C6",
+            "value": null
+          },
+          {
+            "coord": "D6",
+            "value": null
+          },
+          {
+            "coord": "E6",
+            "value": null
+          },
+          {
+            "coord": "F6",
+            "value": "пол"
+          },
+          {
+            "coord": "G6",
+            "value": null
+          },
+          {
+            "coord": "H6",
+            "value": null
+          },
+          {
+            "coord": "I6",
+            "value": "возраст"
+          },
+          {
+            "coord": "J6",
+            "value": null
+          },
+          {
+            "coord": "K6",
+            "value": null
+          },
+          {
+            "coord": "L6",
+            "value": null
+          },
+          {
+            "coord": "M6",
+            "value": null
+          },
+          {
+            "coord": "N6",
+            "value": null
+          },
+          {
+            "coord": "O6",
+            "value": null
+          },
+          {
+            "coord": "P6",
+            "value": null
+          },
+          {
+            "coord": "Q6",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A7",
+            "value": "Чип"
+          },
+          {
+            "coord": "B7",
+            "value": null
+          },
+          {
+            "coord": "C7",
+            "value": null
+          },
+          {
+            "coord": "D7",
+            "value": null
+          },
+          {
+            "coord": "E7",
+            "value": null
+          },
+          {
+            "coord": "F7",
+            "value": null
+          },
+          {
+            "coord": "G7",
+            "value": null
+          },
+          {
+            "coord": "H7",
+            "value": null
+          },
+          {
+            "coord": "I7",
+            "value": null
+          },
+          {
+            "coord": "J7",
+            "value": null
+          },
+          {
+            "coord": "K7",
+            "value": null
+          },
+          {
+            "coord": "L7",
+            "value": null
+          },
+          {
+            "coord": "M7",
+            "value": null
+          },
+          {
+            "coord": "N7",
+            "value": null
+          },
+          {
+            "coord": "O7",
+            "value": null
+          },
+          {
+            "coord": "P7",
+            "value": null
+          },
+          {
+            "coord": "Q7",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A8",
+            "value": "Масса тела"
+          },
+          {
+            "coord": "B8",
+            "value": null
+          },
+          {
+            "coord": "C8",
+            "value": "кг"
+          },
+          {
+            "coord": "D8",
+            "value": "ППТ"
+          },
+          {
+            "coord": "E8",
+            "value": "=0.101*(B8^0.6667)"
+          },
+          {
+            "coord": "F8",
+            "value": "м2"
+          },
+          {
+            "coord": "G8",
+            "value": "Седация"
+          },
+          {
+            "coord": "H8",
+            "value": null
+          },
+          {
+            "coord": "I8",
+            "value": "нет"
+          },
+          {
+            "coord": "J8",
+            "value": null
+          },
+          {
+            "coord": "K8",
+            "value": null
+          },
+          {
+            "coord": "L8",
+            "value": null
+          },
+          {
+            "coord": "M8",
+            "value": null
+          },
+          {
+            "coord": "N8",
+            "value": null
+          },
+          {
+            "coord": "O8",
+            "value": null
+          },
+          {
+            "coord": "P8",
+            "value": null
+          },
+          {
+            "coord": "Q8",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A9",
+            "value": "ЛЕВОЕ ПРЕДСЕРДИЕ "
+          },
+          {
+            "coord": "B9",
+            "value": null
+          },
+          {
+            "coord": "C9",
+            "value": null
+          },
+          {
+            "coord": "D9",
+            "value": null
+          },
+          {
+            "coord": "E9",
+            "value": null
+          },
+          {
+            "coord": "F9",
+            "value": null
+          },
+          {
+            "coord": "G9",
+            "value": null
+          },
+          {
+            "coord": "H9",
+            "value": null
+          },
+          {
+            "coord": "I9",
+            "value": null
+          },
+          {
+            "coord": "J9",
+            "value": null
+          },
+          {
+            "coord": "K9",
+            "value": null
+          },
+          {
+            "coord": "L9",
+            "value": null
+          },
+          {
+            "coord": "M9",
+            "value": null
+          },
+          {
+            "coord": "N9",
+            "value": null
+          },
+          {
+            "coord": "O9",
+            "value": null
+          },
+          {
+            "coord": "P9",
+            "value": null
+          },
+          {
+            "coord": "Q9",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A10",
+            "value": "Короткая ось"
+          },
+          {
+            "coord": "B10",
+            "value": null
+          },
+          {
+            "coord": "C10",
+            "value": null
+          },
+          {
+            "coord": "D10",
+            "value": null
+          },
+          {
+            "coord": "E10",
+            "value": null
+          },
+          {
+            "coord": "F10",
+            "value": "Длинная ось"
+          },
+          {
+            "coord": "G10",
+            "value": null
+          },
+          {
+            "coord": "H10",
+            "value": null
+          },
+          {
+            "coord": "I10",
+            "value": null
+          },
+          {
+            "coord": "J10",
+            "value": null
+          },
+          {
+            "coord": "K10",
+            "value": null
+          },
+          {
+            "coord": "L10",
+            "value": null
+          },
+          {
+            "coord": "M10",
+            "value": null
+          },
+          {
+            "coord": "N10",
+            "value": null
+          },
+          {
+            "coord": "O10",
+            "value": null
+          },
+          {
+            "coord": "P10",
+            "value": null
+          },
+          {
+            "coord": "Q10",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A11",
+            "value": "ЛП max"
+          },
+          {
+            "coord": "B11",
+            "value": null
+          },
+          {
+            "coord": "C11",
+            "value": "мм"
+          },
+          {
+            "coord": "D11",
+            "value": "ЛП/Ао"
+          },
+          {
+            "coord": "E11",
+            "value": "=B11/B12"
+          },
+          {
+            "coord": "F11",
+            "value": "ЛП max"
+          },
+          {
+            "coord": "G11",
+            "value": null
+          },
+          {
+            "coord": "H11",
+            "value": "мм"
+          },
+          {
+            "coord": "I11",
+            "value": null
+          },
+          {
+            "coord": "J11",
+            "value": null
+          },
+          {
+            "coord": "K11",
+            "value": null
+          },
+          {
+            "coord": "L11",
+            "value": null
+          },
+          {
+            "coord": "M11",
+            "value": null
+          },
+          {
+            "coord": "N11",
+            "value": null
+          },
+          {
+            "coord": "O11",
+            "value": null
+          },
+          {
+            "coord": "P11",
+            "value": null
+          },
+          {
+            "coord": "Q11",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A12",
+            "value": "Ао"
+          },
+          {
+            "coord": "B12",
+            "value": null
+          },
+          {
+            "coord": "C12",
+            "value": "мм"
+          },
+          {
+            "coord": "D12",
+            "value": null
+          },
+          {
+            "coord": "E12",
+            "value": null
+          },
+          {
+            "coord": "F12",
+            "value": "ЛПнорм"
+          },
+          {
+            "coord": "G12",
+            "value": "=0.1*G11/B8^0.309"
+          },
+          {
+            "coord": "H12",
+            "value": null
+          },
+          {
+            "coord": "I12",
+            "value": null
+          },
+          {
+            "coord": "J12",
+            "value": null
+          },
+          {
+            "coord": "K12",
+            "value": null
+          },
+          {
+            "coord": "L12",
+            "value": null
+          },
+          {
+            "coord": "M12",
+            "value": null
+          },
+          {
+            "coord": "N12",
+            "value": null
+          },
+          {
+            "coord": "O12",
+            "value": null
+          },
+          {
+            "coord": "P12",
+            "value": null
+          },
+          {
+            "coord": "Q12",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A13",
+            "value": "СОСУДЫ МКК"
+          },
+          {
+            "coord": "B13",
+            "value": null
+          },
+          {
+            "coord": "C13",
+            "value": null
+          },
+          {
+            "coord": "D13",
+            "value": null
+          },
+          {
+            "coord": "E13",
+            "value": null
+          },
+          {
+            "coord": "F13",
+            "value": null
+          },
+          {
+            "coord": "G13",
+            "value": null
+          },
+          {
+            "coord": "H13",
+            "value": null
+          },
+          {
+            "coord": "I13",
+            "value": null
+          },
+          {
+            "coord": "J13",
+            "value": null
+          },
+          {
+            "coord": "K13",
+            "value": null
+          },
+          {
+            "coord": "L13",
+            "value": null
+          },
+          {
+            "coord": "M13",
+            "value": null
+          },
+          {
+            "coord": "N13",
+            "value": null
+          },
+          {
+            "coord": "O13",
+            "value": null
+          },
+          {
+            "coord": "P13",
+            "value": null
+          },
+          {
+            "coord": "Q13",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A14",
+            "value": "ЛВ"
+          },
+          {
+            "coord": "B14",
+            "value": null
+          },
+          {
+            "coord": "C14",
+            "value": "мм"
+          },
+          {
+            "coord": "D14",
+            "value": null
+          },
+          {
+            "coord": "E14",
+            "value": "ЛВ/ПВЛА"
+          },
+          {
+            "coord": "F14",
+            "value": null
+          },
+          {
+            "coord": "G14",
+            "value": "=B14/B15"
+          },
+          {
+            "coord": "H14",
+            "value": null
+          },
+          {
+            "coord": "I14",
+            "value": null
+          },
+          {
+            "coord": "J14",
+            "value": null
+          },
+          {
+            "coord": "K14",
+            "value": null
+          },
+          {
+            "coord": "L14",
+            "value": null
+          },
+          {
+            "coord": "M14",
+            "value": null
+          },
+          {
+            "coord": "N14",
+            "value": null
+          },
+          {
+            "coord": "O14",
+            "value": null
+          },
+          {
+            "coord": "P14",
+            "value": null
+          },
+          {
+            "coord": "Q14",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A15",
+            "value": "ПВЛА"
+          },
+          {
+            "coord": "B15",
+            "value": null
+          },
+          {
+            "coord": "C15",
+            "value": "мм"
+          },
+          {
+            "coord": "D15",
+            "value": null
+          },
+          {
+            "coord": "E15",
+            "value": "В-линии:"
+          },
+          {
+            "coord": "F15",
+            "value": null
+          },
+          {
+            "coord": "G15",
+            "value": "нет"
+          },
+          {
+            "coord": "H15",
+            "value": null
+          },
+          {
+            "coord": "I15",
+            "value": null
+          },
+          {
+            "coord": "J15",
+            "value": null
+          },
+          {
+            "coord": "K15",
+            "value": null
+          },
+          {
+            "coord": "L15",
+            "value": null
+          },
+          {
+            "coord": "M15",
+            "value": null
+          },
+          {
+            "coord": "N15",
+            "value": null
+          },
+          {
+            "coord": "O15",
+            "value": null
+          },
+          {
+            "coord": "P15",
+            "value": null
+          },
+          {
+            "coord": "Q15",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A16",
+            "value": "ЛЕВЫЙ ЖЕЛУДОЧЕК"
+          },
+          {
+            "coord": "B16",
+            "value": null
+          },
+          {
+            "coord": "C16",
+            "value": null
+          },
+          {
+            "coord": "D16",
+            "value": null
+          },
+          {
+            "coord": "E16",
+            "value": null
+          },
+          {
+            "coord": "F16",
+            "value": null
+          },
+          {
+            "coord": "G16",
+            "value": null
+          },
+          {
+            "coord": "H16",
+            "value": null
+          },
+          {
+            "coord": "I16",
+            "value": null
+          },
+          {
+            "coord": "J16",
+            "value": null
+          },
+          {
+            "coord": "K16",
+            "value": null
+          },
+          {
+            "coord": "L16",
+            "value": null
+          },
+          {
+            "coord": "M16",
+            "value": null
+          },
+          {
+            "coord": "N16",
+            "value": null
+          },
+          {
+            "coord": "O16",
+            "value": null
+          },
+          {
+            "coord": "P16",
+            "value": null
+          },
+          {
+            "coord": "Q16",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A17",
+            "value": "Длинная ось"
+          },
+          {
+            "coord": "B17",
+            "value": null
+          },
+          {
+            "coord": "C17",
+            "value": null
+          },
+          {
+            "coord": "D17",
+            "value": null
+          },
+          {
+            "coord": "E17",
+            "value": null
+          },
+          {
+            "coord": "F17",
+            "value": null
+          },
+          {
+            "coord": "G17",
+            "value": null
+          },
+          {
+            "coord": "H17",
+            "value": null
+          },
+          {
+            "coord": "I17",
+            "value": null
+          },
+          {
+            "coord": "J17",
+            "value": null
+          },
+          {
+            "coord": "K17",
+            "value": null
+          },
+          {
+            "coord": "L17",
+            "value": null
+          },
+          {
+            "coord": "M17",
+            "value": null
+          },
+          {
+            "coord": "N17",
+            "value": null
+          },
+          {
+            "coord": "O17",
+            "value": null
+          },
+          {
+            "coord": "P17",
+            "value": null
+          },
+          {
+            "coord": "Q17",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A18",
+            "value": "МЖПд"
+          },
+          {
+            "coord": "B18",
+            "value": null
+          },
+          {
+            "coord": "C18",
+            "value": "мм"
+          },
+          {
+            "coord": "D18",
+            "value": null
+          },
+          {
+            "coord": "E18",
+            "value": null
+          },
+          {
+            "coord": "F18",
+            "value": null
+          },
+          {
+            "coord": "G18",
+            "value": null
+          },
+          {
+            "coord": "H18",
+            "value": null
+          },
+          {
+            "coord": "I18",
+            "value": null
+          },
+          {
+            "coord": "J18",
+            "value": null
+          },
+          {
+            "coord": "K18",
+            "value": null
+          },
+          {
+            "coord": "L18",
+            "value": null
+          },
+          {
+            "coord": "M18",
+            "value": null
+          },
+          {
+            "coord": "N18",
+            "value": null
+          },
+          {
+            "coord": "O18",
+            "value": null
+          },
+          {
+            "coord": "P18",
+            "value": null
+          },
+          {
+            "coord": "Q18",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A19",
+            "value": "КДР"
+          },
+          {
+            "coord": "B19",
+            "value": null
+          },
+          {
+            "coord": "C19",
+            "value": "мм"
+          },
+          {
+            "coord": "D19",
+            "value": null
+          },
+          {
+            "coord": "E19",
+            "value": "КДРн"
+          },
+          {
+            "coord": "F19",
+            "value": null
+          },
+          {
+            "coord": "G19",
+            "value": "=(0.1*B19)/B8^0.294"
+          },
+          {
+            "coord": "H19",
+            "value": null
+          },
+          {
+            "coord": "I19",
+            "value": null
+          },
+          {
+            "coord": "J19",
+            "value": null
+          },
+          {
+            "coord": "K19",
+            "value": null
+          },
+          {
+            "coord": "L19",
+            "value": null
+          },
+          {
+            "coord": "M19",
+            "value": null
+          },
+          {
+            "coord": "N19",
+            "value": null
+          },
+          {
+            "coord": "O19",
+            "value": null
+          },
+          {
+            "coord": "P19",
+            "value": null
+          },
+          {
+            "coord": "Q19",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A20",
+            "value": "ЗСЛЖд"
+          },
+          {
+            "coord": "B20",
+            "value": null
+          },
+          {
+            "coord": "C20",
+            "value": "мм"
+          },
+          {
+            "coord": "D20",
+            "value": null
+          },
+          {
+            "coord": "E20",
+            "value": null
+          },
+          {
+            "coord": "F20",
+            "value": null
+          },
+          {
+            "coord": "G20",
+            "value": null
+          },
+          {
+            "coord": "H20",
+            "value": null
+          },
+          {
+            "coord": "I20",
+            "value": null
+          },
+          {
+            "coord": "J20",
+            "value": null
+          },
+          {
+            "coord": "K20",
+            "value": null
+          },
+          {
+            "coord": "L20",
+            "value": null
+          },
+          {
+            "coord": "M20",
+            "value": null
+          },
+          {
+            "coord": "N20",
+            "value": null
+          },
+          {
+            "coord": "O20",
+            "value": null
+          },
+          {
+            "coord": "P20",
+            "value": null
+          },
+          {
+            "coord": "Q20",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A21",
+            "value": "КСР"
+          },
+          {
+            "coord": "B21",
+            "value": null
+          },
+          {
+            "coord": "C21",
+            "value": "мм"
+          },
+          {
+            "coord": "D21",
+            "value": null
+          },
+          {
+            "coord": "E21",
+            "value": "КСРн"
+          },
+          {
+            "coord": "F21",
+            "value": null
+          },
+          {
+            "coord": "G21",
+            "value": "=(0.1*B21)/B8^0.315"
+          },
+          {
+            "coord": "H21",
+            "value": null
+          },
+          {
+            "coord": "I21",
+            "value": "ФУ%"
+          },
+          {
+            "coord": "J21",
+            "value": "=((B19-B21)/B19)*100"
+          },
+          {
+            "coord": "K21",
+            "value": null
+          },
+          {
+            "coord": "L21",
+            "value": null
+          },
+          {
+            "coord": "M21",
+            "value": null
+          },
+          {
+            "coord": "N21",
+            "value": null
+          },
+          {
+            "coord": "O21",
+            "value": null
+          },
+          {
+            "coord": "P21",
+            "value": null
+          },
+          {
+            "coord": "Q21",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A22",
+            "value": "Объем по Симпсону (*дополнительное измерение)"
+          },
+          {
+            "coord": "B22",
+            "value": null
+          },
+          {
+            "coord": "C22",
+            "value": null
+          },
+          {
+            "coord": "D22",
+            "value": null
+          },
+          {
+            "coord": "E22",
+            "value": null
+          },
+          {
+            "coord": "F22",
+            "value": null
+          },
+          {
+            "coord": "G22",
+            "value": null
+          },
+          {
+            "coord": "H22",
+            "value": null
+          },
+          {
+            "coord": "I22",
+            "value": null
+          },
+          {
+            "coord": "J22",
+            "value": null
+          },
+          {
+            "coord": "K22",
+            "value": null
+          },
+          {
+            "coord": "L22",
+            "value": null
+          },
+          {
+            "coord": "M22",
+            "value": null
+          },
+          {
+            "coord": "N22",
+            "value": null
+          },
+          {
+            "coord": "O22",
+            "value": null
+          },
+          {
+            "coord": "P22",
+            "value": null
+          },
+          {
+            "coord": "Q22",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A23",
+            "value": "КДО"
+          },
+          {
+            "coord": "B23",
+            "value": null
+          },
+          {
+            "coord": "C23",
+            "value": "мл"
+          },
+          {
+            "coord": "D23",
+            "value": "КДО/ППТ"
+          },
+          {
+            "coord": "E23",
+            "value": "=B23/E8"
+          },
+          {
+            "coord": "F23",
+            "value": "КДО/кг"
+          },
+          {
+            "coord": "G23",
+            "value": "=B23/B8"
+          },
+          {
+            "coord": "H23",
+            "value": null
+          },
+          {
+            "coord": "I23",
+            "value": "ФВ%"
+          },
+          {
+            "coord": "J23",
+            "value": "=((B23-B24)/B23)*100"
+          },
+          {
+            "coord": "K23",
+            "value": null
+          },
+          {
+            "coord": "L23",
+            "value": null
+          },
+          {
+            "coord": "M23",
+            "value": null
+          },
+          {
+            "coord": "N23",
+            "value": null
+          },
+          {
+            "coord": "O23",
+            "value": null
+          },
+          {
+            "coord": "P23",
+            "value": null
+          },
+          {
+            "coord": "Q23",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A24",
+            "value": "КСО"
+          },
+          {
+            "coord": "B24",
+            "value": null
+          },
+          {
+            "coord": "C24",
+            "value": "мл"
+          },
+          {
+            "coord": "D24",
+            "value": "КСО/ППТ"
+          },
+          {
+            "coord": "E24",
+            "value": "=B24/E8"
+          },
+          {
+            "coord": "F24",
+            "value": "КСО/кг"
+          },
+          {
+            "coord": "G24",
+            "value": "=B24/B8"
+          },
+          {
+            "coord": "H24",
+            "value": null
+          },
+          {
+            "coord": "I24",
+            "value": null
+          },
+          {
+            "coord": "J24",
+            "value": null
+          },
+          {
+            "coord": "K24",
+            "value": null
+          },
+          {
+            "coord": "L24",
+            "value": null
+          },
+          {
+            "coord": "M24",
+            "value": null
+          },
+          {
+            "coord": "N24",
+            "value": null
+          },
+          {
+            "coord": "O24",
+            "value": null
+          },
+          {
+            "coord": "P24",
+            "value": null
+          },
+          {
+            "coord": "Q24",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A25",
+            "value": "ПРАВОЕ ПРЕДСЕРДИЕ"
+          },
+          {
+            "coord": "B25",
+            "value": null
+          },
+          {
+            "coord": "C25",
+            "value": null
+          },
+          {
+            "coord": "D25",
+            "value": null
+          },
+          {
+            "coord": "E25",
+            "value": null
+          },
+          {
+            "coord": "F25",
+            "value": null
+          },
+          {
+            "coord": "G25",
+            "value": null
+          },
+          {
+            "coord": "H25",
+            "value": null
+          },
+          {
+            "coord": "I25",
+            "value": null
+          },
+          {
+            "coord": "J25",
+            "value": null
+          },
+          {
+            "coord": "K25",
+            "value": null
+          },
+          {
+            "coord": "L25",
+            "value": null
+          },
+          {
+            "coord": "M25",
+            "value": null
+          },
+          {
+            "coord": "N25",
+            "value": null
+          },
+          {
+            "coord": "O25",
+            "value": null
+          },
+          {
+            "coord": "P25",
+            "value": null
+          },
+          {
+            "coord": "Q25",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A26",
+            "value": "ПП"
+          },
+          {
+            "coord": "B26",
+            "value": null
+          },
+          {
+            "coord": "C26",
+            "value": "мм"
+          },
+          {
+            "coord": "D26",
+            "value": null
+          },
+          {
+            "coord": "E26",
+            "value": "Визуальная оценка"
+          },
+          {
+            "coord": "F26",
+            "value": null
+          },
+          {
+            "coord": "G26",
+            "value": null
+          },
+          {
+            "coord": "H26",
+            "value": null
+          },
+          {
+            "coord": "I26",
+            "value": "не расширено"
+          },
+          {
+            "coord": "J26",
+            "value": null
+          },
+          {
+            "coord": "K26",
+            "value": null
+          },
+          {
+            "coord": "L26",
+            "value": null
+          },
+          {
+            "coord": "M26",
+            "value": null
+          },
+          {
+            "coord": "N26",
+            "value": null
+          },
+          {
+            "coord": "O26",
+            "value": null
+          },
+          {
+            "coord": "P26",
+            "value": null
+          },
+          {
+            "coord": "Q26",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A27",
+            "value": "ПРАВЫЙ ЖЕЛУДОЧЕК"
+          },
+          {
+            "coord": "B27",
+            "value": null
+          },
+          {
+            "coord": "C27",
+            "value": null
+          },
+          {
+            "coord": "D27",
+            "value": null
+          },
+          {
+            "coord": "E27",
+            "value": null
+          },
+          {
+            "coord": "F27",
+            "value": null
+          },
+          {
+            "coord": "G27",
+            "value": null
+          },
+          {
+            "coord": "H27",
+            "value": null
+          },
+          {
+            "coord": "I27",
+            "value": null
+          },
+          {
+            "coord": "J27",
+            "value": null
+          },
+          {
+            "coord": "K27",
+            "value": null
+          },
+          {
+            "coord": "L27",
+            "value": null
+          },
+          {
+            "coord": "M27",
+            "value": null
+          },
+          {
+            "coord": "N27",
+            "value": null
+          },
+          {
+            "coord": "O27",
+            "value": null
+          },
+          {
+            "coord": "P27",
+            "value": null
+          },
+          {
+            "coord": "Q27",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A28",
+            "value": "ПЖ"
+          },
+          {
+            "coord": "B28",
+            "value": null
+          },
+          {
+            "coord": "C28",
+            "value": "мм"
+          },
+          {
+            "coord": "D28",
+            "value": null
+          },
+          {
+            "coord": "E28",
+            "value": "ПЖ/ЛЖ"
+          },
+          {
+            "coord": "F28",
+            "value": null
+          },
+          {
+            "coord": "G28",
+            "value": "=B28/B19*100"
+          },
+          {
+            "coord": "H28",
+            "value": "%"
+          },
+          {
+            "coord": "I28",
+            "value": null
+          },
+          {
+            "coord": "J28",
+            "value": null
+          },
+          {
+            "coord": "K28",
+            "value": null
+          },
+          {
+            "coord": "L28",
+            "value": null
+          },
+          {
+            "coord": "M28",
+            "value": null
+          },
+          {
+            "coord": "N28",
+            "value": null
+          },
+          {
+            "coord": "O28",
+            "value": null
+          },
+          {
+            "coord": "P28",
+            "value": null
+          },
+          {
+            "coord": "Q28",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A29",
+            "value": "СПЖд"
+          },
+          {
+            "coord": "B29",
+            "value": null
+          },
+          {
+            "coord": "C29",
+            "value": "мм"
+          },
+          {
+            "coord": "D29",
+            "value": null
+          },
+          {
+            "coord": "E29",
+            "value": "СПЖ/ЗСЛЖ"
+          },
+          {
+            "coord": "F29",
+            "value": null
+          },
+          {
+            "coord": "G29",
+            "value": "=B29/B20*100"
+          },
+          {
+            "coord": "H29",
+            "value": "%"
+          },
+          {
+            "coord": "I29",
+            "value": null
+          },
+          {
+            "coord": "J29",
+            "value": null
+          },
+          {
+            "coord": "K29",
+            "value": null
+          },
+          {
+            "coord": "L29",
+            "value": null
+          },
+          {
+            "coord": "M29",
+            "value": null
+          },
+          {
+            "coord": "N29",
+            "value": null
+          },
+          {
+            "coord": "O29",
+            "value": null
+          },
+          {
+            "coord": "P29",
+            "value": null
+          },
+          {
+            "coord": "Q29",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A30",
+            "value": "TAPSE"
+          },
+          {
+            "coord": "B30",
+            "value": null
+          },
+          {
+            "coord": "C30",
+            "value": "мм"
+          },
+          {
+            "coord": "D30",
+            "value": null
+          },
+          {
+            "coord": "E30",
+            "value": "TAPSEн"
+          },
+          {
+            "coord": "F30",
+            "value": null
+          },
+          {
+            "coord": "G30",
+            "value": "=B30/B8^0.294"
+          },
+          {
+            "coord": "H30",
+            "value": null
+          },
+          {
+            "coord": "I30",
+            "value": null
+          },
+          {
+            "coord": "J30",
+            "value": null
+          },
+          {
+            "coord": "K30",
+            "value": null
+          },
+          {
+            "coord": "L30",
+            "value": null
+          },
+          {
+            "coord": "M30",
+            "value": null
+          },
+          {
+            "coord": "N30",
+            "value": null
+          },
+          {
+            "coord": "O30",
+            "value": null
+          },
+          {
+            "coord": "P30",
+            "value": null
+          },
+          {
+            "coord": "Q30",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A31",
+            "value": "S'"
+          },
+          {
+            "coord": "B31",
+            "value": null
+          },
+          {
+            "coord": "C31",
+            "value": "см/сек"
+          },
+          {
+            "coord": "D31",
+            "value": null
+          },
+          {
+            "coord": "E31",
+            "value": "TAPSE/Ao"
+          },
+          {
+            "coord": "F31",
+            "value": null
+          },
+          {
+            "coord": "G31",
+            "value": "=B30/B12"
+          },
+          {
+            "coord": "H31",
+            "value": null
+          },
+          {
+            "coord": "I31",
+            "value": null
+          },
+          {
+            "coord": "J31",
+            "value": null
+          },
+          {
+            "coord": "K31",
+            "value": null
+          },
+          {
+            "coord": "L31",
+            "value": null
+          },
+          {
+            "coord": "M31",
+            "value": null
+          },
+          {
+            "coord": "N31",
+            "value": null
+          },
+          {
+            "coord": "O31",
+            "value": null
+          },
+          {
+            "coord": "P31",
+            "value": null
+          },
+          {
+            "coord": "Q31",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A32",
+            "value": "МИТРАЛЬНЫЙ КЛАПАН"
+          },
+          {
+            "coord": "B32",
+            "value": null
+          },
+          {
+            "coord": "C32",
+            "value": null
+          },
+          {
+            "coord": "D32",
+            "value": null
+          },
+          {
+            "coord": "E32",
+            "value": null
+          },
+          {
+            "coord": "F32",
+            "value": null
+          },
+          {
+            "coord": "G32",
+            "value": null
+          },
+          {
+            "coord": "H32",
+            "value": null
+          },
+          {
+            "coord": "I32",
+            "value": null
+          },
+          {
+            "coord": "J32",
+            "value": null
+          },
+          {
+            "coord": "K32",
+            "value": null
+          },
+          {
+            "coord": "L32",
+            "value": null
+          },
+          {
+            "coord": "M32",
+            "value": null
+          },
+          {
+            "coord": "N32",
+            "value": null
+          },
+          {
+            "coord": "O32",
+            "value": null
+          },
+          {
+            "coord": "P32",
+            "value": null
+          },
+          {
+            "coord": "Q32",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A33",
+            "value": "Створки"
+          },
+          {
+            "coord": "B33",
+            "value": "не изменены"
+          },
+          {
+            "coord": "C33",
+            "value": null
+          },
+          {
+            "coord": "D33",
+            "value": null
+          },
+          {
+            "coord": "E33",
+            "value": null
+          },
+          {
+            "coord": "F33",
+            "value": null
+          },
+          {
+            "coord": "G33",
+            "value": null
+          },
+          {
+            "coord": "H33",
+            "value": null
+          },
+          {
+            "coord": "I33",
+            "value": null
+          },
+          {
+            "coord": "J33",
+            "value": null
+          },
+          {
+            "coord": "K33",
+            "value": null
+          },
+          {
+            "coord": "L33",
+            "value": null
+          },
+          {
+            "coord": "M33",
+            "value": null
+          },
+          {
+            "coord": "N33",
+            "value": null
+          },
+          {
+            "coord": "O33",
+            "value": null
+          },
+          {
+            "coord": "P33",
+            "value": null
+          },
+          {
+            "coord": "Q33",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A34",
+            "value": "Е"
+          },
+          {
+            "coord": "B34",
+            "value": null
+          },
+          {
+            "coord": "C34",
+            "value": "м/c"
+          },
+          {
+            "coord": "D34",
+            "value": null
+          },
+          {
+            "coord": "E34",
+            "value": "E/A"
+          },
+          {
+            "coord": "F34",
+            "value": null
+          },
+          {
+            "coord": "G34",
+            "value": "=B34/B35"
+          },
+          {
+            "coord": "H34",
+            "value": null
+          },
+          {
+            "coord": "I34",
+            "value": null
+          },
+          {
+            "coord": "J34",
+            "value": null
+          },
+          {
+            "coord": "K34",
+            "value": null
+          },
+          {
+            "coord": "L34",
+            "value": null
+          },
+          {
+            "coord": "M34",
+            "value": null
+          },
+          {
+            "coord": "N34",
+            "value": null
+          },
+          {
+            "coord": "O34",
+            "value": null
+          },
+          {
+            "coord": "P34",
+            "value": null
+          },
+          {
+            "coord": "Q34",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A35",
+            "value": "А"
+          },
+          {
+            "coord": "B35",
+            "value": null
+          },
+          {
+            "coord": "C35",
+            "value": "м/c"
+          },
+          {
+            "coord": "D35",
+            "value": null
+          },
+          {
+            "coord": "E35",
+            "value": null
+          },
+          {
+            "coord": "F35",
+            "value": null
+          },
+          {
+            "coord": "G35",
+            "value": null
+          },
+          {
+            "coord": "H35",
+            "value": null
+          },
+          {
+            "coord": "I35",
+            "value": null
+          },
+          {
+            "coord": "J35",
+            "value": null
+          },
+          {
+            "coord": "K35",
+            "value": null
+          },
+          {
+            "coord": "L35",
+            "value": null
+          },
+          {
+            "coord": "M35",
+            "value": null
+          },
+          {
+            "coord": "N35",
+            "value": null
+          },
+          {
+            "coord": "O35",
+            "value": null
+          },
+          {
+            "coord": "P35",
+            "value": null
+          },
+          {
+            "coord": "Q35",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A36",
+            "value": "Характер потока"
+          },
+          {
+            "coord": "B36",
+            "value": "ламинарный/ турбулентный"
+          },
+          {
+            "coord": "C36",
+            "value": null
+          },
+          {
+            "coord": "D36",
+            "value": null
+          },
+          {
+            "coord": "E36",
+            "value": "SAM"
+          },
+          {
+            "coord": "F36",
+            "value": null
+          },
+          {
+            "coord": "G36",
+            "value": "нет"
+          },
+          {
+            "coord": "H36",
+            "value": null
+          },
+          {
+            "coord": "I36",
+            "value": null
+          },
+          {
+            "coord": "J36",
+            "value": null
+          },
+          {
+            "coord": "K36",
+            "value": null
+          },
+          {
+            "coord": "L36",
+            "value": null
+          },
+          {
+            "coord": "M36",
+            "value": null
+          },
+          {
+            "coord": "N36",
+            "value": null
+          },
+          {
+            "coord": "O36",
+            "value": null
+          },
+          {
+            "coord": "P36",
+            "value": null
+          },
+          {
+            "coord": "Q36",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A37",
+            "value": "IVRT"
+          },
+          {
+            "coord": "B37",
+            "value": null
+          },
+          {
+            "coord": "C37",
+            "value": "мс"
+          },
+          {
+            "coord": "D37",
+            "value": null
+          },
+          {
+            "coord": "E37",
+            "value": "E/IVRT"
+          },
+          {
+            "coord": "F37",
+            "value": null
+          },
+          {
+            "coord": "G37",
+            "value": "=B34/(B37/100)"
+          },
+          {
+            "coord": "H37",
+            "value": null
+          },
+          {
+            "coord": "I37",
+            "value": null
+          },
+          {
+            "coord": "J37",
+            "value": null
+          },
+          {
+            "coord": "K37",
+            "value": null
+          },
+          {
+            "coord": "L37",
+            "value": null
+          },
+          {
+            "coord": "M37",
+            "value": null
+          },
+          {
+            "coord": "N37",
+            "value": null
+          },
+          {
+            "coord": "O37",
+            "value": null
+          },
+          {
+            "coord": "P37",
+            "value": null
+          },
+          {
+            "coord": "Q37",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A38",
+            "value": "E'"
+          },
+          {
+            "coord": "B38",
+            "value": null
+          },
+          {
+            "coord": "C38",
+            "value": "cм/с"
+          },
+          {
+            "coord": "D38",
+            "value": null
+          },
+          {
+            "coord": "E38",
+            "value": "E/E'"
+          },
+          {
+            "coord": "F38",
+            "value": null
+          },
+          {
+            "coord": "G38",
+            "value": "=B34*100/B38"
+          },
+          {
+            "coord": "H38",
+            "value": null
+          },
+          {
+            "coord": "I38",
+            "value": null
+          },
+          {
+            "coord": "J38",
+            "value": null
+          },
+          {
+            "coord": "K38",
+            "value": null
+          },
+          {
+            "coord": "L38",
+            "value": null
+          },
+          {
+            "coord": "M38",
+            "value": null
+          },
+          {
+            "coord": "N38",
+            "value": null
+          },
+          {
+            "coord": "O38",
+            "value": null
+          },
+          {
+            "coord": "P38",
+            "value": null
+          },
+          {
+            "coord": "Q38",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A39",
+            "value": "А'"
+          },
+          {
+            "coord": "B39",
+            "value": null
+          },
+          {
+            "coord": "C39",
+            "value": "cм/с"
+          },
+          {
+            "coord": "D39",
+            "value": null
+          },
+          {
+            "coord": "E39",
+            "value": null
+          },
+          {
+            "coord": "F39",
+            "value": null
+          },
+          {
+            "coord": "G39",
+            "value": null
+          },
+          {
+            "coord": "H39",
+            "value": null
+          },
+          {
+            "coord": "I39",
+            "value": null
+          },
+          {
+            "coord": "J39",
+            "value": null
+          },
+          {
+            "coord": "K39",
+            "value": null
+          },
+          {
+            "coord": "L39",
+            "value": null
+          },
+          {
+            "coord": "M39",
+            "value": null
+          },
+          {
+            "coord": "N39",
+            "value": null
+          },
+          {
+            "coord": "O39",
+            "value": null
+          },
+          {
+            "coord": "P39",
+            "value": null
+          },
+          {
+            "coord": "Q39",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A40",
+            "value": "Регургитация"
+          },
+          {
+            "coord": "B40",
+            "value": null
+          },
+          {
+            "coord": "C40",
+            "value": null
+          },
+          {
+            "coord": "D40",
+            "value": null
+          },
+          {
+            "coord": "E40",
+            "value": null
+          },
+          {
+            "coord": "F40",
+            "value": null
+          },
+          {
+            "coord": "G40",
+            "value": null
+          },
+          {
+            "coord": "H40",
+            "value": null
+          },
+          {
+            "coord": "I40",
+            "value": null
+          },
+          {
+            "coord": "J40",
+            "value": null
+          },
+          {
+            "coord": "K40",
+            "value": null
+          },
+          {
+            "coord": "L40",
+            "value": null
+          },
+          {
+            "coord": "M40",
+            "value": null
+          },
+          {
+            "coord": "N40",
+            "value": null
+          },
+          {
+            "coord": "O40",
+            "value": null
+          },
+          {
+            "coord": "P40",
+            "value": null
+          },
+          {
+            "coord": "Q40",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A41",
+            "value": "Степень"
+          },
+          {
+            "coord": "B41",
+            "value": "0"
+          },
+          {
+            "coord": "C41",
+            "value": null
+          },
+          {
+            "coord": "D41",
+            "value": null
+          },
+          {
+            "coord": "E41",
+            "value": null
+          },
+          {
+            "coord": "F41",
+            "value": null
+          },
+          {
+            "coord": "G41",
+            "value": null
+          },
+          {
+            "coord": "H41",
+            "value": null
+          },
+          {
+            "coord": "I41",
+            "value": null
+          },
+          {
+            "coord": "J41",
+            "value": null
+          },
+          {
+            "coord": "K41",
+            "value": null
+          },
+          {
+            "coord": "L41",
+            "value": null
+          },
+          {
+            "coord": "M41",
+            "value": null
+          },
+          {
+            "coord": "N41",
+            "value": null
+          },
+          {
+            "coord": "O41",
+            "value": null
+          },
+          {
+            "coord": "P41",
+            "value": null
+          },
+          {
+            "coord": "Q41",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A42",
+            "value": "Скорость"
+          },
+          {
+            "coord": "B42",
+            "value": null
+          },
+          {
+            "coord": "C42",
+            "value": "м/с"
+          },
+          {
+            "coord": "D42",
+            "value": null
+          },
+          {
+            "coord": "E42",
+            "value": "Градиент"
+          },
+          {
+            "coord": "F42",
+            "value": null
+          },
+          {
+            "coord": "G42",
+            "value": "=4*(B42^2)"
+          },
+          {
+            "coord": "H42",
+            "value": "мм рт ст"
+          },
+          {
+            "coord": "I42",
+            "value": null
+          },
+          {
+            "coord": "J42",
+            "value": null
+          },
+          {
+            "coord": "K42",
+            "value": null
+          },
+          {
+            "coord": "L42",
+            "value": null
+          },
+          {
+            "coord": "M42",
+            "value": null
+          },
+          {
+            "coord": "N42",
+            "value": null
+          },
+          {
+            "coord": "O42",
+            "value": null
+          },
+          {
+            "coord": "P42",
+            "value": null
+          },
+          {
+            "coord": "Q42",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A43",
+            "value": "АОРТА"
+          },
+          {
+            "coord": "B43",
+            "value": null
+          },
+          {
+            "coord": "C43",
+            "value": null
+          },
+          {
+            "coord": "D43",
+            "value": null
+          },
+          {
+            "coord": "E43",
+            "value": null
+          },
+          {
+            "coord": "F43",
+            "value": null
+          },
+          {
+            "coord": "G43",
+            "value": null
+          },
+          {
+            "coord": "H43",
+            "value": null
+          },
+          {
+            "coord": "I43",
+            "value": null
+          },
+          {
+            "coord": "J43",
+            "value": null
+          },
+          {
+            "coord": "K43",
+            "value": null
+          },
+          {
+            "coord": "L43",
+            "value": null
+          },
+          {
+            "coord": "M43",
+            "value": null
+          },
+          {
+            "coord": "N43",
+            "value": null
+          },
+          {
+            "coord": "O43",
+            "value": null
+          },
+          {
+            "coord": "P43",
+            "value": null
+          },
+          {
+            "coord": "Q43",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A44",
+            "value": "Створки"
+          },
+          {
+            "coord": "B44",
+            "value": "не изменены"
+          },
+          {
+            "coord": "C44",
+            "value": null
+          },
+          {
+            "coord": "D44",
+            "value": null
+          },
+          {
+            "coord": "E44",
+            "value": "Стеноз"
+          },
+          {
+            "coord": "F44",
+            "value": null
+          },
+          {
+            "coord": "G44",
+            "value": "нет"
+          },
+          {
+            "coord": "H44",
+            "value": "ВТЛЖ"
+          },
+          {
+            "coord": "I44",
+            "value": "без особенностей"
+          },
+          {
+            "coord": "J44",
+            "value": null
+          },
+          {
+            "coord": "K44",
+            "value": null
+          },
+          {
+            "coord": "L44",
+            "value": null
+          },
+          {
+            "coord": "M44",
+            "value": null
+          },
+          {
+            "coord": "N44",
+            "value": null
+          },
+          {
+            "coord": "O44",
+            "value": null
+          },
+          {
+            "coord": "P44",
+            "value": null
+          },
+          {
+            "coord": "Q44",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A45",
+            "value": "Фиброзное кольцо"
+          },
+          {
+            "coord": "B45",
+            "value": "=B12"
+          },
+          {
+            "coord": "C45",
+            "value": "мм"
+          },
+          {
+            "coord": "D45",
+            "value": null
+          },
+          {
+            "coord": "E45",
+            "value": null
+          },
+          {
+            "coord": "F45",
+            "value": null
+          },
+          {
+            "coord": "G45",
+            "value": null
+          },
+          {
+            "coord": "H45",
+            "value": null
+          },
+          {
+            "coord": "I45",
+            "value": null
+          },
+          {
+            "coord": "J45",
+            "value": null
+          },
+          {
+            "coord": "K45",
+            "value": null
+          },
+          {
+            "coord": "L45",
+            "value": null
+          },
+          {
+            "coord": "M45",
+            "value": null
+          },
+          {
+            "coord": "N45",
+            "value": null
+          },
+          {
+            "coord": "O45",
+            "value": null
+          },
+          {
+            "coord": "P45",
+            "value": null
+          },
+          {
+            "coord": "Q45",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A46",
+            "value": "Скорость потока"
+          },
+          {
+            "coord": "B46",
+            "value": null
+          },
+          {
+            "coord": "C46",
+            "value": "м/с"
+          },
+          {
+            "coord": "D46",
+            "value": null
+          },
+          {
+            "coord": "E46",
+            "value": "Градиент"
+          },
+          {
+            "coord": "F46",
+            "value": null
+          },
+          {
+            "coord": "G46",
+            "value": "=4*(B46^2)"
+          },
+          {
+            "coord": "H46",
+            "value": "мм рт ст"
+          },
+          {
+            "coord": "I46",
+            "value": null
+          },
+          {
+            "coord": "J46",
+            "value": null
+          },
+          {
+            "coord": "K46",
+            "value": null
+          },
+          {
+            "coord": "L46",
+            "value": null
+          },
+          {
+            "coord": "M46",
+            "value": null
+          },
+          {
+            "coord": "N46",
+            "value": null
+          },
+          {
+            "coord": "O46",
+            "value": null
+          },
+          {
+            "coord": "P46",
+            "value": null
+          },
+          {
+            "coord": "Q46",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A47",
+            "value": "Характер потока"
+          },
+          {
+            "coord": "B47",
+            "value": "ламинарный/турбулентный"
+          },
+          {
+            "coord": "C47",
+            "value": null
+          },
+          {
+            "coord": "D47",
+            "value": null
+          },
+          {
+            "coord": "E47",
+            "value": null
+          },
+          {
+            "coord": "F47",
+            "value": null
+          },
+          {
+            "coord": "G47",
+            "value": null
+          },
+          {
+            "coord": "H47",
+            "value": null
+          },
+          {
+            "coord": "I47",
+            "value": null
+          },
+          {
+            "coord": "J47",
+            "value": null
+          },
+          {
+            "coord": "K47",
+            "value": null
+          },
+          {
+            "coord": "L47",
+            "value": null
+          },
+          {
+            "coord": "M47",
+            "value": null
+          },
+          {
+            "coord": "N47",
+            "value": null
+          },
+          {
+            "coord": "O47",
+            "value": null
+          },
+          {
+            "coord": "P47",
+            "value": null
+          },
+          {
+            "coord": "Q47",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A48",
+            "value": "Регургитация"
+          },
+          {
+            "coord": "B48",
+            "value": null
+          },
+          {
+            "coord": "C48",
+            "value": null
+          },
+          {
+            "coord": "D48",
+            "value": null
+          },
+          {
+            "coord": "E48",
+            "value": null
+          },
+          {
+            "coord": "F48",
+            "value": null
+          },
+          {
+            "coord": "G48",
+            "value": null
+          },
+          {
+            "coord": "H48",
+            "value": null
+          },
+          {
+            "coord": "I48",
+            "value": null
+          },
+          {
+            "coord": "J48",
+            "value": null
+          },
+          {
+            "coord": "K48",
+            "value": null
+          },
+          {
+            "coord": "L48",
+            "value": null
+          },
+          {
+            "coord": "M48",
+            "value": null
+          },
+          {
+            "coord": "N48",
+            "value": null
+          },
+          {
+            "coord": "O48",
+            "value": null
+          },
+          {
+            "coord": "P48",
+            "value": null
+          },
+          {
+            "coord": "Q48",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A49",
+            "value": "Степень"
+          },
+          {
+            "coord": "B49",
+            "value": "0"
+          },
+          {
+            "coord": "C49",
+            "value": null
+          },
+          {
+            "coord": "D49",
+            "value": null
+          },
+          {
+            "coord": "E49",
+            "value": null
+          },
+          {
+            "coord": "F49",
+            "value": null
+          },
+          {
+            "coord": "G49",
+            "value": null
+          },
+          {
+            "coord": "H49",
+            "value": null
+          },
+          {
+            "coord": "I49",
+            "value": null
+          },
+          {
+            "coord": "J49",
+            "value": null
+          },
+          {
+            "coord": "K49",
+            "value": null
+          },
+          {
+            "coord": "L49",
+            "value": null
+          },
+          {
+            "coord": "M49",
+            "value": null
+          },
+          {
+            "coord": "N49",
+            "value": null
+          },
+          {
+            "coord": "O49",
+            "value": null
+          },
+          {
+            "coord": "P49",
+            "value": null
+          },
+          {
+            "coord": "Q49",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A50",
+            "value": "Скорость"
+          },
+          {
+            "coord": "B50",
+            "value": null
+          },
+          {
+            "coord": "C50",
+            "value": "м/с"
+          },
+          {
+            "coord": "D50",
+            "value": null
+          },
+          {
+            "coord": "E50",
+            "value": "Градиент"
+          },
+          {
+            "coord": "F50",
+            "value": null
+          },
+          {
+            "coord": "G50",
+            "value": "=4*(B50^2)"
+          },
+          {
+            "coord": "H50",
+            "value": "мм рт ст"
+          },
+          {
+            "coord": "I50",
+            "value": null
+          },
+          {
+            "coord": "J50",
+            "value": null
+          },
+          {
+            "coord": "K50",
+            "value": null
+          },
+          {
+            "coord": "L50",
+            "value": null
+          },
+          {
+            "coord": "M50",
+            "value": null
+          },
+          {
+            "coord": "N50",
+            "value": null
+          },
+          {
+            "coord": "O50",
+            "value": null
+          },
+          {
+            "coord": "P50",
+            "value": null
+          },
+          {
+            "coord": "Q50",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A51",
+            "value": "ЛЁГОЧНАЯ АРТЕРИЯ"
+          },
+          {
+            "coord": "B51",
+            "value": null
+          },
+          {
+            "coord": "C51",
+            "value": null
+          },
+          {
+            "coord": "D51",
+            "value": null
+          },
+          {
+            "coord": "E51",
+            "value": null
+          },
+          {
+            "coord": "F51",
+            "value": null
+          },
+          {
+            "coord": "G51",
+            "value": null
+          },
+          {
+            "coord": "H51",
+            "value": null
+          },
+          {
+            "coord": "I51",
+            "value": null
+          },
+          {
+            "coord": "J51",
+            "value": null
+          },
+          {
+            "coord": "K51",
+            "value": null
+          },
+          {
+            "coord": "L51",
+            "value": null
+          },
+          {
+            "coord": "M51",
+            "value": null
+          },
+          {
+            "coord": "N51",
+            "value": null
+          },
+          {
+            "coord": "O51",
+            "value": null
+          },
+          {
+            "coord": "P51",
+            "value": null
+          },
+          {
+            "coord": "Q51",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A52",
+            "value": "Створки"
+          },
+          {
+            "coord": "B52",
+            "value": "не изменены"
+          },
+          {
+            "coord": "C52",
+            "value": null
+          },
+          {
+            "coord": "D52",
+            "value": null
+          },
+          {
+            "coord": "E52",
+            "value": "Стеноз"
+          },
+          {
+            "coord": "F52",
+            "value": null
+          },
+          {
+            "coord": "G52",
+            "value": "нет"
+          },
+          {
+            "coord": "H52",
+            "value": "ВТПЖ"
+          },
+          {
+            "coord": "I52",
+            "value": "без особенностей"
+          },
+          {
+            "coord": "J52",
+            "value": null
+          },
+          {
+            "coord": "K52",
+            "value": null
+          },
+          {
+            "coord": "L52",
+            "value": null
+          },
+          {
+            "coord": "M52",
+            "value": null
+          },
+          {
+            "coord": "N52",
+            "value": null
+          },
+          {
+            "coord": "O52",
+            "value": null
+          },
+          {
+            "coord": "P52",
+            "value": null
+          },
+          {
+            "coord": "Q52",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A53",
+            "value": "Фиброзное кольцо"
+          },
+          {
+            "coord": "B53",
+            "value": null
+          },
+          {
+            "coord": "C53",
+            "value": "мм"
+          },
+          {
+            "coord": "D53",
+            "value": null
+          },
+          {
+            "coord": "E53",
+            "value": "Ствол ЛА"
+          },
+          {
+            "coord": "F53",
+            "value": null
+          },
+          {
+            "coord": "G53",
+            "value": null
+          },
+          {
+            "coord": "H53",
+            "value": "мм"
+          },
+          {
+            "coord": "I53",
+            "value": "Ао/ЛА"
+          },
+          {
+            "coord": "J53",
+            "value": "=B45/B53"
+          },
+          {
+            "coord": "K53",
+            "value": null
+          },
+          {
+            "coord": "L53",
+            "value": null
+          },
+          {
+            "coord": "M53",
+            "value": null
+          },
+          {
+            "coord": "N53",
+            "value": null
+          },
+          {
+            "coord": "O53",
+            "value": null
+          },
+          {
+            "coord": "P53",
+            "value": null
+          },
+          {
+            "coord": "Q53",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A54",
+            "value": "Скорость потока"
+          },
+          {
+            "coord": "B54",
+            "value": null
+          },
+          {
+            "coord": "C54",
+            "value": "м/с"
+          },
+          {
+            "coord": "D54",
+            "value": null
+          },
+          {
+            "coord": "E54",
+            "value": "Градиент"
+          },
+          {
+            "coord": "F54",
+            "value": null
+          },
+          {
+            "coord": "G54",
+            "value": "=4*(B54^2)"
+          },
+          {
+            "coord": "H54",
+            "value": "мм рт ст"
+          },
+          {
+            "coord": "I54",
+            "value": null
+          },
+          {
+            "coord": "J54",
+            "value": null
+          },
+          {
+            "coord": "K54",
+            "value": null
+          },
+          {
+            "coord": "L54",
+            "value": null
+          },
+          {
+            "coord": "M54",
+            "value": null
+          },
+          {
+            "coord": "N54",
+            "value": null
+          },
+          {
+            "coord": "O54",
+            "value": null
+          },
+          {
+            "coord": "P54",
+            "value": null
+          },
+          {
+            "coord": "Q54",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A55",
+            "value": "Характер потока"
+          },
+          {
+            "coord": "B55",
+            "value": "ламинарный/турбулентный"
+          },
+          {
+            "coord": "C55",
+            "value": null
+          },
+          {
+            "coord": "D55",
+            "value": null
+          },
+          {
+            "coord": "E55",
+            "value": null
+          },
+          {
+            "coord": "F55",
+            "value": null
+          },
+          {
+            "coord": "G55",
+            "value": null
+          },
+          {
+            "coord": "H55",
+            "value": null
+          },
+          {
+            "coord": "I55",
+            "value": null
+          },
+          {
+            "coord": "J55",
+            "value": null
+          },
+          {
+            "coord": "K55",
+            "value": null
+          },
+          {
+            "coord": "L55",
+            "value": null
+          },
+          {
+            "coord": "M55",
+            "value": null
+          },
+          {
+            "coord": "N55",
+            "value": null
+          },
+          {
+            "coord": "O55",
+            "value": null
+          },
+          {
+            "coord": "P55",
+            "value": null
+          },
+          {
+            "coord": "Q55",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A56",
+            "value": "Регургитация"
+          },
+          {
+            "coord": "B56",
+            "value": null
+          },
+          {
+            "coord": "C56",
+            "value": null
+          },
+          {
+            "coord": "D56",
+            "value": null
+          },
+          {
+            "coord": "E56",
+            "value": null
+          },
+          {
+            "coord": "F56",
+            "value": null
+          },
+          {
+            "coord": "G56",
+            "value": null
+          },
+          {
+            "coord": "H56",
+            "value": null
+          },
+          {
+            "coord": "I56",
+            "value": null
+          },
+          {
+            "coord": "J56",
+            "value": null
+          },
+          {
+            "coord": "K56",
+            "value": null
+          },
+          {
+            "coord": "L56",
+            "value": null
+          },
+          {
+            "coord": "M56",
+            "value": null
+          },
+          {
+            "coord": "N56",
+            "value": null
+          },
+          {
+            "coord": "O56",
+            "value": null
+          },
+          {
+            "coord": "P56",
+            "value": null
+          },
+          {
+            "coord": "Q56",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A57",
+            "value": "Степень"
+          },
+          {
+            "coord": "B57",
+            "value": "0"
+          },
+          {
+            "coord": "C57",
+            "value": null
+          },
+          {
+            "coord": "D57",
+            "value": null
+          },
+          {
+            "coord": "E57",
+            "value": null
+          },
+          {
+            "coord": "F57",
+            "value": null
+          },
+          {
+            "coord": "G57",
+            "value": null
+          },
+          {
+            "coord": "H57",
+            "value": null
+          },
+          {
+            "coord": "I57",
+            "value": null
+          },
+          {
+            "coord": "J57",
+            "value": null
+          },
+          {
+            "coord": "K57",
+            "value": null
+          },
+          {
+            "coord": "L57",
+            "value": null
+          },
+          {
+            "coord": "M57",
+            "value": null
+          },
+          {
+            "coord": "N57",
+            "value": null
+          },
+          {
+            "coord": "O57",
+            "value": null
+          },
+          {
+            "coord": "P57",
+            "value": null
+          },
+          {
+            "coord": "Q57",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A58",
+            "value": "Скорость"
+          },
+          {
+            "coord": "B58",
+            "value": null
+          },
+          {
+            "coord": "C58",
+            "value": "м/с"
+          },
+          {
+            "coord": "D58",
+            "value": null
+          },
+          {
+            "coord": "E58",
+            "value": "Градиент"
+          },
+          {
+            "coord": "F58",
+            "value": null
+          },
+          {
+            "coord": "G58",
+            "value": "=4*(B58^2)"
+          },
+          {
+            "coord": "H58",
+            "value": "мм рт ст"
+          },
+          {
+            "coord": "I58",
+            "value": null
+          },
+          {
+            "coord": "J58",
+            "value": null
+          },
+          {
+            "coord": "K58",
+            "value": null
+          },
+          {
+            "coord": "L58",
+            "value": null
+          },
+          {
+            "coord": "M58",
+            "value": null
+          },
+          {
+            "coord": "N58",
+            "value": null
+          },
+          {
+            "coord": "O58",
+            "value": null
+          },
+          {
+            "coord": "P58",
+            "value": null
+          },
+          {
+            "coord": "Q58",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A59",
+            "value": "ТРИКУСПИДАЛЬНЫЙ КЛАПАН"
+          },
+          {
+            "coord": "B59",
+            "value": null
+          },
+          {
+            "coord": "C59",
+            "value": null
+          },
+          {
+            "coord": "D59",
+            "value": null
+          },
+          {
+            "coord": "E59",
+            "value": null
+          },
+          {
+            "coord": "F59",
+            "value": null
+          },
+          {
+            "coord": "G59",
+            "value": null
+          },
+          {
+            "coord": "H59",
+            "value": null
+          },
+          {
+            "coord": "I59",
+            "value": null
+          },
+          {
+            "coord": "J59",
+            "value": null
+          },
+          {
+            "coord": "K59",
+            "value": null
+          },
+          {
+            "coord": "L59",
+            "value": null
+          },
+          {
+            "coord": "M59",
+            "value": null
+          },
+          {
+            "coord": "N59",
+            "value": null
+          },
+          {
+            "coord": "O59",
+            "value": null
+          },
+          {
+            "coord": "P59",
+            "value": null
+          },
+          {
+            "coord": "Q59",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A60",
+            "value": "Створки"
+          },
+          {
+            "coord": "B60",
+            "value": "не изменены"
+          },
+          {
+            "coord": "C60",
+            "value": null
+          },
+          {
+            "coord": "D60",
+            "value": null
+          },
+          {
+            "coord": "E60",
+            "value": null
+          },
+          {
+            "coord": "F60",
+            "value": null
+          },
+          {
+            "coord": "G60",
+            "value": null
+          },
+          {
+            "coord": "H60",
+            "value": null
+          },
+          {
+            "coord": "I60",
+            "value": null
+          },
+          {
+            "coord": "J60",
+            "value": null
+          },
+          {
+            "coord": "K60",
+            "value": null
+          },
+          {
+            "coord": "L60",
+            "value": null
+          },
+          {
+            "coord": "M60",
+            "value": null
+          },
+          {
+            "coord": "N60",
+            "value": null
+          },
+          {
+            "coord": "O60",
+            "value": null
+          },
+          {
+            "coord": "P60",
+            "value": null
+          },
+          {
+            "coord": "Q60",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A61",
+            "value": "Характер потока"
+          },
+          {
+            "coord": "B61",
+            "value": "ламинарный/турбулентный"
+          },
+          {
+            "coord": "C61",
+            "value": null
+          },
+          {
+            "coord": "D61",
+            "value": null
+          },
+          {
+            "coord": "E61",
+            "value": null
+          },
+          {
+            "coord": "F61",
+            "value": null
+          },
+          {
+            "coord": "G61",
+            "value": null
+          },
+          {
+            "coord": "H61",
+            "value": null
+          },
+          {
+            "coord": "I61",
+            "value": null
+          },
+          {
+            "coord": "J61",
+            "value": null
+          },
+          {
+            "coord": "K61",
+            "value": null
+          },
+          {
+            "coord": "L61",
+            "value": null
+          },
+          {
+            "coord": "M61",
+            "value": null
+          },
+          {
+            "coord": "N61",
+            "value": null
+          },
+          {
+            "coord": "O61",
+            "value": null
+          },
+          {
+            "coord": "P61",
+            "value": null
+          },
+          {
+            "coord": "Q61",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A62",
+            "value": "Регургитация (ТКР)"
+          },
+          {
+            "coord": "B62",
+            "value": null
+          },
+          {
+            "coord": "C62",
+            "value": null
+          },
+          {
+            "coord": "D62",
+            "value": null
+          },
+          {
+            "coord": "E62",
+            "value": null
+          },
+          {
+            "coord": "F62",
+            "value": null
+          },
+          {
+            "coord": "G62",
+            "value": null
+          },
+          {
+            "coord": "H62",
+            "value": null
+          },
+          {
+            "coord": "I62",
+            "value": null
+          },
+          {
+            "coord": "J62",
+            "value": null
+          },
+          {
+            "coord": "K62",
+            "value": null
+          },
+          {
+            "coord": "L62",
+            "value": null
+          },
+          {
+            "coord": "M62",
+            "value": null
+          },
+          {
+            "coord": "N62",
+            "value": null
+          },
+          {
+            "coord": "O62",
+            "value": null
+          },
+          {
+            "coord": "P62",
+            "value": null
+          },
+          {
+            "coord": "Q62",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A63",
+            "value": "Степень "
+          },
+          {
+            "coord": "B63",
+            "value": "0"
+          },
+          {
+            "coord": "C63",
+            "value": null
+          },
+          {
+            "coord": "D63",
+            "value": null
+          },
+          {
+            "coord": "E63",
+            "value": null
+          },
+          {
+            "coord": "F63",
+            "value": null
+          },
+          {
+            "coord": "G63",
+            "value": null
+          },
+          {
+            "coord": "H63",
+            "value": null
+          },
+          {
+            "coord": "I63",
+            "value": null
+          },
+          {
+            "coord": "J63",
+            "value": null
+          },
+          {
+            "coord": "K63",
+            "value": null
+          },
+          {
+            "coord": "L63",
+            "value": null
+          },
+          {
+            "coord": "M63",
+            "value": null
+          },
+          {
+            "coord": "N63",
+            "value": null
+          },
+          {
+            "coord": "O63",
+            "value": null
+          },
+          {
+            "coord": "P63",
+            "value": null
+          },
+          {
+            "coord": "Q63",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A64",
+            "value": "Скорость"
+          },
+          {
+            "coord": "B64",
+            "value": null
+          },
+          {
+            "coord": "C64",
+            "value": "м/с"
+          },
+          {
+            "coord": "D64",
+            "value": null
+          },
+          {
+            "coord": "E64",
+            "value": "Градиент"
+          },
+          {
+            "coord": "F64",
+            "value": null
+          },
+          {
+            "coord": "G64",
+            "value": "=4*(B64^2)"
+          },
+          {
+            "coord": "H64",
+            "value": "мм рт ст"
+          },
+          {
+            "coord": "I64",
+            "value": null
+          },
+          {
+            "coord": "J64",
+            "value": null
+          },
+          {
+            "coord": "K64",
+            "value": null
+          },
+          {
+            "coord": "L64",
+            "value": null
+          },
+          {
+            "coord": "M64",
+            "value": null
+          },
+          {
+            "coord": "N64",
+            "value": null
+          },
+          {
+            "coord": "O64",
+            "value": null
+          },
+          {
+            "coord": "P64",
+            "value": null
+          },
+          {
+            "coord": "Q64",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A65",
+            "value": "Вероятность лёгочной гипертензии"
+          },
+          {
+            "coord": "B65",
+            "value": null
+          },
+          {
+            "coord": "C65",
+            "value": null
+          },
+          {
+            "coord": "D65",
+            "value": null
+          },
+          {
+            "coord": "E65",
+            "value": null
+          },
+          {
+            "coord": "F65",
+            "value": null
+          },
+          {
+            "coord": "G65",
+            "value": "низкая"
+          },
+          {
+            "coord": "H65",
+            "value": null
+          },
+          {
+            "coord": "I65",
+            "value": null
+          },
+          {
+            "coord": "J65",
+            "value": null
+          },
+          {
+            "coord": "K65",
+            "value": null
+          },
+          {
+            "coord": "L65",
+            "value": null
+          },
+          {
+            "coord": "M65",
+            "value": null
+          },
+          {
+            "coord": "N65",
+            "value": null
+          },
+          {
+            "coord": "O65",
+            "value": null
+          },
+          {
+            "coord": "P65",
+            "value": null
+          },
+          {
+            "coord": "Q65",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A66",
+            "value": "Количество анатомических маркеров"
+          },
+          {
+            "coord": "B66",
+            "value": null
+          },
+          {
+            "coord": "C66",
+            "value": null
+          },
+          {
+            "coord": "D66",
+            "value": null
+          },
+          {
+            "coord": "E66",
+            "value": null
+          },
+          {
+            "coord": "F66",
+            "value": null
+          },
+          {
+            "coord": "G66",
+            "value": "0"
+          },
+          {
+            "coord": "H66",
+            "value": null
+          },
+          {
+            "coord": "I66",
+            "value": null
+          },
+          {
+            "coord": "J66",
+            "value": null
+          },
+          {
+            "coord": "K66",
+            "value": null
+          },
+          {
+            "coord": "L66",
+            "value": null
+          },
+          {
+            "coord": "M66",
+            "value": null
+          },
+          {
+            "coord": "N66",
+            "value": null
+          },
+          {
+            "coord": "O66",
+            "value": null
+          },
+          {
+            "coord": "P66",
+            "value": null
+          },
+          {
+            "coord": "Q66",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A67",
+            "value": "ТКР"
+          },
+          {
+            "coord": "B67",
+            "value": null
+          },
+          {
+            "coord": "C67",
+            "value": null
+          },
+          {
+            "coord": "D67",
+            "value": null
+          },
+          {
+            "coord": "E67",
+            "value": null
+          },
+          {
+            "coord": "F67",
+            "value": null
+          },
+          {
+            "coord": "G67",
+            "value": "=B63"
+          },
+          {
+            "coord": "H67",
+            "value": null
+          },
+          {
+            "coord": "I67",
+            "value": null
+          },
+          {
+            "coord": "J67",
+            "value": null
+          },
+          {
+            "coord": "K67",
+            "value": null
+          },
+          {
+            "coord": "L67",
+            "value": null
+          },
+          {
+            "coord": "M67",
+            "value": null
+          },
+          {
+            "coord": "N67",
+            "value": null
+          },
+          {
+            "coord": "O67",
+            "value": null
+          },
+          {
+            "coord": "P67",
+            "value": null
+          },
+          {
+            "coord": "Q67",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A68",
+            "value": "ПРОЧЕЕ"
+          },
+          {
+            "coord": "B68",
+            "value": null
+          },
+          {
+            "coord": "C68",
+            "value": null
+          },
+          {
+            "coord": "D68",
+            "value": null
+          },
+          {
+            "coord": "E68",
+            "value": null
+          },
+          {
+            "coord": "F68",
+            "value": null
+          },
+          {
+            "coord": "G68",
+            "value": null
+          },
+          {
+            "coord": "H68",
+            "value": null
+          },
+          {
+            "coord": "I68",
+            "value": null
+          },
+          {
+            "coord": "J68",
+            "value": null
+          },
+          {
+            "coord": "K68",
+            "value": null
+          },
+          {
+            "coord": "L68",
+            "value": null
+          },
+          {
+            "coord": "M68",
+            "value": null
+          },
+          {
+            "coord": "N68",
+            "value": null
+          },
+          {
+            "coord": "O68",
+            "value": null
+          },
+          {
+            "coord": "P68",
+            "value": null
+          },
+          {
+            "coord": "Q68",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A69",
+            "value": "Полость перикарда"
+          },
+          {
+            "coord": "B69",
+            "value": null
+          },
+          {
+            "coord": "C69",
+            "value": null
+          },
+          {
+            "coord": "D69",
+            "value": null
+          },
+          {
+            "coord": "E69",
+            "value": null
+          },
+          {
+            "coord": "F69",
+            "value": null
+          },
+          {
+            "coord": "G69",
+            "value": null
+          },
+          {
+            "coord": "H69",
+            "value": "не изменена"
+          },
+          {
+            "coord": "I69",
+            "value": null
+          },
+          {
+            "coord": "J69",
+            "value": null
+          },
+          {
+            "coord": "K69",
+            "value": null
+          },
+          {
+            "coord": "L69",
+            "value": null
+          },
+          {
+            "coord": "M69",
+            "value": null
+          },
+          {
+            "coord": "N69",
+            "value": null
+          },
+          {
+            "coord": "O69",
+            "value": null
+          },
+          {
+            "coord": "P69",
+            "value": null
+          },
+          {
+            "coord": "Q69",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A70",
+            "value": "Зоны гипокинеза/ акинеза"
+          },
+          {
+            "coord": "B70",
+            "value": null
+          },
+          {
+            "coord": "C70",
+            "value": null
+          },
+          {
+            "coord": "D70",
+            "value": null
+          },
+          {
+            "coord": "E70",
+            "value": null
+          },
+          {
+            "coord": "F70",
+            "value": null
+          },
+          {
+            "coord": "G70",
+            "value": null
+          },
+          {
+            "coord": "H70",
+            "value": "не обнаружены"
+          },
+          {
+            "coord": "I70",
+            "value": null
+          },
+          {
+            "coord": "J70",
+            "value": null
+          },
+          {
+            "coord": "K70",
+            "value": null
+          },
+          {
+            "coord": "L70",
+            "value": null
+          },
+          {
+            "coord": "M70",
+            "value": null
+          },
+          {
+            "coord": "N70",
+            "value": null
+          },
+          {
+            "coord": "O70",
+            "value": null
+          },
+          {
+            "coord": "P70",
+            "value": null
+          },
+          {
+            "coord": "Q70",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A71",
+            "value": "Свободная жидкость в грудной полости "
+          },
+          {
+            "coord": "B71",
+            "value": null
+          },
+          {
+            "coord": "C71",
+            "value": null
+          },
+          {
+            "coord": "D71",
+            "value": null
+          },
+          {
+            "coord": "E71",
+            "value": null
+          },
+          {
+            "coord": "F71",
+            "value": null
+          },
+          {
+            "coord": "G71",
+            "value": null
+          },
+          {
+            "coord": "H71",
+            "value": "не выявлена"
+          },
+          {
+            "coord": "I71",
+            "value": null
+          },
+          {
+            "coord": "J71",
+            "value": null
+          },
+          {
+            "coord": "K71",
+            "value": null
+          },
+          {
+            "coord": "L71",
+            "value": null
+          },
+          {
+            "coord": "M71",
+            "value": null
+          },
+          {
+            "coord": "N71",
+            "value": null
+          },
+          {
+            "coord": "O71",
+            "value": null
+          },
+          {
+            "coord": "P71",
+            "value": null
+          },
+          {
+            "coord": "Q71",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A72",
+            "value": "Координация сократительной активности миокарда"
+          },
+          {
+            "coord": "B72",
+            "value": null
+          },
+          {
+            "coord": "C72",
+            "value": null
+          },
+          {
+            "coord": "D72",
+            "value": null
+          },
+          {
+            "coord": "E72",
+            "value": null
+          },
+          {
+            "coord": "F72",
+            "value": null
+          },
+          {
+            "coord": "G72",
+            "value": null
+          },
+          {
+            "coord": "H72",
+            "value": "не изменена"
+          },
+          {
+            "coord": "I72",
+            "value": null
+          },
+          {
+            "coord": "J72",
+            "value": null
+          },
+          {
+            "coord": "K72",
+            "value": null
+          },
+          {
+            "coord": "L72",
+            "value": null
+          },
+          {
+            "coord": "M72",
+            "value": null
+          },
+          {
+            "coord": "N72",
+            "value": null
+          },
+          {
+            "coord": "O72",
+            "value": null
+          },
+          {
+            "coord": "P72",
+            "value": null
+          },
+          {
+            "coord": "Q72",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A73",
+            "value": "Признаки патологического шунтирования"
+          },
+          {
+            "coord": "B73",
+            "value": null
+          },
+          {
+            "coord": "C73",
+            "value": null
+          },
+          {
+            "coord": "D73",
+            "value": null
+          },
+          {
+            "coord": "E73",
+            "value": null
+          },
+          {
+            "coord": "F73",
+            "value": null
+          },
+          {
+            "coord": "G73",
+            "value": null
+          },
+          {
+            "coord": "H73",
+            "value": "не обнаружены"
+          },
+          {
+            "coord": "I73",
+            "value": null
+          },
+          {
+            "coord": "J73",
+            "value": null
+          },
+          {
+            "coord": "K73",
+            "value": null
+          },
+          {
+            "coord": "L73",
+            "value": null
+          },
+          {
+            "coord": "M73",
+            "value": null
+          },
+          {
+            "coord": "N73",
+            "value": null
+          },
+          {
+            "coord": "O73",
+            "value": null
+          },
+          {
+            "coord": "P73",
+            "value": null
+          },
+          {
+            "coord": "Q73",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A74",
+            "value": "ДМПП"
+          },
+          {
+            "coord": "B74",
+            "value": "нет"
+          },
+          {
+            "coord": "C74",
+            "value": null
+          },
+          {
+            "coord": "D74",
+            "value": "ДМЖП"
+          },
+          {
+            "coord": "E74",
+            "value": "нет"
+          },
+          {
+            "coord": "F74",
+            "value": null
+          },
+          {
+            "coord": "G74",
+            "value": "ОАП"
+          },
+          {
+            "coord": "H74",
+            "value": "нет"
+          },
+          {
+            "coord": "I74",
+            "value": null
+          },
+          {
+            "coord": "J74",
+            "value": null
+          },
+          {
+            "coord": "K74",
+            "value": null
+          },
+          {
+            "coord": "L74",
+            "value": null
+          },
+          {
+            "coord": "M74",
+            "value": null
+          },
+          {
+            "coord": "N74",
+            "value": null
+          },
+          {
+            "coord": "O74",
+            "value": null
+          },
+          {
+            "coord": "P74",
+            "value": null
+          },
+          {
+            "coord": "Q74",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A75",
+            "value": "Направление сброса"
+          },
+          {
+            "coord": "B75",
+            "value": null
+          },
+          {
+            "coord": "C75",
+            "value": null
+          },
+          {
+            "coord": "D75",
+            "value": "Скорость"
+          },
+          {
+            "coord": "E75",
+            "value": null
+          },
+          {
+            "coord": "F75",
+            "value": "м/с"
+          },
+          {
+            "coord": "G75",
+            "value": "Градиент"
+          },
+          {
+            "coord": "H75",
+            "value": null
+          },
+          {
+            "coord": "I75",
+            "value": "=4*(E75^2)"
+          },
+          {
+            "coord": "J75",
+            "value": "мм рт ст"
+          },
+          {
+            "coord": "K75",
+            "value": null
+          },
+          {
+            "coord": "L75",
+            "value": null
+          },
+          {
+            "coord": "M75",
+            "value": null
+          },
+          {
+            "coord": "N75",
+            "value": null
+          },
+          {
+            "coord": "O75",
+            "value": null
+          },
+          {
+            "coord": "P75",
+            "value": null
+          },
+          {
+            "coord": "Q75",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A76",
+            "value": "Описание шунта"
+          },
+          {
+            "coord": "B76",
+            "value": "нет"
+          },
+          {
+            "coord": "C76",
+            "value": null
+          },
+          {
+            "coord": "D76",
+            "value": null
+          },
+          {
+            "coord": "E76",
+            "value": null
+          },
+          {
+            "coord": "F76",
+            "value": null
+          },
+          {
+            "coord": "G76",
+            "value": null
+          },
+          {
+            "coord": "H76",
+            "value": null
+          },
+          {
+            "coord": "I76",
+            "value": null
+          },
+          {
+            "coord": "J76",
+            "value": null
+          },
+          {
+            "coord": "K76",
+            "value": null
+          },
+          {
+            "coord": "L76",
+            "value": null
+          },
+          {
+            "coord": "M76",
+            "value": null
+          },
+          {
+            "coord": "N76",
+            "value": null
+          },
+          {
+            "coord": "O76",
+            "value": null
+          },
+          {
+            "coord": "P76",
+            "value": null
+          },
+          {
+            "coord": "Q76",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A77",
+            "value": "КОММЕНТАРИИ"
+          },
+          {
+            "coord": "B77",
+            "value": null
+          },
+          {
+            "coord": "C77",
+            "value": null
+          },
+          {
+            "coord": "D77",
+            "value": null
+          },
+          {
+            "coord": "E77",
+            "value": null
+          },
+          {
+            "coord": "F77",
+            "value": null
+          },
+          {
+            "coord": "G77",
+            "value": null
+          },
+          {
+            "coord": "H77",
+            "value": null
+          },
+          {
+            "coord": "I77",
+            "value": null
+          },
+          {
+            "coord": "J77",
+            "value": null
+          },
+          {
+            "coord": "K77",
+            "value": null
+          },
+          {
+            "coord": "L77",
+            "value": null
+          },
+          {
+            "coord": "M77",
+            "value": null
+          },
+          {
+            "coord": "N77",
+            "value": null
+          },
+          {
+            "coord": "O77",
+            "value": null
+          },
+          {
+            "coord": "P77",
+            "value": null
+          },
+          {
+            "coord": "Q77",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A80",
+            "value": "ЗАКЛЮЧЕНИЕ ПО РЕЗУЛЬТАТАМ ЭХОКАРДИОГРАФИИ"
+          },
+          {
+            "coord": "B80",
+            "value": null
+          },
+          {
+            "coord": "C80",
+            "value": null
+          },
+          {
+            "coord": "D80",
+            "value": null
+          },
+          {
+            "coord": "E80",
+            "value": null
+          },
+          {
+            "coord": "F80",
+            "value": null
+          },
+          {
+            "coord": "G80",
+            "value": null
+          },
+          {
+            "coord": "H80",
+            "value": null
+          },
+          {
+            "coord": "I80",
+            "value": null
+          },
+          {
+            "coord": "J80",
+            "value": null
+          },
+          {
+            "coord": "K80",
+            "value": null
+          },
+          {
+            "coord": "L80",
+            "value": null
+          },
+          {
+            "coord": "M80",
+            "value": null
+          },
+          {
+            "coord": "N80",
+            "value": null
+          },
+          {
+            "coord": "O80",
+            "value": null
+          },
+          {
+            "coord": "P80",
+            "value": null
+          },
+          {
+            "coord": "Q80",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A85",
+            "value": "* не является кардиологическим диагнозом и должно рассматриваться в комплексе..."
+          },
+          {
+            "coord": "B85",
+            "value": null
+          },
+          {
+            "coord": "C85",
+            "value": null
+          },
+          {
+            "coord": "D85",
+            "value": null
+          },
+          {
+            "coord": "E85",
+            "value": null
+          },
+          {
+            "coord": "F85",
+            "value": null
+          },
+          {
+            "coord": "G85",
+            "value": null
+          },
+          {
+            "coord": "H85",
+            "value": null
+          },
+          {
+            "coord": "I85",
+            "value": null
+          },
+          {
+            "coord": "J85",
+            "value": null
+          },
+          {
+            "coord": "K85",
+            "value": null
+          },
+          {
+            "coord": "L85",
+            "value": null
+          },
+          {
+            "coord": "M85",
+            "value": null
+          },
+          {
+            "coord": "N85",
+            "value": null
+          },
+          {
+            "coord": "O85",
+            "value": null
+          },
+          {
+            "coord": "P85",
+            "value": null
+          },
+          {
+            "coord": "Q85",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A86",
+            "value": "Ветеринарный врач:"
+          },
+          {
+            "coord": "B86",
+            "value": null
+          },
+          {
+            "coord": "C86",
+            "value": null
+          },
+          {
+            "coord": "D86",
+            "value": null
+          },
+          {
+            "coord": "E86",
+            "value": null
+          },
+          {
+            "coord": "F86",
+            "value": null
+          },
+          {
+            "coord": "G86",
+            "value": null
+          },
+          {
+            "coord": "H86",
+            "value": null
+          },
+          {
+            "coord": "I86",
+            "value": null
+          },
+          {
+            "coord": "J86",
+            "value": null
+          },
+          {
+            "coord": "K86",
+            "value": null
+          },
+          {
+            "coord": "L86",
+            "value": null
+          },
+          {
+            "coord": "M86",
+            "value": null
+          },
+          {
+            "coord": "N86",
+            "value": null
+          },
+          {
+            "coord": "O86",
+            "value": null
+          },
+          {
+            "coord": "P86",
+            "value": null
+          },
+          {
+            "coord": "Q86",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A87",
+            "value": "Дата:"
+          },
+          {
+            "coord": "B87",
+            "value": null
+          },
+          {
+            "coord": "C87",
+            "value": null
+          },
+          {
+            "coord": "D87",
+            "value": null
+          },
+          {
+            "coord": "E87",
+            "value": null
+          },
+          {
+            "coord": "F87",
+            "value": null
+          },
+          {
+            "coord": "G87",
+            "value": null
+          },
+          {
+            "coord": "H87",
+            "value": null
+          },
+          {
+            "coord": "I87",
+            "value": null
+          },
+          {
+            "coord": "J87",
+            "value": null
+          },
+          {
+            "coord": "K87",
+            "value": null
+          },
+          {
+            "coord": "L87",
+            "value": null
+          },
+          {
+            "coord": "M87",
+            "value": null
+          },
+          {
+            "coord": "N87",
+            "value": null
+          },
+          {
+            "coord": "O87",
+            "value": null
+          },
+          {
+            "coord": "P87",
+            "value": null
+          },
+          {
+            "coord": "Q87",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A88",
+            "value": "Формат протокола рекомендован Кардиологическим Ветеринарным Обществом"
+          },
+          {
+            "coord": "B88",
+            "value": null
+          },
+          {
+            "coord": "C88",
+            "value": null
+          },
+          {
+            "coord": "D88",
+            "value": null
+          },
+          {
+            "coord": "E88",
+            "value": null
+          },
+          {
+            "coord": "F88",
+            "value": null
+          },
+          {
+            "coord": "G88",
+            "value": null
+          },
+          {
+            "coord": "H88",
+            "value": null
+          },
+          {
+            "coord": "I88",
+            "value": null
+          },
+          {
+            "coord": "J88",
+            "value": null
+          },
+          {
+            "coord": "K88",
+            "value": null
+          },
+          {
+            "coord": "L88",
+            "value": null
+          },
+          {
+            "coord": "M88",
+            "value": null
+          },
+          {
+            "coord": "N88",
+            "value": null
+          },
+          {
+            "coord": "O88",
+            "value": null
+          },
+          {
+            "coord": "P88",
+            "value": null
+          },
+          {
+            "coord": "Q88",
+            "value": null
+          }
+        ],
+        [
+          {
+            "coord": "A89",
+            "value": "*список показателей может быть расширен на усмотрение врача с учётом клиничес..."
+          },
+          {
+            "coord": "B89",
+            "value": null
+          },
+          {
+            "coord": "C89",
+            "value": null
+          },
+          {
+            "coord": "D89",
+            "value": null
+          },
+          {
+            "coord": "E89",
+            "value": null
+          },
+          {
+            "coord": "F89",
+            "value": null
+          },
+          {
+            "coord": "G89",
+            "value": null
+          },
+          {
+            "coord": "H89",
+            "value": null
+          },
+          {
+            "coord": "I89",
+            "value": null
+          },
+          {
+            "coord": "J89",
+            "value": null
+          },
+          {
+            "coord": "K89",
+            "value": null
+          },
+          {
+            "coord": "L89",
+            "value": null
+          },
+          {
+            "coord": "M89",
+            "value": null
+          },
+          {
+            "coord": "N89",
+            "value": null
+          },
+          {
+            "coord": "O89",
+            "value": null
+          },
+          {
+            "coord": "P89",
+            "value": null
+          },
+          {
+            "coord": "Q89",
+            "value": null
+          }
+        ]
+      ],
+      "formulas": [
+        {
+          "coord": "E8",
+          "formula": "=0.101*(B8^0.6667)"
+        },
+        {
+          "coord": "E11",
+          "formula": "=B11/B12"
+        },
+        {
+          "coord": "G12",
+          "formula": "=0.1*G11/B8^0.309"
+        },
+        {
+          "coord": "G14",
+          "formula": "=B14/B15"
+        },
+        {
+          "coord": "G19",
+          "formula": "=(0.1*B19)/B8^0.294"
+        },
+        {
+          "coord": "G21",
+          "formula": "=(0.1*B21)/B8^0.315"
+        },
+        {
+          "coord": "J21",
+          "formula": "=((B19-B21)/B19)*100"
+        },
+        {
+          "coord": "E23",
+          "formula": "=B23/E8"
+        },
+        {
+          "coord": "G23",
+          "formula": "=B23/B8"
+        },
+        {
+          "coord": "J23",
+          "formula": "=((B23-B24)/B23)*100"
+        },
+        {
+          "coord": "E24",
+          "formula": "=B24/E8"
+        },
+        {
+          "coord": "G24",
+          "formula": "=B24/B8"
+        },
+        {
+          "coord": "G28",
+          "formula": "=B28/B19*100"
+        },
+        {
+          "coord": "G29",
+          "formula": "=B29/B20*100"
+        },
+        {
+          "coord": "G30",
+          "formula": "=B30/B8^0.294"
+        },
+        {
+          "coord": "G31",
+          "formula": "=B30/B12"
+        },
+        {
+          "coord": "G34",
+          "formula": "=B34/B35"
+        },
+        {
+          "coord": "G37",
+          "formula": "=B34/(B37/100)"
+        },
+        {
+          "coord": "G38",
+          "formula": "=B34*100/B38"
+        },
+        {
+          "coord": "G42",
+          "formula": "=4*(B42^2)"
+        },
+        {
+          "coord": "B45",
+          "formula": "=B12"
+        },
+        {
+          "coord": "G46",
+          "formula": "=4*(B46^2)"
+        },
+        {
+          "coord": "G50",
+          "formula": "=4*(B50^2)"
+        },
+        {
+          "coord": "J53",
+          "formula": "=B45/B53"
+        },
+        {
+          "coord": "G54",
+          "formula": "=4*(B54^2)"
+        },
+        {
+          "coord": "G58",
+          "formula": "=4*(B58^2)"
+        },
+        {
+          "coord": "G64",
+          "formula": "=4*(B64^2)"
+        },
+        {
+          "coord": "G67",
+          "formula": "=B63"
+        },
+        {
+          "coord": "I75",
+          "formula": "=4*(E75^2)"
+        }
+      ]
+    }
+  ]
+}

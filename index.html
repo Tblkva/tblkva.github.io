@@ -26,7 +26,46 @@
             </div>
         </div>
 
-        <div class="form-section">
+        <div class="short-block gradient-stroke pets-tabs-block">
+            <div class="short-block-wrapper">
+                <div class="short-block-body" style="overflow: visible; position: relative;">
+                    <div class="pets-tabs">
+                        <button class="pets-tab-nav-btn" type="button" id="pets-tab-prev" title="Предыдущий режим">
+                            <iconify-icon icon="mdi:chevron-left"></iconify-icon>
+                        </button>
+                        <div class="pets-tab-dropdown">
+                            <button class="pets-tab-btn" type="button" id="pets-tab-btn" aria-expanded="false">
+                                <span class="pets-tab-btn-content">
+                                    <iconify-icon icon="mdi:calculator-variant" id="pets-tab-icon"></iconify-icon>
+                                    <span id="pets-tab-text">Текущий калькулятор</span>
+                                </span>
+                                <iconify-icon icon="mdi:chevron-down"></iconify-icon>
+                            </button>
+                            <div class="pets-tab-dropdown-menu hidden" id="pets-tab-menu" style="display: none;">
+                                <div class="pets-tab-dropdown-item active" data-screen="old">
+                                    <iconify-icon icon="mdi:calculator-variant"></iconify-icon>
+                                    <span>Текущий калькулятор</span>
+                                </div>
+                                <div class="pets-tab-dropdown-item" data-screen="cats">
+                                    <iconify-icon icon="mdi:cat"></iconify-icon>
+                                    <span>Для кошек</span>
+                                </div>
+                                <div class="pets-tab-dropdown-item" data-screen="dogs">
+                                    <iconify-icon icon="mdi:dog"></iconify-icon>
+                                    <span>Для собак</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="pets-tab-nav-btn" type="button" id="pets-tab-next" title="Следующий режим">
+                            <iconify-icon icon="mdi:chevron-right"></iconify-icon>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pets-screen" id="screen-old">
+            <div class="form-section">
             <div class="section-divider">
                 <h3>Обязательные параметры:</h3>
                 <div class="button-group">
@@ -240,6 +279,22 @@
             <div id="success-message" class="success" style="display: none;"></div>
             <div class="results-text" id="results-content"></div>
             <button class="copy-btn" onclick="copyToClipboard()" id="copy-btn" style="display: none;">Копировать в буфер обмена</button>
+        </div>
+        </div>
+
+        <div class="pets-screen" id="screen-cats" style="display: none;">
+            <div class="stub-screen">
+                <h2>Калькулятор для кошек</h2>
+                <p>Новая версия калькулятора для кошек вынесена на отдельную страницу.</p>
+                <p><a href="cat_calc.html">Открыть калькулятор для кошек</a></p>
+            </div>
+        </div>
+
+        <div class="pets-screen" id="screen-dogs" style="display: none;">
+            <div class="stub-screen">
+                <h2>Калькулятор для собак</h2>
+                <p>Раздел находится в разработке. Здесь будет отдельный калькулятор параметров для собак.</p>
+            </div>
         </div>
     </div>
 
@@ -678,6 +733,535 @@ EPSS: ${epss[0]} мм
             document.body.removeChild(textArea);
         }
 
+        const petsTabs = [
+            { key: 'old', label: 'Текущий калькулятор', icon: 'mdi:calculator-variant' },
+            { key: 'cats', label: 'Для кошек', icon: 'mdi:cat' },
+            { key: 'dogs', label: 'Для собак', icon: 'mdi:dog' }
+        ];
+        let currentPetsTabIndex = 0;
+
+        function setPetsScreenByKey(key) {
+            const index = petsTabs.findIndex(t => t.key === key);
+            if (index === -1) return;
+            currentPetsTabIndex = index;
+
+            try {
+                localStorage.setItem('petsCurrentTab', key);
+            } catch (e) {
+                // ignore storage errors
+            }
+
+            const screenKey = petsTabs[currentPetsTabIndex].key;
+            const screenId = 'screen-' + screenKey;
+
+            const screens = document.querySelectorAll('.pets-screen');
+            screens.forEach(screen => {
+                if (screen.id === screenId) {
+                    screen.style.display = 'block';
+                } else {
+                    screen.style.display = 'none';
+                }
+            });
+
+            const tabTextEl = document.getElementById('pets-tab-text');
+            const tabIconEl = document.getElementById('pets-tab-icon');
+            if (tabTextEl) {
+                tabTextEl.textContent = petsTabs[currentPetsTabIndex].label;
+            }
+            if (tabIconEl) {
+                tabIconEl.setAttribute('icon', petsTabs[currentPetsTabIndex].icon);
+            }
+
+            const tabItems = document.querySelectorAll('.pets-tab-dropdown-item');
+            tabItems.forEach(item => {
+                if (item.dataset.screen === screenKey) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+
+            const menu = document.getElementById('pets-tab-menu');
+            if (menu) {
+                menu.classList.add('hidden');
+                menu.style.display = 'none';
+            }
+        }
+
+        function togglePetsTabMenu() {
+            const menu = document.getElementById('pets-tab-menu');
+            if (!menu) return;
+
+            const isHidden = menu.classList.contains('hidden') || menu.style.display === 'none';
+            if (isHidden) {
+                menu.classList.remove('hidden');
+                menu.style.display = 'block';
+            } else {
+                menu.classList.add('hidden');
+                menu.style.display = 'none';
+            }
+        }
+
+        function showNextPetsTab() {
+            currentPetsTabIndex = (currentPetsTabIndex + 1) % petsTabs.length;
+            setPetsScreenByKey(petsTabs[currentPetsTabIndex].key);
+        }
+
+        function showPrevPetsTab() {
+            currentPetsTabIndex = (currentPetsTabIndex - 1 + petsTabs.length) % petsTabs.length;
+            setPetsScreenByKey(petsTabs[currentPetsTabIndex].key);
+        }
+
+        // Калькулятор для кошек
+        function calculateCat() {
+            try {
+                const sedation = document.getElementById('cat-sedation').value;
+                const contrast = document.getElementById('cat-contrast').value;
+                const vLines = document.getElementById('cat-v-lines').value;
+                const weightStr = document.getElementById('cat-weight').value;
+                const lpMaxShortStr = document.getElementById('cat-lp-max-short').value;
+                const lpMaxLongStr = document.getElementById('cat-lp-max-long').value;
+                const aoStr = document.getElementById('cat-ao').value;
+                const lvStr = document.getElementById('cat-lv').value;
+                const pvlaStr = document.getElementById('cat-pvla').value;
+                const kdrStr = document.getElementById('cat-kdr').value;
+                const ksrStr = document.getElementById('cat-ksr').value;
+                const mzhpShortStr = document.getElementById('cat-mzhp-short').value;
+                const zslzhShortStr = document.getElementById('cat-zslzh-short').value;
+                const mzhpLongStr = document.getElementById('cat-mzhp-long').value;
+                const zslzhLongStr = document.getElementById('cat-zslzh-long').value;
+                const papillaryStr = document.getElementById('cat-papillary').value;
+                const hypertrophyStr = document.getElementById('cat-hypertrophy').value;
+                const ppStr = document.getElementById('cat-pp').value;
+                const ppVisualStr = document.getElementById('cat-pp-visual').value;
+                const pzhStr = document.getElementById('cat-pzh').value;
+                const spzhStr = document.getElementById('cat-spzh').value;
+                const mkLeafletsStr = document.getElementById('cat-mk-leaflets').value;
+                const mkEStr = document.getElementById('cat-mk-e').value;
+                const mkAStr = document.getElementById('cat-mk-a').value;
+                const mkIvrtStr = document.getElementById('cat-mk-ivrt').value;
+                const mkEPrimeStr = document.getElementById('cat-mk-e-prime').value;
+                const mkAPrimeStr = document.getElementById('cat-mk-a-prime').value;
+                const mkRegVelStr = document.getElementById('cat-mk-reg-vel').value;
+                const aoLeafletsStr = document.getElementById('cat-ao-leaflets').value;
+                const aoWallsStr = document.getElementById('cat-ao-walls').value;
+                const aoVtljStr = document.getElementById('cat-ao-vtlj').value;
+                const aoRingStr = document.getElementById('cat-ao-ring').value;
+                const aoFlowStr = document.getElementById('cat-ao-flow').value;
+                const aoRegVelStr = document.getElementById('cat-ao-reg-vel').value;
+                const tkLeafletsStr = document.getElementById('cat-tk-leaflets').value;
+                const tkEStr = document.getElementById('cat-tk-e').value;
+                const tkAStr = document.getElementById('cat-tk-a').value;
+                const tkRegVelStr = document.getElementById('cat-tk-reg-vel').value;
+                const aoVelStr = document.getElementById('cat-ao-vel').value;
+                const laVelStr = document.getElementById('cat-la-vel').value;
+                const laLeafletsStr = document.getElementById('cat-la-leaflets').value;
+                const laStenosisStr = document.getElementById('cat-la-stenosis').value;
+                const laVtpjStr = document.getElementById('cat-la-vtpj').value;
+                const laRingStr = document.getElementById('cat-la-ring').value;
+                const laTrunkStr = document.getElementById('cat-la-trunk').value;
+                const laFlowStr = document.getElementById('cat-la-flow').value;
+                const laRegVelStr = document.getElementById('cat-la-reg-vel').value;
+                const shuntDmppStr = document.getElementById('cat-shunt-dmpp').value;
+                const shuntDmzhpStr = document.getElementById('cat-shunt-dmzhp').value;
+                const shuntOapStr = document.getElementById('cat-shunt-oap').value;
+
+                const errors = [];
+                const errorFieldIds = [];
+
+                if (!weightStr || weightStr.trim() === '') {
+                    errors.push('Масса тела');
+                    errorFieldIds.push('cat-weight');
+                }
+                if (!lpMaxShortStr || lpMaxShortStr.trim() === '') {
+                    errors.push('ЛП max (короткая ось)');
+                    errorFieldIds.push('cat-lp-max-short');
+                }
+                if (!aoStr || aoStr.trim() === '') {
+                    errors.push('Ао');
+                    errorFieldIds.push('cat-ao');
+                }
+                if (!lvStr || lvStr.trim() === '') {
+                    errors.push('ЛВ');
+                    errorFieldIds.push('cat-lv');
+                }
+                if (!pvlaStr || pvlaStr.trim() === '') {
+                    errors.push('ПВЛА');
+                    errorFieldIds.push('cat-pvla');
+                }
+                if (!kdrStr || kdrStr.trim() === '') {
+                    errors.push('КДР');
+                    errorFieldIds.push('cat-kdr');
+                }
+                if (!ksrStr || ksrStr.trim() === '') {
+                    errors.push('КСР');
+                    errorFieldIds.push('cat-ksr');
+                }
+
+                if (errors.length > 0) {
+                    showErrorCat(`Пожалуйста, заполните следующие поля: ${errors.join(', ')}`, errorFieldIds);
+                    return;
+                }
+
+                const weight = parseFloat(weightStr.replace(',', '.'));
+                const lpMaxShort = parseFloat(lpMaxShortStr.replace(',', '.'));
+                const lpMaxLong = lpMaxLongStr ? parseFloat(lpMaxLongStr.replace(',', '.')) : NaN;
+                const ao = parseFloat(aoStr.replace(',', '.'));
+                const lv = parseFloat(lvStr.replace(',', '.'));
+                const pvla = parseFloat(pvlaStr.replace(',', '.'));
+                const kdr = parseFloat(kdrStr.replace(',', '.'));
+                const ksr = parseFloat(ksrStr.replace(',', '.'));
+                const mzhpShort = mzhpShortStr ? parseFloat(mzhpShortStr.replace(',', '.')) : NaN;
+                const zslzhShort = zslzhShortStr ? parseFloat(zslzhShortStr.replace(',', '.')) : NaN;
+                const mzhpLong = mzhpLongStr ? parseFloat(mzhpLongStr.replace(',', '.')) : NaN;
+                const zslzhLong = zslzhLongStr ? parseFloat(zslzhLongStr.replace(',', '.')) : NaN;
+                const pp = ppStr ? parseFloat(ppStr.replace(',', '.')) : NaN;
+                const pzh = pzhStr ? parseFloat(pzhStr.replace(',', '.')) : NaN;
+                const spzh = spzhStr ? parseFloat(spzhStr.replace(',', '.')) : NaN;
+                const mkE = mkEStr ? parseFloat(mkEStr.replace(',', '.')) : NaN;
+                const mkA = mkAStr ? parseFloat(mkAStr.replace(',', '.')) : NaN;
+                const mkIvrt = mkIvrtStr ? parseFloat(mkIvrtStr.replace(',', '.')) : NaN;
+                const mkEPrime = mkEPrimeStr ? parseFloat(mkEPrimeStr.replace(',', '.')) : NaN;
+                const mkAPrime = mkAPrimeStr ? parseFloat(mkAPrimeStr.replace(',', '.')) : NaN;
+                const mkRegVel = mkRegVelStr ? parseFloat(mkRegVelStr.replace(',', '.')) : NaN;
+                const aoRing = aoRingStr ? parseFloat(aoRingStr.replace(',', '.')) : NaN;
+                const aoFlow = aoFlowStr ? parseFloat(aoFlowStr.replace(',', '.')) : NaN;
+                const aoRegVel = aoRegVelStr ? parseFloat(aoRegVelStr.replace(',', '.')) : NaN;
+                const tkE = tkEStr ? parseFloat(tkEStr.replace(',', '.')) : NaN;
+                const tkA = tkAStr ? parseFloat(tkAStr.replace(',', '.')) : NaN;
+                const tkRegVel = tkRegVelStr ? parseFloat(tkRegVelStr.replace(',', '.')) : NaN;
+                const aoVel = aoVelStr ? parseFloat(aoVelStr.replace(',', '.')) : NaN;
+                const laVel = laVelStr ? parseFloat(laVelStr.replace(',', '.')) : NaN;
+                const laRing = laRingStr ? parseFloat(laRingStr.replace(',', '.')) : NaN;
+                const laTrunk = laTrunkStr ? parseFloat(laTrunkStr.replace(',', '.')) : NaN;
+                const laFlow = laFlowStr ? parseFloat(laFlowStr.replace(',', '.')) : NaN;
+                const laRegVel = laRegVelStr ? parseFloat(laRegVelStr.replace(',', '.')) : NaN;
+
+                const numericErrors = [];
+                if (isNaN(weight)) numericErrors.push('масса тела');
+                if (isNaN(lpMaxShort)) numericErrors.push('ЛП max (короткая ось)');
+                if (isNaN(ao)) numericErrors.push('Ао');
+                if (isNaN(lv)) numericErrors.push('ЛВ');
+                if (isNaN(pvla)) numericErrors.push('ПВЛА');
+                if (isNaN(kdr)) numericErrors.push('КДР');
+                if (isNaN(ksr)) numericErrors.push('КСР');
+
+                if (numericErrors.length > 0) {
+                    showErrorCat(`Пожалуйста, введите корректные числовые значения для: ${numericErrors.join(', ')}`);
+                    return;
+                }
+
+                const lpAo = lpMaxShort / ao;
+                const lvPvla = lv / pvla;
+                const fs = (kdr - ksr) / kdr * 100;
+
+                let pzhLj = NaN;
+                let spzhZslzh = NaN;
+                if (!isNaN(pzh)) {
+                    pzhLj = pzh / kdr * 100;
+                }
+                if (!isNaN(spzh) && !isNaN(zslzhShort)) {
+                    spzhZslzh = spzh / zslzhShort * 100;
+                }
+
+                let eaMk = NaN;
+                let eePrimeMk = NaN;
+                let eaTk = NaN;
+                if (!isNaN(mkE) && !isNaN(mkA) && mkA !== 0) {
+                    eaMk = mkE / mkA;
+                }
+                if (!isNaN(mkE) && !isNaN(mkEPrime) && mkEPrime !== 0) {
+                    eePrimeMk = (mkE * 100) / mkEPrime;
+                }
+                if (!isNaN(tkE) && !isNaN(tkA) && tkA !== 0) {
+                    eaTk = tkE / tkA;
+                }
+
+                let gradAo = NaN;
+                let gradMkReg = NaN;
+                let gradTkReg = NaN;
+                let gradLa = NaN;
+                let gradLaReg = NaN;
+                let aoLaRatio = NaN;
+                if (!isNaN(aoVel)) {
+                    gradAo = 4 * Math.pow(aoVel, 2);
+                }
+                if (!isNaN(laVel)) {
+                    gradLa = 4 * Math.pow(laVel, 2);
+                }
+                if (!isNaN(mkRegVel)) {
+                    gradMkReg = 4 * Math.pow(mkRegVel, 2);
+                }
+                if (!isNaN(tkRegVel)) {
+                    gradTkReg = 4 * Math.pow(tkRegVel, 2);
+                }
+                if (!isNaN(laFlow)) {
+                    gradLa = 4 * Math.pow(laFlow, 2);
+                }
+                if (!isNaN(laRegVel)) {
+                    gradLaReg = 4 * Math.pow(laRegVel, 2);
+                }
+                if (!isNaN(aoRing) && !isNaN(laRing) && laRing !== 0) {
+                    aoLaRatio = aoRing / laRing;
+                }
+
+                let results = `Кошки — расчёт протокола ЭхоКГ
+
+Основные данные:
+Седация: ${sedation}
+Масса тела: ${weight.toFixed(2)} кг
+
+Левое предсердие и аорта:
+ЛП max (короткая ось): ${lpMaxShort.toFixed(2)} мм
+ЛП max (длинная ось): ${isNaN(lpMaxLong) ? '—' : lpMaxLong.toFixed(2) + ' мм'}
+Ао: ${ao.toFixed(2)} мм
+ЛП/Ао (по короткой оси): ${lpAo.toFixed(2)}
+Спонтанное контрастирование: ${contrast}
+
+Сосуды малого круга:
+ЛВ: ${lv.toFixed(2)} мм
+ПВЛА: ${pvla.toFixed(2)} мм
+ЛВ/ПВЛА: ${lvPvla.toFixed(2)}
+В-линии: ${vLines}
+
+Левый желудочек:
+МЖПд (короткая ось): ${isNaN(mzhpShort) ? '—' : mzhpShort.toFixed(2) + ' мм'}
+ЗСЛЖд (короткая ось): ${isNaN(zslzhShort) ? '—' : zslzhShort.toFixed(2) + ' мм'}
+МЖПд (длинная ось): ${isNaN(mzhpLong) ? '—' : mzhpLong.toFixed(2) + ' мм'}
+ЗСЛЖд (длинная ось): ${isNaN(zslzhLong) ? '—' : zslzhLong.toFixed(2) + ' мм'}
+КДР: ${kdr.toFixed(2)} мм
+КСР: ${ksr.toFixed(2)} мм
+Фракция укорочения (ФУ): ${fs.toFixed(2)}%
+Папиллярные мышцы: ${papillaryStr || 'без особенностей'}
+Локальная гипертрофия: ${hypertrophyStr}
+
+Аорта:
+Створки: ${aoLeafletsStr || 'не изменены'}
+Стеноз: ${aoWallsStr || 'нет'}
+ВТЛЖ: ${aoVtljStr || 'без особенностей'}
+Фиброзное кольцо: ${isNaN(aoRing) ? '—' : aoRing.toFixed(2) + ' мм'}
+Скорость потока: ${isNaN(aoFlow) ? '—' : aoFlow.toFixed(2) + ' м/с'}
+Градиент (4*v²): ${isNaN(gradAo) ? '—' : gradAo.toFixed(2)} мм рт. ст.
+Регургитация: скорость = ${isNaN(aoRegVel) ? '—' : aoRegVel.toFixed(2)} м/с`;
+
+                results += `
+
+Правое предсердие:
+Размер (ПП): ${isNaN(pp) ? '—' : pp.toFixed(2) + ' мм'}
+Визуальная оценка: ${ppVisualStr || 'не расширено'}
+
+Правый желудочек:
+ПЖ: ${isNaN(pzh) ? '—' : pzh.toFixed(2) + ' мм'}
+СПЖд: ${isNaN(spzh) ? '—' : spzh.toFixed(2) + ' мм'}
+ПЖ/ЛЖ: ${isNaN(pzhLj) ? '—' : pzhLj.toFixed(2) + ' %'}
+СПЖ/ЗСЛЖ: ${isNaN(spzhZslzh) ? '—' : spzhZslzh.toFixed(2) + ' %'}
+
+Клапанный аппарат:
+Митральный клапан: створки — ${mkLeafletsStr || 'не изменены'}, E = ${isNaN(mkE) ? '—' : mkE.toFixed(2)} м/с, A = ${isNaN(mkA) ? '—' : mkA.toFixed(2)} м/с, IVRT = ${isNaN(mkIvrt) ? '—' : mkIvrt.toFixed(0)} мс, E' = ${isNaN(mkEPrime) ? '—' : mkEPrime.toFixed(2)} см/с, A' = ${isNaN(mkAPrime) ? '—' : mkAPrime.toFixed(2)} см/с, E/A = ${isNaN(eaMk) ? '—' : eaMk.toFixed(2)}, E*100/E' = ${isNaN(eePrimeMk) ? '—' : eePrimeMk.toFixed(2)}, регургитация: скорость = ${isNaN(mkRegVel) ? '—' : mkRegVel.toFixed(2)} м/с, градиент 4*v² = ${isNaN(gradMkReg) ? '—' : gradMkReg.toFixed(2)} мм рт. ст.
+Трикуспидальный клапан: створки — ${tkLeafletsStr || 'не изменены'}, E = ${isNaN(tkE) ? '—' : tkE.toFixed(2)} м/с, A = ${isNaN(tkA) ? '—' : tkA.toFixed(2)} м/с, E/A = ${isNaN(eaTk) ? '—' : eaTk.toFixed(2)}, регургитация: скорость = ${isNaN(tkRegVel) ? '—' : tkRegVel.toFixed(2)} м/с, градиент 4*v² = ${isNaN(gradTkReg) ? '—' : gradTkReg.toFixed(2)} мм рт. ст.
+Аортальный клапан: скорость = ${isNaN(aoVel) ? '—' : aoVel.toFixed(2)} м/с, градиент 4*v² = ${isNaN(gradAo) ? '—' : gradAo.toFixed(2)} мм рт. ст.
+Клапан лёгочной артерии: створки — ${laLeafletsStr || 'не изменены'}, стеноз: ${laStenosisStr || 'нет'}, ВТПЖ: ${laVtpjStr || 'без особенностей'}, фиброзное кольцо: ${isNaN(laRing) ? '—' : laRing.toFixed(2) + ' мм'}, ствол: ${isNaN(laTrunk) ? '—' : laTrunk.toFixed(2) + ' мм'}, Ао/ЛА: ${isNaN(aoLaRatio) ? '—' : aoLaRatio.toFixed(2)}, скорость потока = ${isNaN(laFlow) ? '—' : laFlow.toFixed(2)} м/с, градиент 4*v² = ${isNaN(gradLa) ? '—' : gradLa.toFixed(2)} мм рт. ст., регургитация: скорость = ${isNaN(laRegVel) ? '—' : laRegVel.toFixed(2)} м/с, градиент 4*v² = ${isNaN(gradLaReg) ? '—' : gradLaReg.toFixed(2)} мм рт. ст.
+
+Признаки патологического шунтирования:
+ДМПП: ${shuntDmppStr || 'нет'}
+ДМЖП: ${shuntDmzhpStr || 'нет'}
+ОАП: ${shuntOapStr || 'нет'}`;
+
+                const resultsContent = document.getElementById('results-content-cat');
+                const resultsBlock = document.getElementById('results-cat');
+                const copyBtn = document.getElementById('copy-btn-cat');
+                const lpAoField = document.getElementById('cat-lpao-short');
+                const lvPvlaField = document.getElementById('cat-lvpvla');
+                const fsField = document.getElementById('cat-fs');
+                const pzhLvField = document.getElementById('cat-pzh-lv');
+                const spzhZslzhField = document.getElementById('cat-spzh-zslzh');
+                const mkEaField = document.getElementById('cat-mk-ea');
+                const mkEePrimeField = document.getElementById('cat-mk-eeprime');
+                const mkRegGradField = document.getElementById('cat-mk-reg-grad');
+                const aoLaField = document.getElementById('cat-ao-la-ratio');
+                const laGradField = document.getElementById('cat-la-grad');
+                const laRegGradField = document.getElementById('cat-la-reg-grad');
+            const tkRegGradField = document.getElementById('cat-tk-reg-grad');
+
+                resultsContent.textContent = results;
+                resultsBlock.classList.add('show');
+                copyBtn.style.display = 'block';
+                if (lpAoField) {
+                    lpAoField.value = lpAo.toFixed(2);
+                }
+                if (lvPvlaField) {
+                    lvPvlaField.value = lvPvla.toFixed(2);
+                }
+                if (fsField) {
+                    fsField.value = fs.toFixed(2);
+                }
+                if (pzhLvField && !isNaN(pzhLj)) {
+                    pzhLvField.value = pzhLj.toFixed(2);
+                }
+                if (spzhZslzhField && !isNaN(spzhZslzh)) {
+                    spzhZslzhField.value = spzhZslzh.toFixed(2);
+                }
+                if (mkEaField && !isNaN(eaMk)) {
+                    mkEaField.value = eaMk.toFixed(2);
+                }
+                if (mkEePrimeField && !isNaN(eePrimeMk)) {
+                    mkEePrimeField.value = eePrimeMk.toFixed(2);
+                }
+                if (mkRegGradField && !isNaN(gradMkReg)) {
+                    mkRegGradField.value = gradMkReg.toFixed(2);
+                }
+                if (aoLaField && !isNaN(aoLaRatio)) {
+                    aoLaField.value = aoLaRatio.toFixed(2);
+                }
+                if (laGradField && !isNaN(gradLa)) {
+                    laGradField.value = gradLa.toFixed(2);
+                }
+                if (laRegGradField && !isNaN(gradLaReg)) {
+                    laRegGradField.value = gradLaReg.toFixed(2);
+                }
+                if (tkRegGradField && !isNaN(gradTkReg)) {
+                    tkRegGradField.value = gradTkReg.toFixed(2);
+                }
+
+                hideErrorCat();
+                clearCatInputErrors();
+                showSuccessCat('Расчёты для кошек выполнены успешно!');
+
+            } catch (error) {
+                showErrorCat('Ошибка в расчётах: ' + error.message);
+            }
+        }
+
+        function showErrorCat(message, errorFields = []) {
+            const errorEl = document.getElementById('error-message-cat');
+            const successEl = document.getElementById('success-message-cat');
+
+            errorEl.textContent = message;
+            errorEl.style.display = 'block';
+            if (successEl) {
+                successEl.style.display = 'none';
+            }
+
+            clearCatInputErrors();
+
+            if (errorFields.length > 0) {
+                errorFields.forEach(fieldId => {
+                    const field = document.getElementById(fieldId);
+                    if (field) {
+                        field.classList.add('input-error');
+                    }
+                });
+            }
+        }
+
+        function clearCatInputErrors() {
+            const inputs = document.querySelectorAll('#screen-cats input');
+            inputs.forEach(input => {
+                input.classList.remove('input-error');
+            });
+        }
+
+        function showSuccessCat(message) {
+            const successEl = document.getElementById('success-message-cat');
+            const errorEl = document.getElementById('error-message-cat');
+            if (successEl) {
+                successEl.textContent = message;
+                successEl.style.display = 'block';
+            }
+            if (errorEl) {
+                errorEl.style.display = 'none';
+            }
+        }
+
+        function hideErrorCat() {
+            const errorEl = document.getElementById('error-message-cat');
+            if (errorEl) {
+                errorEl.style.display = 'none';
+            }
+        }
+
+        function copyCatToClipboard() {
+            const resultsText = document.getElementById('results-content-cat').textContent;
+
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(resultsText).then(() => {
+                    showSuccessCat('Результаты скопированы в буфер обмена!');
+                }).catch(err => {
+                    console.error('Ошибка копирования:', err);
+                    fallbackCopyTextToClipboard(resultsText);
+                });
+            } else {
+                fallbackCopyTextToClipboard(resultsText);
+            }
+        }
+
+        function clearCatData() {
+            const inputs = document.querySelectorAll('#screen-cats input[type="text"]');
+            inputs.forEach(input => {
+                input.value = '';
+            });
+            const lpAoField = document.getElementById('cat-lpao-short');
+            const lvPvlaField = document.getElementById('cat-lvpvla');
+            const fsField = document.getElementById('cat-fs');
+            const pzhLvField = document.getElementById('cat-pzh-lv');
+            const spzhZslzhField = document.getElementById('cat-spzh-zslzh');
+            const mkEaField = document.getElementById('cat-mk-ea');
+            const mkEePrimeField = document.getElementById('cat-mk-eeprime');
+            const mkRegGradField = document.getElementById('cat-mk-reg-grad');
+            const aoGradField = document.getElementById('cat-ao-grad');
+            const aoLaField = document.getElementById('cat-ao-la-ratio');
+            const laGradField = document.getElementById('cat-la-grad');
+            const laRegGradField = document.getElementById('cat-la-reg-grad');
+            const tkRegGradField = document.getElementById('cat-tk-reg-grad');
+            if (lpAoField) {
+                lpAoField.value = '';
+            }
+            if (lvPvlaField) {
+                lvPvlaField.value = '';
+            }
+            if (fsField) {
+                fsField.value = '';
+            }
+            if (pzhLvField) {
+                pzhLvField.value = '';
+            }
+            if (spzhZslzhField) {
+                spzhZslzhField.value = '';
+            }
+            if (mkEaField) {
+                mkEaField.value = '';
+            }
+            if (mkEePrimeField) {
+                mkEePrimeField.value = '';
+            }
+            if (mkRegGradField) {
+                mkRegGradField.value = '';
+            }
+            if (aoGradField) {
+                aoGradField.value = '';
+            }
+            if (aoLaField) {
+                aoLaField.value = '';
+            }
+            if (laGradField) {
+                laGradField.value = '';
+            }
+            if (laRegGradField) {
+                laRegGradField.value = '';
+            }
+            if (tkRegGradField) {
+                tkRegGradField.value = '';
+            }
+            clearCatInputErrors();
+            hideErrorCat();
+            const successEl = document.getElementById('success-message-cat');
+            const resultsBlock = document.getElementById('results-cat');
+            const copyBtn = document.getElementById('copy-btn-cat');
+            if (successEl) successEl.style.display = 'none';
+            if (resultsBlock) resultsBlock.classList.remove('show');
+            if (copyBtn) copyBtn.style.display = 'none';
+        }
+
         // Функции для сохранения и загрузки данных
         function saveFormData() {
             const formData = {};
@@ -777,7 +1361,15 @@ EPSS: ${epss[0]} мм
                 // Обработчик Enter для расчета
                 input.addEventListener('keypress', function(e) {
                     if (e.key === 'Enter') {
-                        calculate();
+                        const screenOld = document.getElementById('screen-old');
+                        const screenCats = document.getElementById('screen-cats');
+                        if (screenCats && screenCats.style.display !== 'none') {
+                            calculateCat();
+                        } else if (screenOld && screenOld.style.display !== 'none') {
+                            calculate();
+                        } else {
+                            calculate();
+                        }
                     }
                 });
                 
@@ -797,7 +1389,310 @@ EPSS: ${epss[0]} мм
                     });
                 }
             });
+
+            function updateCatLpAoField() {
+                const lpMaxShortInput = document.getElementById('cat-lp-max-short');
+                const aoInput = document.getElementById('cat-ao');
+                const lpAoField = document.getElementById('cat-lpao-short');
+                if (!lpMaxShortInput || !aoInput || !lpAoField) return;
+
+                const lpStr = lpMaxShortInput.value;
+                const aoStr = aoInput.value;
+                const lp = parseFloat(lpStr.replace(',', '.'));
+                const aoVal = parseFloat(aoStr.replace(',', '.'));
+
+                if (!isNaN(lp) && !isNaN(aoVal) && aoVal !== 0) {
+                    lpAoField.value = (lp / aoVal).toFixed(2);
+                } else {
+                    lpAoField.value = '';
+                }
+            }
+
+            function updateCatFsField() {
+                const kdrInput = document.getElementById('cat-kdr');
+                const ksrInput = document.getElementById('cat-ksr');
+                const fsField = document.getElementById('cat-fs');
+                if (!kdrInput || !ksrInput || !fsField) return;
+
+                const kdrStr = kdrInput.value;
+                const ksrStr = ksrInput.value;
+                const kdr = parseFloat(kdrStr.replace(',', '.'));
+                const ksr = parseFloat(ksrStr.replace(',', '.'));
+
+                if (!isNaN(kdr) && !isNaN(ksr) && kdr !== 0) {
+                    const fs = (kdr - ksr) / kdr * 100;
+                    fsField.value = fs.toFixed(2);
+                } else {
+                    fsField.value = '';
+                }
+            }
+
+            function updateCatLvPvlaField() {
+                const lvInput = document.getElementById('cat-lv');
+                const pvlaInput = document.getElementById('cat-pvla');
+                const lvPvlaField = document.getElementById('cat-lvpvla');
+                if (!lvInput || !pvlaInput || !lvPvlaField) return;
+
+                const lvStr = lvInput.value;
+                const pvlaStr = pvlaInput.value;
+                const lv = parseFloat(lvStr.replace(',', '.'));
+                const pvla = parseFloat(pvlaStr.replace(',', '.'));
+
+                if (!isNaN(lv) && !isNaN(pvla) && pvla !== 0) {
+                    lvPvlaField.value = (lv / pvla).toFixed(2);
+                } else {
+                    lvPvlaField.value = '';
+                }
+            }
+
+            function updateCatRightRatiosField() {
+                const pzhInput = document.getElementById('cat-pzh');
+                const spzhInput = document.getElementById('cat-spzh');
+                const kdrInput = document.getElementById('cat-kdr');
+                const zslzhShortInput = document.getElementById('cat-zslzh-short');
+                const pzhLvField = document.getElementById('cat-pzh-lv');
+                const spzhZslzhField = document.getElementById('cat-spzh-zslzh');
+                if (!pzhInput || !spzhInput || !kdrInput || !zslzhShortInput || !pzhLvField || !spzhZslzhField) return;
+
+                const pzh = parseFloat(pzhInput.value.replace(',', '.'));
+                const spzh = parseFloat(spzhInput.value.replace(',', '.'));
+                const kdr = parseFloat(kdrInput.value.replace(',', '.'));
+                const zslzh = parseFloat(zslzhShortInput.value.replace(',', '.'));
+
+                if (!isNaN(pzh) && !isNaN(kdr) && kdr !== 0) {
+                    pzhLvField.value = (pzh / kdr * 100).toFixed(2);
+                } else {
+                    pzhLvField.value = '';
+                }
+
+                if (!isNaN(spzh) && !isNaN(zslzh) && zslzh !== 0) {
+                    spzhZslzhField.value = (spzh / zslzh * 100).toFixed(2);
+                } else {
+                    spzhZslzhField.value = '';
+                }
+            }
+
+            function updateCatMitralDerivedFields() {
+                const eInput = document.getElementById('cat-mk-e');
+                const aInput = document.getElementById('cat-mk-a');
+                const ePrimeInput = document.getElementById('cat-mk-e-prime');
+                const eaField = document.getElementById('cat-mk-ea');
+                const eePrimeField = document.getElementById('cat-mk-eeprime');
+                if (!eInput || !aInput || !ePrimeInput || !eaField || !eePrimeField) return;
+
+                const e = parseFloat(eInput.value.replace(',', '.'));
+                const a = parseFloat(aInput.value.replace(',', '.'));
+                const ePrime = parseFloat(ePrimeInput.value.replace(',', '.'));
+
+                if (!isNaN(e) && !isNaN(a) && a !== 0) {
+                    eaField.value = (e / a).toFixed(2);
+                } else {
+                    eaField.value = '';
+                }
+
+                if (!isNaN(e) && !isNaN(ePrime) && ePrime !== 0) {
+                    eePrimeField.value = (e * 100 / ePrime).toFixed(2);
+                } else {
+                    eePrimeField.value = '';
+                }
+            }
+
+            function updateCatAoGradientField() {
+                const flowInput = document.getElementById('cat-ao-flow');
+                const gradField = document.getElementById('cat-ao-grad');
+                if (!flowInput || !gradField) return;
+
+                const v = parseFloat(flowInput.value.replace(',', '.'));
+                if (!isNaN(v)) {
+                    gradField.value = (4 * Math.pow(v, 2)).toFixed(2);
+                } else {
+                    gradField.value = '';
+                }
+            }
+
+            function updateCatAoLaRatioField() {
+                const aoRingInput = document.getElementById('cat-ao-ring');
+                const laRingInput = document.getElementById('cat-la-ring');
+                const ratioField = document.getElementById('cat-ao-la-ratio');
+                if (!aoRingInput || !laRingInput || !ratioField) return;
+
+                const aoRing = parseFloat(aoRingInput.value.replace(',', '.'));
+                const laRing = parseFloat(laRingInput.value.replace(',', '.'));
+
+                if (!isNaN(aoRing) && !isNaN(laRing) && laRing !== 0) {
+                    ratioField.value = (aoRing / laRing).toFixed(2);
+                } else {
+                    ratioField.value = '';
+                }
+            }
+
+            function updateCatMitralRegGradientField() {
+                const velInput = document.getElementById('cat-mk-reg-vel');
+                const gradField = document.getElementById('cat-mk-reg-grad');
+                if (!velInput || !gradField) return;
+
+                const v = parseFloat(velInput.value.replace(',', '.'));
+                if (!isNaN(v)) {
+                    gradField.value = (4 * Math.pow(v, 2)).toFixed(2);
+                } else {
+                    gradField.value = '';
+                }
+            }
+
+            function updateCatTricuspidRegGradientField() {
+                const velInput = document.getElementById('cat-tk-reg-vel');
+                const gradField = document.getElementById('cat-tk-reg-grad');
+                if (!velInput || !gradField) return;
+
+                const v = parseFloat(velInput.value.replace(',', '.'));
+                if (!isNaN(v)) {
+                    gradField.value = (4 * Math.pow(v, 2)).toFixed(2);
+                } else {
+                    gradField.value = '';
+                }
+            }
+
+            function updateCatLaGradientsField() {
+                const flowInput = document.getElementById('cat-la-flow');
+                const flowGradField = document.getElementById('cat-la-grad');
+                const regVelInput = document.getElementById('cat-la-reg-vel');
+                const regGradField = document.getElementById('cat-la-reg-grad');
+                if (!flowInput || !flowGradField || !regVelInput || !regGradField) return;
+
+                const vFlow = parseFloat(flowInput.value.replace(',', '.'));
+                if (!isNaN(vFlow)) {
+                    flowGradField.value = (4 * Math.pow(vFlow, 2)).toFixed(2);
+                } else {
+                    flowGradField.value = '';
+                }
+
+                const vReg = parseFloat(regVelInput.value.replace(',', '.'));
+                if (!isNaN(vReg)) {
+                    regGradField.value = (4 * Math.pow(vReg, 2)).toFixed(2);
+                } else {
+                    regGradField.value = '';
+                }
+            }
+
+            const lpMaxShortInput = document.getElementById('cat-lp-max-short');
+            const aoInput = document.getElementById('cat-ao');
+            const lvInput = document.getElementById('cat-lv');
+            const pvlaInput = document.getElementById('cat-pvla');
+            const kdrInput = document.getElementById('cat-kdr');
+            const ksrInput = document.getElementById('cat-ksr');
+            const pzhInput = document.getElementById('cat-pzh');
+            const spzhInput = document.getElementById('cat-spzh');
+            const mkEInput = document.getElementById('cat-mk-e');
+            const mkAInput = document.getElementById('cat-mk-a');
+            const mkEPrimeInput = document.getElementById('cat-mk-e-prime');
+            const aoFlowInput = document.getElementById('cat-ao-flow');
+            const mkRegVelInput = document.getElementById('cat-mk-reg-vel');
+            const aoRingInput = document.getElementById('cat-ao-ring');
+            const laRingInput = document.getElementById('cat-la-ring');
+            const laFlowInput = document.getElementById('cat-la-flow');
+            const laRegVelInput = document.getElementById('cat-la-reg-vel');
+            const tkRegVelInput = document.getElementById('cat-tk-reg-vel');
+            if (lpMaxShortInput) {
+                lpMaxShortInput.addEventListener('input', updateCatLpAoField);
+            }
+            if (aoInput) {
+                aoInput.addEventListener('input', updateCatLpAoField);
+            }
+            if (lvInput) {
+                lvInput.addEventListener('input', updateCatLvPvlaField);
+            }
+            if (pvlaInput) {
+                pvlaInput.addEventListener('input', updateCatLvPvlaField);
+            }
+            if (kdrInput) {
+                kdrInput.addEventListener('input', updateCatFsField);
+                kdrInput.addEventListener('input', updateCatRightRatiosField);
+            }
+            if (ksrInput) {
+                ksrInput.addEventListener('input', updateCatFsField);
+            }
+            if (pzhInput) {
+                pzhInput.addEventListener('input', updateCatRightRatiosField);
+            }
+            if (spzhInput) {
+                spzhInput.addEventListener('input', updateCatRightRatiosField);
+            }
+            if (mkEInput) {
+                mkEInput.addEventListener('input', updateCatMitralDerivedFields);
+            }
+            if (mkAInput) {
+                mkAInput.addEventListener('input', updateCatMitralDerivedFields);
+            }
+            if (mkEPrimeInput) {
+                mkEPrimeInput.addEventListener('input', updateCatMitralDerivedFields);
+            }
+            if (aoFlowInput) {
+                aoFlowInput.addEventListener('input', updateCatAoGradientField);
+            }
+            if (mkRegVelInput) {
+                mkRegVelInput.addEventListener('input', updateCatMitralRegGradientField);
+            }
+            if (aoRingInput) {
+                aoRingInput.addEventListener('input', updateCatAoLaRatioField);
+            }
+            if (laRingInput) {
+                laRingInput.addEventListener('input', updateCatAoLaRatioField);
+            }
+            if (laFlowInput) {
+                laFlowInput.addEventListener('input', updateCatLaGradientsField);
+            }
+            if (laRegVelInput) {
+                laRegVelInput.addEventListener('input', updateCatLaGradientsField);
+            }
+            if (tkRegVelInput) {
+                tkRegVelInput.addEventListener('input', updateCatTricuspidRegGradientField);
+            }
+
+            const petsTabBtn = document.getElementById('pets-tab-btn');
+            const petsTabPrev = document.getElementById('pets-tab-prev');
+            const petsTabNext = document.getElementById('pets-tab-next');
+            const petsTabMenu = document.getElementById('pets-tab-menu');
+
+            if (petsTabBtn && petsTabPrev && petsTabNext && petsTabMenu) {
+                petsTabBtn.addEventListener('click', function () {
+                    togglePetsTabMenu();
+                });
+
+                petsTabPrev.addEventListener('click', function () {
+                    showPrevPetsTab();
+                });
+
+                petsTabNext.addEventListener('click', function () {
+                    showNextPetsTab();
+                });
+
+                petsTabMenu.querySelectorAll('.pets-tab-dropdown-item').forEach(item => {
+                    item.addEventListener('click', function () {
+                        const screenKey = this.dataset.screen;
+                        setPetsScreenByKey(screenKey);
+                    });
+                });
+
+                document.addEventListener('click', function (event) {
+                    if (!petsTabBtn.contains(event.target) && !petsTabMenu.contains(event.target)) {
+                        petsTabMenu.classList.add('hidden');
+                        petsTabMenu.style.display = 'none';
+                    }
+                });
+
+                let initialTab = 'old';
+                try {
+                    const savedTab = localStorage.getItem('petsCurrentTab');
+                    if (savedTab && petsTabs.find(t => t.key === savedTab)) {
+                        initialTab = savedTab;
+                    }
+                } catch (e) {
+                    // ignore storage errors
+                }
+                setPetsScreenByKey(initialTab);
+            }
         });
     </script>
+    <script src="iconify-icon.min.js"></script>
 </body>
 </html>

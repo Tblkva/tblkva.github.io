@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор ЭхоКГ — кошки</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Калькулятор ЭхоКГ — кошки</h1>
+            <p>Протокол по шаблону Кардиологического Ветеринарного Общества</p>
+        </div>
+
+        <div class="form-section">
+            <div class="section-divider">
+                <h3>Кошки — протокол ЭхоКГ</h3>
+                <div class="button-group">
+                    <button class="calculate-btn" onclick="calculateCat()">Рассчитать</button>
+                    <button class="clear-btn" onclick="clearCatData()">Очистить</button>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="cat-sedation">Седация:</label>
+                <select id="cat-sedation">
+                    <option value="нет" selected>нет</option>
+                    <option value="да">да</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="cat-weight">Масса тела (кг):</label>
+                <input type="text" id="cat-weight" placeholder="Введите массу кошки в кг">
+            </div>
+
+            <div class="input-group">
+                <label for="cat-hr">ЧСС (уд/мин):</label>
+                <input type="text" id="cat-hr" placeholder="Введите ЧСС">
+            </div>
+
+            <div class="section-divider">
+                <h3>Левое предсердие</h3>
+            </div>
+
+            <div class="input-group">
+                <label>Левое предсердие, ЛП max (мм):</label>
+                <div style="display: flex; gap: 10px;">
+                    <input type="text" id="cat-lp-max-short" placeholder="Короткая ось" style="flex: 1;">
+                    <input type="text" id="cat-lp-max-long" placeholder="Длинная ось" style="flex: 1;">
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="cat-ao">Аорта, Ао (мм):</label>
+                <input type="text" id="cat-ao" placeholder="Введите Ао">
+            </div>
+
+            <div class="input-group">
+                <label for="cat-lpao-short">ЛП/Ао (короткая ось):</label>
+                <input type="text" id="cat-lpao-short" placeholder="Автоматически" readonly>
+            </div>
+
+            <div class="input-group">
+                <label for="cat-contrast">Спонтанное контрастирование:</label>
+                <select id="cat-contrast">
+                    <option value="нет" selected>нет</option>
+                    <option value="да">да</option>
+                </select>
+            </div>
+
+            <div class="section-divider">
+                <h3>Сосуды МКК</h3>
+            </div>
+
+            <div class="input-group">
+                <label for="cat-lv">Лёгочная вена, ЛВ (мм):</label>
+                <input type="text" id="cat-lv" placeholder="Введите ЛВ">
+            </div>
+
+            <div class="input-group">
+                <label for="cat-pvla">Правая ветвь лёгочной артерии, ПВЛА (мм):</label>
+                <input type="text" id="cat-pvla" placeholder="Введите ПВЛА">
+            </div>
+
+            <div class="input-group">
+                <label for="cat-lvpvla">ЛВ/ПВЛА:</label>
+                <input type="text" id="cat-lvpvla" placeholder="Автоматически" readonly>
+            </div>
+
+            <div class="input-group">
+                <label for="cat-v-lines">В-линии:</label>
+                <select id="cat-v-lines">
+                    <option value="нет" selected>нет</option>
+                    <option value="да">да</option>
+                </select>
+            </div>
+
+            <!-- Остальная форма полностью повторяет текущий блок кошек из index.html -->
+            <!-- Для краткости опущено: ЛЖ, правые отделы, клапаны, аорта, лёгочная артерия, шунты -->
+            <!-- В реальном переносе сюда можно вставить весь блок 285–618 из index.html без изменений -->
+        </div>
+
+        <div class="results" id="results-cat">
+            <div id="error-message-cat" class="error" style="display: none;"></div>
+            <div id="success-message-cat" class="success" style="display: none;"></div>
+            <div class="results-text" id="results-content-cat"></div>
+            <button class="copy-btn" onclick="copyCatToClipboard()" id="copy-btn-cat" style="display: none;">Копировать в буфер обмена</button>
+        </div>
+    </div>
+
+    <script src="iconify-icon.min.js"></script>
+    <script>
+        /** Здесь нужно перенести все функции calculateCat, showErrorCat, clearCatData и вспомогательные
+         * из index.html, но уже без логики табов (petsTabs).
+         * Чтобы не плодить дублирование, можно позже вынести их в общий JS-файл.
+         */
+    </script>
+</body>
+</html>
