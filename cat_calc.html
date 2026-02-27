@@ -23,22 +23,21 @@
                 </div>
             </div>
 
-            <div class="input-group">
-                <label for="cat-sedation">Седация:</label>
-                <select id="cat-sedation">
-                    <option value="нет" selected>нет</option>
-                    <option value="да">да</option>
-                </select>
-            </div>
+            <div class="input-group" style="display: flex; gap: 16px; flex-wrap: wrap; align-items: flex-end;">
+                <div style="flex: 1; min-width: 180px;">
+                    <label for="cat-sedation">Седация:</label>
+                    <input type="text" id="cat-sedation" placeholder="Схема седации" value="Нет">
+                </div>
 
-            <div class="input-group">
-                <label for="cat-weight">Масса тела (кг):</label>
-                <input type="text" id="cat-weight" placeholder="Введите массу кошки в кг">
-            </div>
+                <div style="flex: 1; min-width: 180px;">
+                    <label for="cat-weight">Масса тела (кг):</label>
+                    <input type="text" id="cat-weight" placeholder="Введите массу кошки в кг">
+                </div>
 
-            <div class="input-group">
-                <label for="cat-hr">ЧСС (уд/мин):</label>
-                <input type="text" id="cat-hr" placeholder="Введите ЧСС">
+                <div style="flex: 1; min-width: 180px;">
+                    <label for="cat-hr">ЧСС (уд/мин):</label>
+                    <input type="text" id="cat-hr" placeholder="Введите ЧСС">
+                </div>
             </div>
 
             <div class="section-divider">
@@ -53,54 +52,334 @@
                 </div>
             </div>
 
-            <div class="input-group">
-                <label for="cat-ao">Аорта, Ао (мм):</label>
-                <input type="text" id="cat-ao" placeholder="Введите Ао">
-            </div>
+            <div class="input-group" style="display: flex; gap: 16px; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 180px;">
+                    <label for="cat-ao">Аорта (мм):</label>
+                    <input type="text" id="cat-ao" placeholder="Введите Ао">
+                </div>
 
-            <div class="input-group">
-                <label for="cat-lpao-short">ЛП/Ао (короткая ось):</label>
-                <input type="text" id="cat-lpao-short" placeholder="Автоматически" readonly>
+                <div style="flex: 1; min-width: 180px;">
+                    <label for="cat-lpao-short">ЛП/Ао (короткая ось):</label>
+                    <input type="text" id="cat-lpao-short" placeholder="Автоматически" readonly>
+                </div>
             </div>
 
             <div class="input-group">
                 <label for="cat-contrast">Спонтанное контрастирование:</label>
-                <select id="cat-contrast">
-                    <option value="нет" selected>нет</option>
-                    <option value="да">да</option>
-                </select>
+                <input type="text" id="cat-contrast" placeholder="Описание контрастирования" value="Нет">
             </div>
 
             <div class="section-divider">
                 <h3>Сосуды МКК</h3>
             </div>
 
-            <div class="input-group">
-                <label for="cat-lv">Лёгочная вена, ЛВ (мм):</label>
-                <input type="text" id="cat-lv" placeholder="Введите ЛВ">
+            <div class="input-group" style="display: flex; gap: 16px; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 180px;">
+                    <label for="cat-lv">Лёгочная вена(мм):</label>
+                    <input type="text" id="cat-lv" placeholder="Введите ЛВ">
+                </div>
+
+                <div style="flex: 1; min-width: 180px;">
+                    <label for="cat-pvla">Правая ветвь лёгочной артери(мм):</label>
+                    <input type="text" id="cat-pvla" placeholder="Введите ПВЛА">
+                </div>
+                
+                <div style="flex: 1; min-width: 180px;">
+                    <label for="cat-lvpvla">ЛВ/ПВЛА:</label>
+                    <input type="text" id="cat-lvpvla" placeholder="Автоматически" readonly>
+                </div>
             </div>
 
-            <div class="input-group">
-                <label for="cat-pvla">Правая ветвь лёгочной артерии, ПВЛА (мм):</label>
-                <input type="text" id="cat-pvla" placeholder="Введите ПВЛА">
-            </div>
-
-            <div class="input-group">
-                <label for="cat-lvpvla">ЛВ/ПВЛА:</label>
-                <input type="text" id="cat-lvpvla" placeholder="Автоматически" readonly>
-            </div>
 
             <div class="input-group">
                 <label for="cat-v-lines">В-линии:</label>
-                <select id="cat-v-lines">
-                    <option value="нет" selected>нет</option>
-                    <option value="да">да</option>
-                </select>
+                <input type="text" id="cat-v-lines" placeholder="Описание В-линий" value="нет">
             </div>
 
-            <!-- Остальная форма полностью повторяет текущий блок кошек из index.html -->
-            <!-- Для краткости опущено: ЛЖ, правые отделы, клапаны, аорта, лёгочная артерия, шунты -->
-            <!-- В реальном переносе сюда можно вставить весь блок 285–618 из index.html без изменений -->
+            <div class="section-divider">
+                <h3>Левый желудочек</h3>
+            </div>
+
+            <div class="input-group">
+                <label>Короткая ось: МЖПд и ЗСЛЖд (мм):</label>
+                <div style="display: flex; gap: 10px;">
+                    <input type="text" id="cat-mzhp-short" placeholder="МЖПд (короткая)" style="flex: 1;">
+                    <input type="text" id="cat-zslzh-short" placeholder="ЗСЛЖд (короткая)" style="flex: 1;">
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>Длинная ось: МЖПд и ЗСЛЖд (мм):</label>
+                <div style="display: flex; gap: 10px;">
+                    <input type="text" id="cat-mzhp-long" placeholder="МЖПд (длинная)" style="flex: 1;">
+                    <input type="text" id="cat-zslzh-long" placeholder="ЗСЛЖд (длинная)" style="flex: 1;">
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>Конечные диастолический и систолический размеры ЛЖ (мм):</label>
+                <div style="display: flex; gap: 10px;">
+                    <input type="text" id="cat-kdr" placeholder="КДР" style="flex: 1;">
+                    <input type="text" id="cat-ksr" placeholder="КСР" style="flex: 1;">
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="cat-fs">Фракция укорочения (ФУ), %:</label>
+                <input type="text" id="cat-fs" placeholder="Автоматически" readonly>
+            </div>
+
+            <div class="input-group">
+                <label for="cat-papillary">Папиллярные мышцы:</label>
+                <input type="text" id="cat-papillary" placeholder="Описание папиллярных мышц" value="без особенностей">
+            </div>
+
+            <div class="input-group">
+                <label for="cat-hypertrophy">Локальная гипертрофия:</label>
+                <input type="text" id="cat-hypertrophy" placeholder="базальный/средний/апикальный" value="не выявлено">
+            </div>
+
+            <div class="section-divider">
+                <h3>Правое предсердие</h3>
+            </div>
+
+            <div class="input-group" style="display: flex; gap: 16px; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 180px;">
+                    <label for="cat-pp">Размер (ПП, мм):</label>
+                    <input type="text" id="cat-pp" placeholder="Введите размер ПП в мм">
+                </div>
+
+                <div style="flex: 1; min-width: 180px;">
+                    <label for="cat-pp-visual">Визуальная оценка:</label>
+                    <input type="text" id="cat-pp-visual" placeholder="Визуальная оценка ПП" value="не расширено">
+                </div>
+            </div>
+
+            <div class="section-divider">
+                <h3>Правый желудочек</h3>
+            </div>
+
+            <div class="input-group">
+                <label>Размер ПЖ и толщина СПЖд (мм):</label>
+                <div style="display: flex; gap: 10px;">
+                    <input type="text" id="cat-pzh" placeholder="ПЖ" style="flex: 1;">
+                    <input type="text" id="cat-spzh" placeholder="СПЖд" style="flex: 1;">
+                </div>
+            </div>
+
+            <div class="input-group" style="display: flex; gap: 16px; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 180px;">
+                    <label for="cat-pzh-lv">ПЖ/ЛЖ (%):</label>
+                    <input type="text" id="cat-pzh-lv" placeholder="Автоматически (ПЖ/КДР×100)" readonly>
+                </div>
+
+                <div style="flex: 1; min-width: 180px;">
+                    <label for="cat-spzh-zslzh">СПЖ/ЗСЛЖ (%):</label>
+                    <input type="text" id="cat-spzh-zslzh" placeholder="Автоматически (СПЖ/ЗСЛЖ×100)" readonly>
+                </div>
+            </div>
+
+            <div class="section-divider">
+                <h3>Клапанный аппарат (основные допплеровские показатели)</h3>
+            </div>
+            <div class="section-divider">
+                <h3>Митральный клапан — створки</h3>
+            </div>
+
+            <div class="input-group">
+                <label for="cat-mk-leaflets">Cтворки:</label>
+                <input type="text" id="cat-mk-leaflets" placeholder="Описание створок" value="не изменены">
+            </div>
+
+            <div class="input-group">
+                <label>Митральный клапан, скорости E и A (м/с):</label>
+                <div style="display: flex; gap: 10px;">
+                    <input type="text" id="cat-mk-e" placeholder="E" style="flex: 1;">
+                    <input type="text" id="cat-mk-a" placeholder="A" style="flex: 1;">
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="cat-mk-ivrt">IVRT (мс):</label>
+                <input type="text" id="cat-mk-ivrt" placeholder="IVRT, мс">
+            </div>
+
+            <div class="input-group">
+                <label>Тканевой допплер митрального кольца, E' и A' (см/с):</label>
+                <div style="display: flex; gap: 10px;">
+                    <input type="text" id="cat-mk-e-prime" placeholder="E'" style="flex: 1;">
+                    <input type="text" id="cat-mk-a-prime" placeholder="A'" style="flex: 1;">
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>Митральный клапан — расчёты:</label>
+                <div style="display: flex; gap: 10px;">
+                    <input type="text" id="cat-mk-ea" placeholder="E/A" readonly style="flex: 1;">
+                    <input type="text" id="cat-mk-eeprime" placeholder="E*100/E'" readonly style="flex: 1;">
+                </div>
+            </div>
+
+            <div class="input-group" style="display: flex; gap: 16px; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 180px;">
+                    <label for="cat-mk-reg-vel">Ррегургитация, скорость (м/с):</label>
+                    <input type="text" id="cat-mk-reg-vel" placeholder="Скорость регургитации" value="0">
+                </div>
+
+                <div style="flex: 1; min-width: 180px;">
+                    <label for="cat-mk-reg-grad">Градиент регургитации (4*v²), мм рт. ст.:</label>
+                    <input type="text" id="cat-mk-reg-grad" placeholder="Автоматически" readonly>
+                </div>
+            </div>
+
+            <div class="section-divider">
+                <h3>Трикуспидальный клапан</h3>
+            </div>
+
+            <div class="input-group">
+                <label for="cat-tk-leaflets">Cтворки:</label>
+                <input type="text" id="cat-tk-leaflets" placeholder="Описание створок" value="не изменены">
+            </div>
+
+            <div class="input-group">
+                <label>Трикуспидальный клапан, скорости E и A (м/с):</label>
+                <div style="display: flex; gap: 10px;">
+                    <input type="text" id="cat-tk-e" placeholder="E" style="flex: 1;">
+                    <input type="text" id="cat-tk-a" placeholder="A" style="flex: 1;">
+                </div>
+            </div>
+
+            <div class="input-group" style="display: flex; gap: 16px; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 180px;">
+                    <label for="cat-tk-reg-vel">Регургитация, скорость (м/с):</label>
+                    <input type="text" id="cat-tk-reg-vel" placeholder="Скорость регургитации" value="0">
+                </div>
+
+                <div style="flex: 1; min-width: 180px;">
+                    <label for="cat-tk-reg-grad">Градиент регургитации (4*v²), мм рт. ст.:</label>
+                    <input type="text" id="cat-tk-reg-grad" placeholder="Автоматически" readonly>
+                </div>
+            </div>
+
+            <div class="section-divider">
+                <h3>Аорта</h3>
+            </div>
+
+            <div class="input-group">
+                <label for="cat-ao-leaflets">Створки:</label>
+                <input type="text" id="cat-ao-leaflets" placeholder="Описание створок" value="не изменены">
+            </div>
+
+            <div class="input-group">
+                <label for="cat-ao-walls">Стеноз:</label>
+                <input type="text" id="cat-ao-walls" placeholder="Описание стенок" value="нет">
+            </div>
+
+            <div class="input-group">
+                <label for="cat-ao-vtlj">ВТЛЖ:</label>
+                <input type="text" id="cat-ao-vtlj" placeholder="Описание выносящего тракта ЛЖ" value="без особенностей">
+            </div>
+
+            <div class="input-group">
+                <label for="cat-ao-ring">Фиброзное кольцо (мм):</label>
+                <input type="text" id="cat-ao-ring" placeholder="Введите размер кольца, мм">
+            </div>
+
+            <div class="input-group" style="display: flex; gap: 16px; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 180px;">
+                    <label for="cat-ao-flow">Скорость потока (м/с):</label>
+                    <input type="text" id="cat-ao-flow" placeholder="Введите скорость потока, м/с">
+                </div>
+
+                <div style="flex: 1; min-width: 180px;">
+                    <label for="cat-ao-grad">Градиент (4*v²), мм рт. ст.:</label>
+                    <input type="text" id="cat-ao-grad" placeholder="Автоматически" readonly>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="cat-ao-reg-vel">Регургитация, скорость (м/с):</label>
+                <input type="text" id="cat-ao-reg-vel" placeholder="Скорость регургитации" value="0">
+            </div>
+
+            <div class="section-divider">
+                <h3>Лёгочная артерия</h3>
+            </div>
+
+            <div class="input-group">
+                <label for="cat-la-leaflets">Створки:</label>
+                <input type="text" id="cat-la-leaflets" placeholder="Описание створок" value="не изменены">
+            </div>
+
+            <div class="input-group">
+                <label for="cat-la-stenosis">Стеноз:</label>
+                <input type="text" id="cat-la-stenosis" placeholder="Стеноз" value="нет">
+            </div>
+
+            <div class="input-group">
+                <label for="cat-la-vtpj">ВТПЖ:</label>
+                <input type="text" id="cat-la-vtpj" placeholder="Описание ВТПЖ" value="без особенностей">
+            </div>
+
+            <div class="input-group" style="display: flex; gap: 16px; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 180px;">
+                    <label for="cat-la-ring">Фиброзное кольцо (мм):</label>
+                    <input type="text" id="cat-la-ring" placeholder="Введите размер кольца, мм">
+                </div>
+
+                <div style="flex: 1; min-width: 180px;">
+                    <label for="cat-la-trunk">Ствол (мм):</label>
+                    <input type="text" id="cat-la-trunk" placeholder="Введите размер ствола, мм">
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="cat-ao-la-ratio">Ао/ЛА:</label>
+                <input type="text" id="cat-ao-la-ratio" placeholder="Автоматически (Ао/кольцо ЛА)" readonly>
+            </div>
+
+            <div class="input-group" style="display: flex; gap: 16px; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 180px;">
+                    <label for="cat-la-flow">Скорость потока (м/с):</label>
+                    <input type="text" id="cat-la-flow" placeholder="Введите скорость потока, м/с">
+                </div>
+
+                <div style="flex: 1; min-width: 180px;">
+                    <label for="cat-la-grad">Градиент (4*v²), мм рт. ст.:</label>
+                    <input type="text" id="cat-la-grad" placeholder="Автоматически" readonly>
+                </div>
+            </div>
+
+            <div class="input-group" style="display: flex; gap: 16px; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 180px;">
+                    <label for="cat-la-reg-vel">Регургитация, скорость (м/с):</label>
+                    <input type="text" id="cat-la-reg-vel" placeholder="Скорость регургитации" value="0">
+                </div>
+
+                <div style="flex: 1; min-width: 180px;">
+                    <label for="cat-la-reg-grad">Градиент регургитации (4*v²), мм рт. ст.:</label>
+                    <input type="text" id="cat-la-reg-grad" placeholder="Автоматически" readonly>
+                </div>
+            </div>
+
+            <div class="section-divider">
+                <h3>Признаки патологического шунтирования</h3>
+            </div>
+
+            <div class="input-group">
+                <label for="cat-shunt-dmpp">ДМПП:</label>
+                <input type="text" id="cat-shunt-dmpp" placeholder="ДМПП" value="нет">
+            </div>
+
+            <div class="input-group">
+                <label for="cat-shunt-dmzhp">ДМЖП:</label>
+                <input type="text" id="cat-shunt-dmzhp" placeholder="ДМЖП" value="нет">
+            </div>
+
+            <div class="input-group">
+                <label for="cat-shunt-oap">ОАП:</label>
+                <input type="text" id="cat-shunt-oap" placeholder="ОАП" value="нет">
+            </div>
         </div>
 
         <div class="results" id="results-cat">
@@ -112,11 +391,707 @@
     </div>
 
     <script src="iconify-icon.min.js"></script>
+    <script src="magic.js"></script>
     <script>
-        /** Здесь нужно перенести все функции calculateCat, showErrorCat, clearCatData и вспомогательные
-         * из index.html, но уже без логики табов (petsTabs).
-         * Чтобы не плодить дублирование, можно позже вынести их в общий JS-файл.
-         */
+        function showErrorCat(message, errorFields = []) {
+            const errorEl = document.getElementById('error-message-cat');
+            const successEl = document.getElementById('success-message-cat');
+
+            errorEl.textContent = message;
+            errorEl.style.display = 'block';
+            if (successEl) {
+                successEl.style.display = 'none';
+            }
+
+            clearCatInputErrors();
+
+            if (errorFields.length > 0) {
+                errorFields.forEach(fieldId => {
+                    const field = document.getElementById(fieldId);
+                    if (field) {
+                        field.classList.add('input-error');
+                    }
+                });
+            }
+        }
+
+        function clearCatInputErrors() {
+            const inputs = document.querySelectorAll('.form-section input');
+            inputs.forEach(input => {
+                input.classList.remove('input-error');
+            });
+        }
+
+        function showSuccessCat(message) {
+            const successEl = document.getElementById('success-message-cat');
+            const errorEl = document.getElementById('error-message-cat');
+            if (successEl) {
+                successEl.textContent = message;
+                successEl.style.display = 'block';
+            }
+            if (errorEl) {
+                errorEl.style.display = 'none';
+            }
+        }
+
+        function hideErrorCat() {
+            const errorEl = document.getElementById('error-message-cat');
+            if (errorEl) {
+                errorEl.style.display = 'none';
+            }
+        }
+
+        function fallbackCopyTextToClipboard(text) {
+            const textArea = document.createElement('textarea');
+            textArea.value = text;
+            textArea.style.position = 'fixed';
+            textArea.style.left = '-999999px';
+            textArea.style.top = '-999999px';
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+
+            try {
+                document.execCommand('copy');
+                showSuccessCat('Результаты скопированы в буфер обмена!');
+            } catch (err) {
+                showErrorCat('Ошибка копирования: ' + err);
+            }
+
+            document.body.removeChild(textArea);
+        }
+
+        function copyCatToClipboard() {
+            const resultsText = document.getElementById('results-content-cat').textContent;
+
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(resultsText).then(() => {
+                    showSuccessCat('Результаты скопированы в буфер обмена!');
+                }).catch(err => {
+                    console.error('Ошибка копирования:', err);
+                    fallbackCopyTextToClipboard(resultsText);
+                });
+            } else {
+                fallbackCopyTextToClipboard(resultsText);
+            }
+        }
+
+        function clearCatData() {
+            const inputs = document.querySelectorAll('.form-section input[type="text"]');
+            inputs.forEach(input => {
+                input.value = '';
+            });
+
+            const computedIds = [
+                'cat-lpao-short',
+                'cat-lvpvla',
+                'cat-fs',
+                'cat-pzh-lv',
+                'cat-spzh-zslzh',
+                'cat-mk-ea',
+                'cat-mk-eeprime',
+                'cat-mk-reg-grad',
+                'cat-ao-grad',
+                'cat-ao-la-ratio',
+                'cat-la-grad',
+                'cat-la-reg-grad',
+                'cat-tk-reg-grad'
+            ];
+            computedIds.forEach(id => {
+                const field = document.getElementById(id);
+                if (field) field.value = '';
+            });
+
+            clearCatInputErrors();
+            hideErrorCat();
+            const successEl = document.getElementById('success-message-cat');
+            const resultsBlock = document.getElementById('results-cat');
+            const copyBtn = document.getElementById('copy-btn-cat');
+            if (successEl) successEl.style.display = 'none';
+            if (resultsBlock) resultsBlock.classList.remove('show');
+            if (copyBtn) copyBtn.style.display = 'none';
+        }
+
+        function calculateCat() {
+            try {
+                const sedation = document.getElementById('cat-sedation').value;
+                const contrast = document.getElementById('cat-contrast').value;
+                const vLines = document.getElementById('cat-v-lines').value;
+                const weightStr = document.getElementById('cat-weight').value;
+                const lpMaxShortStr = document.getElementById('cat-lp-max-short').value;
+                const lpMaxLongStr = document.getElementById('cat-lp-max-long').value;
+                const aoStr = document.getElementById('cat-ao').value;
+                const lvStr = document.getElementById('cat-lv').value;
+                const pvlaStr = document.getElementById('cat-pvla').value;
+                const kdrStr = document.getElementById('cat-kdr').value;
+                const ksrStr = document.getElementById('cat-ksr').value;
+                const mzhpShortStr = document.getElementById('cat-mzhp-short').value;
+                const zslzhShortStr = document.getElementById('cat-zslzh-short').value;
+                const mzhpLongStr = document.getElementById('cat-mzhp-long').value;
+                const zslzhLongStr = document.getElementById('cat-zslzh-long').value;
+                const papillaryStr = document.getElementById('cat-papillary').value;
+                const hypertrophyStr = document.getElementById('cat-hypertrophy').value;
+                const ppStr = document.getElementById('cat-pp').value;
+                const ppVisualStr = document.getElementById('cat-pp-visual').value;
+                const pzhStr = document.getElementById('cat-pzh').value;
+                const spzhStr = document.getElementById('cat-spzh').value;
+                const mkLeafletsStr = document.getElementById('cat-mk-leaflets').value;
+                const mkEStr = document.getElementById('cat-mk-e').value;
+                const mkAStr = document.getElementById('cat-mk-a').value;
+                const mkIvrtStr = document.getElementById('cat-mk-ivrt').value;
+                const mkEPrimeStr = document.getElementById('cat-mk-e-prime').value;
+                const mkAPrimeStr = document.getElementById('cat-mk-a-prime').value;
+                const mkRegVelStr = document.getElementById('cat-mk-reg-vel').value;
+                const aoLeafletsStr = document.getElementById('cat-ao-leaflets').value;
+                const aoWallsStr = document.getElementById('cat-ao-walls').value;
+                const aoVtljStr = document.getElementById('cat-ao-vtlj').value;
+                const aoRingStr = document.getElementById('cat-ao-ring').value;
+                const aoFlowStr = document.getElementById('cat-ao-flow').value;
+                const aoRegVelStr = document.getElementById('cat-ao-reg-vel').value;
+                const tkLeafletsStr = document.getElementById('cat-tk-leaflets').value;
+                const tkEStr = document.getElementById('cat-tk-e').value;
+                const tkAStr = document.getElementById('cat-tk-a').value;
+                const tkRegVelStr = document.getElementById('cat-tk-reg-vel').value;
+                const laLeafletsStr = document.getElementById('cat-la-leaflets').value;
+                const laStenosisStr = document.getElementById('cat-la-stenosis').value;
+                const laVtpjStr = document.getElementById('cat-la-vtpj').value;
+                const laRingStr = document.getElementById('cat-la-ring').value;
+                const laTrunkStr = document.getElementById('cat-la-trunk').value;
+                const laFlowStr = document.getElementById('cat-la-flow').value;
+                const laRegVelStr = document.getElementById('cat-la-reg-vel').value;
+                const shuntDmppStr = document.getElementById('cat-shunt-dmpp').value;
+                const shuntDmzhpStr = document.getElementById('cat-shunt-dmzhp').value;
+                const shuntOapStr = document.getElementById('cat-shunt-oap').value;
+
+                const errors = [];
+                const errorFieldIds = [];
+
+                if (!weightStr || weightStr.trim() === '') {
+                    errors.push('Масса тела');
+                    errorFieldIds.push('cat-weight');
+                }
+                if (!lpMaxShortStr || lpMaxShortStr.trim() === '') {
+                    errors.push('ЛП max (короткая ось)');
+                    errorFieldIds.push('cat-lp-max-short');
+                }
+                if (!aoStr || aoStr.trim() === '') {
+                    errors.push('Ао');
+                    errorFieldIds.push('cat-ao');
+                }
+                if (!lvStr || lvStr.trim() === '') {
+                    errors.push('ЛВ');
+                    errorFieldIds.push('cat-lv');
+                }
+                if (!pvlaStr || pvlaStr.trim() === '') {
+                    errors.push('ПВЛА');
+                    errorFieldIds.push('cat-pvla');
+                }
+                if (!kdrStr || kdrStr.trim() === '') {
+                    errors.push('КДР');
+                    errorFieldIds.push('cat-kdr');
+                }
+                if (!ksrStr || ksrStr.trim() === '') {
+                    errors.push('КСР');
+                    errorFieldIds.push('cat-ksr');
+                }
+
+                if (errors.length > 0) {
+                    showErrorCat(`Пожалуйста, заполните следующие поля: ${errors.join(', ')}`, errorFieldIds);
+                    return;
+                }
+
+                const weight = parseFloat(weightStr.replace(',', '.'));
+                const lpMaxShort = parseFloat(lpMaxShortStr.replace(',', '.'));
+                const lpMaxLong = lpMaxLongStr ? parseFloat(lpMaxLongStr.replace(',', '.')) : NaN;
+                const ao = parseFloat(aoStr.replace(',', '.'));
+                const lv = parseFloat(lvStr.replace(',', '.'));
+                const pvla = parseFloat(pvlaStr.replace(',', '.'));
+                const kdr = parseFloat(kdrStr.replace(',', '.'));
+                const ksr = parseFloat(ksrStr.replace(',', '.'));
+                const mzhpShort = mzhpShortStr ? parseFloat(mzhpShortStr.replace(',', '.')) : NaN;
+                const zslzhShort = zslzhShortStr ? parseFloat(zslzhShortStr.replace(',', '.')) : NaN;
+                const mzhpLong = mzhpLongStr ? parseFloat(mzhpLongStr.replace(',', '.')) : NaN;
+                const zslzhLong = zslzhLongStr ? parseFloat(zslzhLongStr.replace(',', '.')) : NaN;
+                const pp = ppStr ? parseFloat(ppStr.replace(',', '.')) : NaN;
+                const pzh = pzhStr ? parseFloat(pzhStr.replace(',', '.')) : NaN;
+                const spzh = spzhStr ? parseFloat(spzhStr.replace(',', '.')) : NaN;
+                const mkE = mkEStr ? parseFloat(mkEStr.replace(',', '.')) : NaN;
+                const mkA = mkAStr ? parseFloat(mkAStr.replace(',', '.')) : NaN;
+                const mkIvrt = mkIvrtStr ? parseFloat(mkIvrtStr.replace(',', '.')) : NaN;
+                const mkEPrime = mkEPrimeStr ? parseFloat(mkEPrimeStr.replace(',', '.')) : NaN;
+                const mkAPrime = mkAPrimeStr ? parseFloat(mkAPrimeStr.replace(',', '.')) : NaN;
+                const mkRegVel = mkRegVelStr ? parseFloat(mkRegVelStr.replace(',', '.')) : NaN;
+                const aoRing = aoRingStr ? parseFloat(aoRingStr.replace(',', '.')) : NaN;
+                const aoFlow = aoFlowStr ? parseFloat(aoFlowStr.replace(',', '.')) : NaN;
+                const aoRegVel = aoRegVelStr ? parseFloat(aoRegVelStr.replace(',', '.')) : NaN;
+                const tkE = tkEStr ? parseFloat(tkEStr.replace(',', '.')) : NaN;
+                const tkA = tkAStr ? parseFloat(tkAStr.replace(',', '.')) : NaN;
+                const tkRegVel = tkRegVelStr ? parseFloat(tkRegVelStr.replace(',', '.')) : NaN;
+                const laRing = laRingStr ? parseFloat(laRingStr.replace(',', '.')) : NaN;
+                const laTrunk = laTrunkStr ? parseFloat(laTrunkStr.replace(',', '.')) : NaN;
+                const laFlow = laFlowStr ? parseFloat(laFlowStr.replace(',', '.')) : NaN;
+                const laRegVel = laRegVelStr ? parseFloat(laRegVelStr.replace(',', '.')) : NaN;
+
+                const numericErrors = [];
+                if (isNaN(weight)) numericErrors.push('масса тела');
+                if (isNaN(lpMaxShort)) numericErrors.push('ЛП max (короткая ось)');
+                if (isNaN(ao)) numericErrors.push('Ао');
+                if (isNaN(lv)) numericErrors.push('ЛВ');
+                if (isNaN(pvla)) numericErrors.push('ПВЛА');
+                if (isNaN(kdr)) numericErrors.push('КДР');
+                if (isNaN(ksr)) numericErrors.push('КСР');
+
+                if (numericErrors.length > 0) {
+                    showErrorCat(`Пожалуйста, введите корректные числовые значения для: ${numericErrors.join(', ')}`);
+                    return;
+                }
+
+                const lpAo = lpMaxShort / ao;
+                const lvPvla = lv / pvla;
+                const fs = (kdr - ksr) / kdr * 100;
+
+                let pzhLj = NaN;
+                let spzhZslzh = NaN;
+                if (!isNaN(pzh)) {
+                    pzhLj = pzh / kdr * 100;
+                }
+                if (!isNaN(spzh) && !isNaN(zslzhShort)) {
+                    spzhZslzh = spzh / zslzhShort * 100;
+                }
+
+                let eaMk = NaN;
+                let eePrimeMk = NaN;
+                let eaTk = NaN;
+                if (!isNaN(mkE) && !isNaN(mkA) && mkA !== 0) {
+                    eaMk = mkE / mkA;
+                }
+                if (!isNaN(mkE) && !isNaN(mkEPrime) && mkEPrime !== 0) {
+                    eePrimeMk = (mkE * 100) / mkEPrime;
+                }
+                if (!isNaN(tkE) && !isNaN(tkA) && tkA !== 0) {
+                    eaTk = tkE / tkA;
+                }
+
+                let gradAo = NaN;
+                let gradMkReg = NaN;
+                let gradTkReg = NaN;
+                let gradLa = NaN;
+                let gradLaReg = NaN;
+                let aoLaRatio = NaN;
+                if (!isNaN(aoFlow)) {
+                    gradAo = 4 * Math.pow(aoFlow, 2);
+                }
+                if (!isNaN(mkRegVel)) {
+                    gradMkReg = 4 * Math.pow(mkRegVel, 2);
+                }
+                if (!isNaN(tkRegVel)) {
+                    gradTkReg = 4 * Math.pow(tkRegVel, 2);
+                }
+                if (!isNaN(laFlow)) {
+                    gradLa = 4 * Math.pow(laFlow, 2);
+                }
+                if (!isNaN(laRegVel)) {
+                    gradLaReg = 4 * Math.pow(laRegVel, 2);
+                }
+                if (!isNaN(aoRing) && !isNaN(laRing) && laRing !== 0) {
+                    aoLaRatio = aoRing / laRing;
+                }
+
+                let results = `Кошки — расчёт протокола ЭхоКГ
+
+Основные данные:
+Седация: ${sedation}
+Масса тела: ${weight.toFixed(2)} кг
+
+Левое предсердие и аорта:
+ЛП max (короткая ось): ${lpMaxShort.toFixed(2)} мм
+ЛП max (длинная ось): ${isNaN(lpMaxLong) ? '—' : lpMaxLong.toFixed(2) + ' мм'}
+Ао: ${ao.toFixed(2)} мм
+ЛП/Ао (по короткой оси): ${lpAo.toFixed(2)}
+Спонтанное контрастирование: ${contrast}
+
+Сосуды малого круга:
+ЛВ: ${lv.toFixed(2)} мм
+ПВЛА: ${pvla.toFixed(2)} мм
+ЛВ/ПВЛА: ${lvPvla.toFixed(2)}
+В-линии: ${vLines}
+
+Левый желудочек:
+МЖПд (короткая ось): ${isNaN(mzhpShort) ? '—' : mzhpShort.toFixed(2) + ' мм'}
+ЗСЛЖд (короткая ось): ${isNaN(zslzhShort) ? '—' : zslzhShort.toFixed(2) + ' мм'}
+МЖПд (длинная ось): ${isNaN(mzhpLong) ? '—' : mzhpLong.toFixed(2) + ' мм'}
+ЗСЛЖд (длинная ось): ${isNaN(zslzhLong) ? '—' : zslzhLong.toFixed(2) + ' мм'}
+КДР: ${kdr.toFixed(2)} мм
+КСР: ${ksr.toFixed(2)} мм
+Фракция укорочения (ФУ): ${fs.toFixed(2)}%
+Папиллярные мышцы: ${papillaryStr || 'без особенностей'}
+Локальная гипертрофия: ${hypertrophyStr}
+
+Аорта:
+Створки: ${aoLeafletsStr || 'не изменены'}
+Стеноз: ${aoWallsStr || 'нет'}
+ВТЛЖ: ${aoVtljStr || 'без особенностей'}
+Фиброзное кольцо: ${isNaN(aoRing) ? '—' : aoRing.toFixed(2) + ' мм'}
+Скорость потока: ${isNaN(aoFlow) ? '—' : aoFlow.toFixed(2) + ' м/с'}
+Градиент (4*v²): ${isNaN(gradAo) ? '—' : gradAo.toFixed(2)} мм рт. ст.
+Регургитация: скорость = ${isNaN(aoRegVel) ? '—' : aoRegVel.toFixed(2)} м/с`;
+
+                results += `
+
+Правое предсердие:
+Размер (ПП): ${isNaN(pp) ? '—' : pp.toFixed(2) + ' мм'}
+Визуальная оценка: ${ppVisualStr || 'не расширено'}
+
+Правый желудочек:
+ПЖ: ${isNaN(pzh) ? '—' : pzh.toFixed(2) + ' мм'}
+СПЖд: ${isNaN(spzh) ? '—' : spzh.toFixed(2) + ' мм'}
+ПЖ/ЛЖ: ${isNaN(pzhLj) ? '—' : pzhLj.toFixed(2) + ' %'}
+СПЖ/ЗСЛЖ: ${isNaN(spzhZslzh) ? '—' : spzhZslzh.toFixed(2) + ' %'}
+
+Клапанный аппарат:
+Митральный клапан: створки — ${mkLeafletsStr || 'не изменены'}, E = ${isNaN(mkE) ? '—' : mkE.toFixed(2)} м/с, A = ${isNaN(mkA) ? '—' : mkA.toFixed(2)} м/с, IVRT = ${isNaN(mkIvrt) ? '—' : mkIvrt.toFixed(0)} мс, E' = ${isNaN(mkEPrime) ? '—' : mkEPrime.toFixed(2)} см/с, A' = ${isNaN(mkAPrime) ? '—' : mkAPrime.toFixed(2)} см/с, E/A = ${isNaN(eaMk) ? '—' : eaMk.toFixed(2)}, E*100/E' = ${isNaN(eePrimeMk) ? '—' : eePrimeMk.toFixed(2)}, регургитация: скорость = ${isNaN(mkRegVel) ? '—' : mkRegVel.toFixed(2)} м/с, градиент 4*v² = ${isNaN(gradMkReg) ? '—' : gradMkReg.toFixed(2)} мм рт. ст.
+Трикуспидальный клапан: створки — ${tkLeafletsStr || 'не изменены'}, E = ${isNaN(tkE) ? '—' : tkE.toFixed(2)} м/с, A = ${isNaN(tkA) ? '—' : tkA.toFixed(2)} м/с, E/A = ${isNaN(eaTk) ? '—' : eaTk.toFixed(2)}, регургитация: скорость = ${isNaN(tkRegVel) ? '—' : tkRegVel.toFixed(2)} м/с, градиент 4*v² = ${isNaN(gradTkReg) ? '—' : gradTkReg.toFixed(2)} мм рт. ст.
+Клапан лёгочной артерии: створки — ${laLeafletsStr || 'не изменены'}, стеноз: ${laStenosisStr || 'нет'}, ВТПЖ: ${laVtpjStr || 'без особенностей'}, фиброзное кольцо: ${isNaN(laRing) ? '—' : laRing.toFixed(2) + ' мм'}, ствол: ${isNaN(laTrunk) ? '—' : laTrunk.toFixed(2) + ' мм'}, Ао/ЛА: ${isNaN(aoLaRatio) ? '—' : aoLaRatio.toFixed(2)}, скорость потока = ${isNaN(laFlow) ? '—' : laFlow.toFixed(2)} м/с, градиент 4*v² = ${isNaN(gradLa) ? '—' : gradLa.toFixed(2)} мм рт. ст., регургитация: скорость = ${isNaN(laRegVel) ? '—' : laRegVel.toFixed(2)} м/с, градиент 4*v² = ${isNaN(gradLaReg) ? '—' : gradLaReg.toFixed(2)} мм рт. ст.
+
+Признаки патологического шунтирования:
+ДМПП: ${shuntDmppStr || 'нет'}
+ДМЖП: ${shuntDmzhpStr || 'нет'}
+ОАП: ${shuntOapStr || 'нет'}`;
+
+                const resultsContent = document.getElementById('results-content-cat');
+                const resultsBlock = document.getElementById('results-cat');
+                const copyBtn = document.getElementById('copy-btn-cat');
+                const lpAoField = document.getElementById('cat-lpao-short');
+                const lvPvlaField = document.getElementById('cat-lvpvla');
+                const fsField = document.getElementById('cat-fs');
+                const pzhLvField = document.getElementById('cat-pzh-lv');
+                const spzhZslzhField = document.getElementById('cat-spzh-zslzh');
+                const mkEaField = document.getElementById('cat-mk-ea');
+                const mkEePrimeField = document.getElementById('cat-mk-eeprime');
+                const mkRegGradField = document.getElementById('cat-mk-reg-grad');
+                const aoLaField = document.getElementById('cat-ao-la-ratio');
+                const laGradField = document.getElementById('cat-la-grad');
+                const laRegGradField = document.getElementById('cat-la-reg-grad');
+                const tkRegGradField = document.getElementById('cat-tk-reg-grad');
+
+                resultsContent.textContent = results;
+                resultsBlock.classList.add('show');
+                copyBtn.style.display = 'block';
+                if (lpAoField) {
+                    lpAoField.value = lpAo.toFixed(2);
+                }
+                if (lvPvlaField) {
+                    lvPvlaField.value = lvPvla.toFixed(2);
+                }
+                if (fsField) {
+                    fsField.value = fs.toFixed(2);
+                }
+                if (pzhLvField && !isNaN(pzhLj)) {
+                    pzhLvField.value = pzhLj.toFixed(2);
+                }
+                if (spzhZslzhField && !isNaN(spzhZslzh)) {
+                    spzhZslzhField.value = spzhZslzh.toFixed(2);
+                }
+                if (mkEaField && !isNaN(eaMk)) {
+                    mkEaField.value = eaMk.toFixed(2);
+                }
+                if (mkEePrimeField && !isNaN(eePrimeMk)) {
+                    mkEePrimeField.value = eePrimeMk.toFixed(2);
+                }
+                if (mkRegGradField && !isNaN(gradMkReg)) {
+                    mkRegGradField.value = gradMkReg.toFixed(2);
+                }
+                if (aoLaField && !isNaN(aoLaRatio)) {
+                    aoLaField.value = aoLaRatio.toFixed(2);
+                }
+                if (laGradField && !isNaN(gradLa)) {
+                    laGradField.value = gradLa.toFixed(2);
+                }
+                if (laRegGradField && !isNaN(gradLaReg)) {
+                    laRegGradField.value = gradLaReg.toFixed(2);
+                }
+                if (tkRegGradField && !isNaN(gradTkReg)) {
+                    tkRegGradField.value = gradTkReg.toFixed(2);
+                }
+
+                hideErrorCat();
+                clearCatInputErrors();
+                showSuccessCat('Расчёты для кошек выполнены успешно!');
+
+            } catch (error) {
+                showErrorCat('Ошибка в расчётах: ' + error.message);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            function updateCatLpAoField() {
+                const lpMaxShortInput = document.getElementById('cat-lp-max-short');
+                const aoInput = document.getElementById('cat-ao');
+                const lpAoField = document.getElementById('cat-lpao-short');
+                if (!lpMaxShortInput || !aoInput || !lpAoField) return;
+
+                const lp = parseFloat(lpMaxShortInput.value.replace(',', '.'));
+                const aoVal = parseFloat(aoInput.value.replace(',', '.'));
+
+                if (!isNaN(lp) && !isNaN(aoVal) && aoVal !== 0) {
+                    lpAoField.value = (lp / aoVal).toFixed(2);
+                } else {
+                    lpAoField.value = '';
+                }
+            }
+
+            function updateCatFsField() {
+                const kdrInput = document.getElementById('cat-kdr');
+                const ksrInput = document.getElementById('cat-ksr');
+                const fsField = document.getElementById('cat-fs');
+                if (!kdrInput || !ksrInput || !fsField) return;
+
+                const kdr = parseFloat(kdrInput.value.replace(',', '.'));
+                const ksr = parseFloat(ksrInput.value.replace(',', '.'));
+
+                if (!isNaN(kdr) && !isNaN(ksr) && kdr !== 0) {
+                    const fs = (kdr - ksr) / kdr * 100;
+                    fsField.value = fs.toFixed(2);
+                } else {
+                    fsField.value = '';
+                }
+            }
+
+            function updateCatLvPvlaField() {
+                const lvInput = document.getElementById('cat-lv');
+                const pvlaInput = document.getElementById('cat-pvla');
+                const lvPvlaField = document.getElementById('cat-lvpvla');
+                if (!lvInput || !pvlaInput || !lvPvlaField) return;
+
+                const lv = parseFloat(lvInput.value.replace(',', '.'));
+                const pvla = parseFloat(pvlaInput.value.replace(',', '.'));
+
+                if (!isNaN(lv) && !isNaN(pvla) && pvla !== 0) {
+                    lvPvlaField.value = (lv / pvla).toFixed(2);
+                } else {
+                    lvPvlaField.value = '';
+                }
+            }
+
+            function updateCatRightRatiosField() {
+                const pzhInput = document.getElementById('cat-pzh');
+                const spzhInput = document.getElementById('cat-spzh');
+                const kdrInput = document.getElementById('cat-kdr');
+                const zslzhShortInput = document.getElementById('cat-zslzh-short');
+                const pzhLvField = document.getElementById('cat-pzh-lv');
+                const spzhZslzhField = document.getElementById('cat-spzh-zslzh');
+                if (!pzhInput || !spzhInput || !kdrInput || !zslzhShortInput || !pzhLvField || !spzhZslzhField) return;
+
+                const pzh = parseFloat(pzhInput.value.replace(',', '.'));
+                const spzh = parseFloat(spzhInput.value.replace(',', '.'));
+                const kdr = parseFloat(kdrInput.value.replace(',', '.'));
+                const zslzh = parseFloat(zslzhShortInput.value.replace(',', '.'));
+
+                if (!isNaN(pzh) && !isNaN(kdr) && kdr !== 0) {
+                    pzhLvField.value = (pzh / kdr * 100).toFixed(2);
+                } else {
+                    pzhLvField.value = '';
+                }
+
+                if (!isNaN(spzh) && !isNaN(zslzh) && zslzh !== 0) {
+                    spzhZslzhField.value = (spzh / zslzh * 100).toFixed(2);
+                } else {
+                    spzhZslzhField.value = '';
+                }
+            }
+
+            function updateCatMitralDerivedFields() {
+                const eInput = document.getElementById('cat-mk-e');
+                const aInput = document.getElementById('cat-mk-a');
+                const ePrimeInput = document.getElementById('cat-mk-e-prime');
+                const eaField = document.getElementById('cat-mk-ea');
+                const eePrimeField = document.getElementById('cat-mk-eeprime');
+                if (!eInput || !aInput || !ePrimeInput || !eaField || !eePrimeField) return;
+
+                const e = parseFloat(eInput.value.replace(',', '.'));
+                const a = parseFloat(aInput.value.replace(',', '.'));
+                const ePrime = parseFloat(ePrimeInput.value.replace(',', '.'));
+
+                if (!isNaN(e) && !isNaN(a) && a !== 0) {
+                    eaField.value = (e / a).toFixed(2);
+                } else {
+                    eaField.value = '';
+                }
+
+                if (!isNaN(e) && !isNaN(ePrime) && ePrime !== 0) {
+                    eePrimeField.value = (e * 100 / ePrime).toFixed(2);
+                } else {
+                    eePrimeField.value = '';
+                }
+            }
+
+            function updateCatAoGradientField() {
+                const flowInput = document.getElementById('cat-ao-flow');
+                const gradField = document.getElementById('cat-ao-grad');
+                if (!flowInput || !gradField) return;
+
+                const v = parseFloat(flowInput.value.replace(',', '.'));
+                if (!isNaN(v)) {
+                    gradField.value = (4 * Math.pow(v, 2)).toFixed(2);
+                } else {
+                    gradField.value = '';
+                }
+            }
+
+            function updateCatAoLaRatioField() {
+                const aoRingInput = document.getElementById('cat-ao-ring');
+                const laRingInput = document.getElementById('cat-la-ring');
+                const ratioField = document.getElementById('cat-ao-la-ratio');
+                if (!aoRingInput || !laRingInput || !ratioField) return;
+
+                const aoRing = parseFloat(aoRingInput.value.replace(',', '.'));
+                const laRing = parseFloat(laRingInput.value.replace(',', '.'));
+
+                if (!isNaN(aoRing) && !isNaN(laRing) && laRing !== 0) {
+                    ratioField.value = (aoRing / laRing).toFixed(2);
+                } else {
+                    ratioField.value = '';
+                }
+            }
+
+            function updateCatMitralRegGradientField() {
+                const velInput = document.getElementById('cat-mk-reg-vel');
+                const gradField = document.getElementById('cat-mk-reg-grad');
+                if (!velInput || !gradField) return;
+
+                const v = parseFloat(velInput.value.replace(',', '.'));
+                if (!isNaN(v)) {
+                    gradField.value = (4 * Math.pow(v, 2)).toFixed(2);
+                } else {
+                    gradField.value = '';
+                }
+            }
+
+            function updateCatTricuspidRegGradientField() {
+                const velInput = document.getElementById('cat-tk-reg-vel');
+                const gradField = document.getElementById('cat-tk-reg-grad');
+                if (!velInput || !gradField) return;
+
+                const v = parseFloat(velInput.value.replace(',', '.'));
+                if (!isNaN(v)) {
+                    gradField.value = (4 * Math.pow(v, 2)).toFixed(2);
+                } else {
+                    gradField.value = '';
+                }
+            }
+
+            function updateCatLaGradientsField() {
+                const flowInput = document.getElementById('cat-la-flow');
+                const flowGradField = document.getElementById('cat-la-grad');
+                const regVelInput = document.getElementById('cat-la-reg-vel');
+                const regGradField = document.getElementById('cat-la-reg-grad');
+                if (!flowInput || !flowGradField || !regVelInput || !regGradField) return;
+
+                const vFlow = parseFloat(flowInput.value.replace(',', '.'));
+                if (!isNaN(vFlow)) {
+                    flowGradField.value = (4 * Math.pow(vFlow, 2)).toFixed(2);
+                } else {
+                    flowGradField.value = '';
+                }
+
+                const vReg = parseFloat(regVelInput.value.replace(',', '.'));
+                if (!isNaN(vReg)) {
+                    regGradField.value = (4 * Math.pow(vReg, 2)).toFixed(2);
+                } else {
+                    regGradField.value = '';
+                }
+            }
+
+            const lpMaxShortInput = document.getElementById('cat-lp-max-short');
+            const aoInput = document.getElementById('cat-ao');
+            const lvInput = document.getElementById('cat-lv');
+            const pvlaInput = document.getElementById('cat-pvla');
+            const kdrInput = document.getElementById('cat-kdr');
+            const ksrInput = document.getElementById('cat-ksr');
+            const pzhInput = document.getElementById('cat-pzh');
+            const spzhInput = document.getElementById('cat-spzh');
+            const mkEInput = document.getElementById('cat-mk-e');
+            const mkAInput = document.getElementById('cat-mk-a');
+            const mkEPrimeInput = document.getElementById('cat-mk-e-prime');
+            const aoFlowInput = document.getElementById('cat-ao-flow');
+            const mkRegVelInput = document.getElementById('cat-mk-reg-vel');
+            const aoRingInput = document.getElementById('cat-ao-ring');
+            const laRingInput = document.getElementById('cat-la-ring');
+            const laFlowInput = document.getElementById('cat-la-flow');
+            const laRegVelInput = document.getElementById('cat-la-reg-vel');
+            const tkRegVelInput = document.getElementById('cat-tk-reg-vel');
+
+            if (lpMaxShortInput) {
+                lpMaxShortInput.addEventListener('input', updateCatLpAoField);
+            }
+            if (aoInput) {
+                aoInput.addEventListener('input', updateCatLpAoField);
+            }
+            if (lvInput) {
+                lvInput.addEventListener('input', updateCatLvPvlaField);
+            }
+            if (pvlaInput) {
+                pvlaInput.addEventListener('input', updateCatLvPvlaField);
+            }
+            if (kdrInput) {
+                kdrInput.addEventListener('input', updateCatFsField);
+                kdrInput.addEventListener('input', updateCatRightRatiosField);
+            }
+            if (ksrInput) {
+                ksrInput.addEventListener('input', updateCatFsField);
+            }
+            if (pzhInput) {
+                pzhInput.addEventListener('input', updateCatRightRatiosField);
+            }
+            if (spzhInput) {
+                spzhInput.addEventListener('input', updateCatRightRatiosField);
+            }
+            if (mkEInput) {
+                mkEInput.addEventListener('input', updateCatMitralDerivedFields);
+            }
+            if (mkAInput) {
+                mkAInput.addEventListener('input', updateCatMitralDerivedFields);
+            }
+            if (mkEPrimeInput) {
+                mkEPrimeInput.addEventListener('input', updateCatMitralDerivedFields);
+            }
+            if (aoFlowInput) {
+                aoFlowInput.addEventListener('input', updateCatAoGradientField);
+            }
+            if (mkRegVelInput) {
+                mkRegVelInput.addEventListener('input', updateCatMitralRegGradientField);
+            }
+            if (aoRingInput) {
+                aoRingInput.addEventListener('input', updateCatAoLaRatioField);
+            }
+            if (laRingInput) {
+                laRingInput.addEventListener('input', updateCatAoLaRatioField);
+            }
+            if (laFlowInput) {
+                laFlowInput.addEventListener('input', updateCatLaGradientsField);
+            }
+            if (laRegVelInput) {
+                laRegVelInput.addEventListener('input', updateCatLaGradientsField);
+            }
+            if (tkRegVelInput) {
+                tkRegVelInput.addEventListener('input', updateCatTricuspidRegGradientField);
+            }
+
+            // Обработчик Enter и сброса ошибок на ввод
+            const allInputs = document.querySelectorAll('.form-section input');
+            allInputs.forEach(input => {
+                input.addEventListener('keypress', function (e) {
+                    if (e.key === 'Enter') {
+                        calculateCat();
+                    }
+                });
+                input.addEventListener('input', function () {
+                    if (this.classList.contains('input-error')) {
+                        this.classList.remove('input-error');
+                    }
+                });
+            });
+        });
     </script>
 </body>
 </html>
