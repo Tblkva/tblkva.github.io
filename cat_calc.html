@@ -262,7 +262,7 @@
 
             <div class="input-group" style="display: flex; gap: 16px; flex-wrap: wrap;">
                 <div style="flex: 1; min-width: 180px;">
-                    <label for="cat-mk-reg-vel">Ррегургитация, скорость (м/с):</label>
+                    <label for="cat-mk-reg-vel">Регургитация, скорость (м/с):</label>
                     <input type="text" id="cat-mk-reg-vel" placeholder="Скорость регургитации" value="0">
                 </div>
 
@@ -403,22 +403,82 @@
             </div>
 
             <div class="section-divider">
+                <h3>Вероятность лёгочной гипертензии</h3>
+            </div>
+
+            <div class="input-group">
+                <label>Полость перикарда:</label>
+                <div style="display: flex; gap: 16px; flex-wrap: wrap; align-items: center;">
+                    <label style="display: inline-flex; align-items: center; gap: 6px; cursor: pointer;">
+                        <input type="checkbox" id="cat-pericard-unchanged" value="не изменена" checked onchange="document.getElementById('cat-pericard-changed').checked=!this.checked">
+                        <span>не изменена</span>
+                    </label>
+                    <label style="display: inline-flex; align-items: center; gap: 6px; cursor: pointer;">
+                        <input type="checkbox" id="cat-pericard-changed" value="изменена" onchange="document.getElementById('cat-pericard-unchanged').checked=!this.checked">
+                        <span>изменена</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>Свободная жидкость в грудной полости:</label>
+                <div style="display: flex; gap: 16px; flex-wrap: wrap; align-items: center;">
+                    <label style="display: inline-flex; align-items: center; gap: 6px; cursor: pointer;">
+                        <input type="checkbox" id="cat-fluid-no" value="нет" checked onchange="document.getElementById('cat-fluid-yes').checked=!this.checked">
+                        <span>нет</span>
+                    </label>
+                    <label style="display: inline-flex; align-items: center; gap: 6px; cursor: pointer;">
+                        <input type="checkbox" id="cat-fluid-yes" value="есть" onchange="document.getElementById('cat-fluid-no').checked=!this.checked">
+                        <span>есть</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>Зоны гипокинеза/акинеза:</label>
+                <div style="display: flex; gap: 16px; flex-wrap: wrap; align-items: center;">
+                    <label style="display: inline-flex; align-items: center; gap: 6px; cursor: pointer;">
+                        <input type="checkbox" id="cat-hypokinesis-no" value="нет" checked onchange="document.getElementById('cat-hypokinesis-yes').checked=!this.checked">
+                        <span>нет</span>
+                    </label>
+                    <label style="display: inline-flex; align-items: center; gap: 6px; cursor: pointer;">
+                        <input type="checkbox" id="cat-hypokinesis-yes" value="есть" onchange="document.getElementById('cat-hypokinesis-no').checked=!this.checked">
+                        <span>есть</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>Координация сократительной активности миокарда:</label>
+                <div style="display: flex; gap: 16px; flex-wrap: wrap; align-items: center;">
+                    <label style="display: inline-flex; align-items: center; gap: 6px; cursor: pointer;">
+                        <input type="checkbox" id="cat-coordination-unchanged" value="не изменена" checked onchange="document.getElementById('cat-coordination-changed').checked=!this.checked">
+                        <span>не изменена</span>
+                    </label>
+                    <label style="display: inline-flex; align-items: center; gap: 6px; cursor: pointer;">
+                        <input type="checkbox" id="cat-coordination-changed" value="изменена" onchange="document.getElementById('cat-coordination-unchanged').checked=!this.checked">
+                        <span>изменена</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="section-divider">
                 <h3>Признаки патологического шунтирования</h3>
             </div>
 
-            <div class="input-group">
-                <label for="cat-shunt-dmpp">ДМПП:</label>
-                <input type="text" id="cat-shunt-dmpp" placeholder="ДМПП" value="нет">
-            </div>
-
-            <div class="input-group">
-                <label for="cat-shunt-dmzhp">ДМЖП:</label>
-                <input type="text" id="cat-shunt-dmzhp" placeholder="ДМЖП" value="нет">
-            </div>
-
-            <div class="input-group">
-                <label for="cat-shunt-oap">ОАП:</label>
-                <input type="text" id="cat-shunt-oap" placeholder="ОАП" value="нет">
+            <div class="input-group" style="display: flex; gap: 16px; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 140px;">
+                    <label for="cat-shunt-dmpp">ДМПП:</label>
+                    <input type="text" id="cat-shunt-dmpp" placeholder="ДМПП" value="нет">
+                </div>
+                <div style="flex: 1; min-width: 140px;">
+                    <label for="cat-shunt-dmzhp">ДМЖП:</label>
+                    <input type="text" id="cat-shunt-dmzhp" placeholder="ДМЖП" value="нет">
+                </div>
+                <div style="flex: 1; min-width: 140px;">
+                    <label for="cat-shunt-oap">ОАП:</label>
+                    <input type="text" id="cat-shunt-oap" placeholder="ОАП" value="нет">
+                </div>
             </div>
         </div>
 
@@ -543,6 +603,19 @@
                 if (field) field.value = '';
             });
 
+            const pericardUnchanged = document.getElementById('cat-pericard-unchanged');
+            const fluidNo = document.getElementById('cat-fluid-no');
+            const hypokinesisNo = document.getElementById('cat-hypokinesis-no');
+            const coordinationUnchanged = document.getElementById('cat-coordination-unchanged');
+            if (pericardUnchanged) pericardUnchanged.checked = true;
+            if (document.getElementById('cat-pericard-changed')) document.getElementById('cat-pericard-changed').checked = false;
+            if (fluidNo) fluidNo.checked = true;
+            if (document.getElementById('cat-fluid-yes')) document.getElementById('cat-fluid-yes').checked = false;
+            if (hypokinesisNo) hypokinesisNo.checked = true;
+            if (document.getElementById('cat-hypokinesis-yes')) document.getElementById('cat-hypokinesis-yes').checked = false;
+            if (coordinationUnchanged) coordinationUnchanged.checked = true;
+            if (document.getElementById('cat-coordination-changed')) document.getElementById('cat-coordination-changed').checked = false;
+
             clearCatInputErrors();
             hideErrorCat();
             const successEl = document.getElementById('success-message-cat');
@@ -603,6 +676,11 @@
                 const shuntDmppStr = document.getElementById('cat-shunt-dmpp').value;
                 const shuntDmzhpStr = document.getElementById('cat-shunt-dmzhp').value;
                 const shuntOapStr = document.getElementById('cat-shunt-oap').value;
+
+                const pericardStr = document.getElementById('cat-pericard-changed').checked ? 'изменена' : 'не изменена';
+                const fluidStr = document.getElementById('cat-fluid-yes').checked ? 'есть' : 'нет';
+                const hypokinesisStr = document.getElementById('cat-hypokinesis-yes').checked ? 'есть' : 'нет';
+                const coordinationStr = document.getElementById('cat-coordination-changed').checked ? 'изменена' : 'не изменена';
 
                 const errors = [];
                 const errorFieldIds = [];
@@ -790,9 +868,15 @@
 СПЖ/ЗСЛЖ: ${isNaN(spzhZslzh) ? '—' : spzhZslzh.toFixed(2) + ' %'}
 
 Клапанный аппарат:
-Митральный клапан: створки — ${mkLeafletsStr || 'не изменены'}, E = ${isNaN(mkE) ? '—' : mkE.toFixed(2)} м/с, A = ${isNaN(mkA) ? '—' : mkA.toFixed(2)} м/с, IVRT = ${isNaN(mkIvrt) ? '—' : mkIvrt.toFixed(0)} мс, E' = ${isNaN(mkEPrime) ? '—' : mkEPrime.toFixed(2)} см/с, A' = ${isNaN(mkAPrime) ? '—' : mkAPrime.toFixed(2)} см/с, E/A = ${isNaN(eaMk) ? '—' : eaMk.toFixed(2)}, E*100/E' = ${isNaN(eePrimeMk) ? '—' : eePrimeMk.toFixed(2)}, регургитация: скорость = ${isNaN(mkRegVel) ? '—' : mkRegVel.toFixed(2)} м/с, градиент 4*v² = ${isNaN(gradMkReg) ? '—' : gradMkReg.toFixed(2)} мм рт. ст.
+Митральный клапан: створки — ${mkLeafletsStr || 'не изменены'}, E = ${isNaN(mkE) ? '—' : mkE.toFixed(2)} м/с, A = ${isNaN(mkA) ? '—' : mkA.toFixed(2)} м/с, IVRT = ${isNaN(mkIvrt) ? '—' : mkIvrt.toFixed(0)} мс, E' = ${isNaN(mkEPrime) ? '—' : mkEPrime.toFixed(2)} см/с, A' = ${isNaN(mkAPrime) ? '—' : mkAPrime.toFixed(2)} см/с, E/A = ${isNaN(eaMk) ? '—' : eaMk.toFixed(2)}, E/E' = ${isNaN(eePrimeMk) ? '—' : eePrimeMk.toFixed(2)}, регургитация: скорость = ${isNaN(mkRegVel) ? '—' : mkRegVel.toFixed(2)} м/с, градиент 4*v² = ${isNaN(gradMkReg) ? '—' : gradMkReg.toFixed(2)} мм рт. ст.
 Трикуспидальный клапан: створки — ${tkLeafletsStr || 'не изменены'}, E = ${isNaN(tkE) ? '—' : tkE.toFixed(2)} м/с, A = ${isNaN(tkA) ? '—' : tkA.toFixed(2)} м/с, E/A = ${isNaN(eaTk) ? '—' : eaTk.toFixed(2)}, регургитация: скорость = ${isNaN(tkRegVel) ? '—' : tkRegVel.toFixed(2)} м/с, градиент 4*v² = ${isNaN(gradTkReg) ? '—' : gradTkReg.toFixed(2)} мм рт. ст.
 Клапан лёгочной артерии: створки — ${laLeafletsStr || 'не изменены'}, стеноз: ${laStenosisStr || 'нет'}, ВТПЖ: ${laVtpjStr || 'без особенностей'}, фиброзное кольцо: ${isNaN(laRing) ? '—' : laRing.toFixed(2) + ' мм'}, ствол: ${isNaN(laTrunk) ? '—' : laTrunk.toFixed(2) + ' мм'}, Ао/ЛА: ${isNaN(aoLaRatio) ? '—' : aoLaRatio.toFixed(2)}, скорость потока = ${isNaN(laFlow) ? '—' : laFlow.toFixed(2)} м/с, градиент 4*v² = ${isNaN(gradLa) ? '—' : gradLa.toFixed(2)} мм рт. ст., регургитация: скорость = ${isNaN(laRegVel) ? '—' : laRegVel.toFixed(2)} м/с, градиент 4*v² = ${isNaN(gradLaReg) ? '—' : gradLaReg.toFixed(2)} мм рт. ст.
+
+Вероятность лёгочной гипертензии:
+Полость перикарда: ${pericardStr}
+Свободная жидкость в грудной полости: ${fluidStr}
+Зоны гипокинеза/акинеза: ${hypokinesisStr}
+Координация сократительной активности миокарда: ${coordinationStr}
 
 Признаки патологического шунтирования:
 ДМПП: ${shuntDmppStr || 'нет'}
