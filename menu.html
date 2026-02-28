@@ -1,0 +1,37 @@
+<div class="short-block gradient-stroke pets-tabs-block">
+    <div class="short-block-wrapper">
+        <div class="short-block-body" style="overflow: visible; position: relative;">
+            <div class="pets-tabs">
+                <button class="pets-tab-nav-btn" type="button" id="pets-tab-prev" title="Предыдущий режим">
+                    <iconify-icon icon="mdi:chevron-left"></iconify-icon>
+                </button>
+                <div class="pets-tab-dropdown">
+                    <button class="pets-tab-btn" type="button" id="pets-tab-btn" aria-expanded="false">
+                        <span class="pets-tab-btn-content">
+                            <iconify-icon icon="mdi:calculator-variant" id="pets-tab-icon"></iconify-icon>
+                            <span id="pets-tab-text">Текущий калькулятор</span>
+                        </span>
+                        <iconify-icon icon="mdi:chevron-down"></iconify-icon>
+                    </button>
+                    <div class="pets-tab-dropdown-menu hidden" id="pets-tab-menu" style="display: none;">
+                        <div class="pets-tab-dropdown-item" data-screen="old">
+                            <iconify-icon icon="mdi:calculator-variant"></iconify-icon>
+                            <span>Текущий калькулятор</span>
+                        </div>
+                        <div class="pets-tab-dropdown-item" data-screen="cats">
+                            <iconify-icon icon="mdi:cat"></iconify-icon>
+                            <span>Для кошек</span>
+                        </div>
+                        <div class="pets-tab-dropdown-item" data-screen="dogs">
+                            <iconify-icon icon="mdi:dog"></iconify-icon>
+                            <span>Для собак</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="pets-tab-nav-btn" type="button" id="pets-tab-next" title="Следующий режим">
+                    <iconify-icon icon="mdi:chevron-right"></iconify-icon>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

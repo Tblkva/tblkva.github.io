@@ -26,39 +26,41 @@
             </div>
         </div>
 
-        <div class="short-block gradient-stroke pets-tabs-block">
-            <div class="short-block-wrapper">
-                <div class="short-block-body" style="overflow: visible; position: relative;">
-                    <div class="pets-tabs">
-                        <button class="pets-tab-nav-btn" type="button" id="pets-tab-prev" title="Предыдущий режим">
-                            <iconify-icon icon="mdi:chevron-left"></iconify-icon>
-                        </button>
-                        <div class="pets-tab-dropdown">
-                            <button class="pets-tab-btn" type="button" id="pets-tab-btn" aria-expanded="false">
-                                <span class="pets-tab-btn-content">
-                                    <iconify-icon icon="mdi:calculator-variant" id="pets-tab-icon"></iconify-icon>
-                                    <span id="pets-tab-text">Текущий калькулятор</span>
-                                </span>
-                                <iconify-icon icon="mdi:chevron-down"></iconify-icon>
+        <div id="pets-menu-container">
+            <div class="short-block gradient-stroke pets-tabs-block">
+                <div class="short-block-wrapper">
+                    <div class="short-block-body" style="overflow: visible; position: relative;">
+                        <div class="pets-tabs">
+                            <button class="pets-tab-nav-btn" type="button" id="pets-tab-prev" title="Предыдущий режим">
+                                <iconify-icon icon="mdi:chevron-left"></iconify-icon>
                             </button>
-                            <div class="pets-tab-dropdown-menu hidden" id="pets-tab-menu" style="display: none;">
-                                <div class="pets-tab-dropdown-item active" data-screen="old">
-                                    <iconify-icon icon="mdi:calculator-variant"></iconify-icon>
-                                    <span>Текущий калькулятор</span>
-                                </div>
-                                <div class="pets-tab-dropdown-item" data-screen="cats">
-                                    <iconify-icon icon="mdi:cat"></iconify-icon>
-                                    <span>Для кошек</span>
-                                </div>
-                                <div class="pets-tab-dropdown-item" data-screen="dogs">
-                                    <iconify-icon icon="mdi:dog"></iconify-icon>
-                                    <span>Для собак</span>
+                            <div class="pets-tab-dropdown">
+                                <button class="pets-tab-btn" type="button" id="pets-tab-btn" aria-expanded="false">
+                                    <span class="pets-tab-btn-content">
+                                        <iconify-icon icon="mdi:calculator-variant" id="pets-tab-icon"></iconify-icon>
+                                        <span id="pets-tab-text">Текущий калькулятор</span>
+                                    </span>
+                                    <iconify-icon icon="mdi:chevron-down"></iconify-icon>
+                                </button>
+                                <div class="pets-tab-dropdown-menu hidden" id="pets-tab-menu" style="display: none;">
+                                    <div class="pets-tab-dropdown-item" data-screen="old">
+                                        <iconify-icon icon="mdi:calculator-variant"></iconify-icon>
+                                        <span>Текущий калькулятор</span>
+                                    </div>
+                                    <div class="pets-tab-dropdown-item" data-screen="cats">
+                                        <iconify-icon icon="mdi:cat"></iconify-icon>
+                                        <span>Для кошек</span>
+                                    </div>
+                                    <div class="pets-tab-dropdown-item" data-screen="dogs">
+                                        <iconify-icon icon="mdi:dog"></iconify-icon>
+                                        <span>Для собак</span>
+                                    </div>
                                 </div>
                             </div>
+                            <button class="pets-tab-nav-btn" type="button" id="pets-tab-next" title="Следующий режим">
+                                <iconify-icon icon="mdi:chevron-right"></iconify-icon>
+                            </button>
                         </div>
-                        <button class="pets-tab-nav-btn" type="button" id="pets-tab-next" title="Следующий режим">
-                            <iconify-icon icon="mdi:chevron-right"></iconify-icon>
-                        </button>
                     </div>
                 </div>
             </div>
@@ -741,6 +743,15 @@ EPSS: ${epss[0]} мм
         let currentPetsTabIndex = 0;
 
         function setPetsScreenByKey(key) {
+            if (key === 'cats') {
+                window.location.href = 'cat_calc.html';
+                return;
+            }
+            if (key === 'dogs') {
+                window.location.href = 'dog_calc.html';
+                return;
+            }
+
             const index = petsTabs.findIndex(t => t.key === key);
             if (index === -1) return;
             currentPetsTabIndex = index;
@@ -1648,51 +1659,10 @@ EPSS: ${epss[0]} мм
                 tkRegVelInput.addEventListener('input', updateCatTricuspidRegGradientField);
             }
 
-            const petsTabBtn = document.getElementById('pets-tab-btn');
-            const petsTabPrev = document.getElementById('pets-tab-prev');
-            const petsTabNext = document.getElementById('pets-tab-next');
-            const petsTabMenu = document.getElementById('pets-tab-menu');
-
-            if (petsTabBtn && petsTabPrev && petsTabNext && petsTabMenu) {
-                petsTabBtn.addEventListener('click', function () {
-                    togglePetsTabMenu();
-                });
-
-                petsTabPrev.addEventListener('click', function () {
-                    showPrevPetsTab();
-                });
-
-                petsTabNext.addEventListener('click', function () {
-                    showNextPetsTab();
-                });
-
-                petsTabMenu.querySelectorAll('.pets-tab-dropdown-item').forEach(item => {
-                    item.addEventListener('click', function () {
-                        const screenKey = this.dataset.screen;
-                        setPetsScreenByKey(screenKey);
-                    });
-                });
-
-                document.addEventListener('click', function (event) {
-                    if (!petsTabBtn.contains(event.target) && !petsTabMenu.contains(event.target)) {
-                        petsTabMenu.classList.add('hidden');
-                        petsTabMenu.style.display = 'none';
-                    }
-                });
-
-                let initialTab = 'old';
-                try {
-                    const savedTab = localStorage.getItem('petsCurrentTab');
-                    if (savedTab && petsTabs.find(t => t.key === savedTab)) {
-                        initialTab = savedTab;
-                    }
-                } catch (e) {
-                    // ignore storage errors
-                }
-                setPetsScreenByKey(initialTab);
-            }
+            initPetsMenu({ currentPage: 'old', onSelect: setPetsScreenByKey, skipFetch: true });
         });
     </script>
     <script src="iconify-icon.min.js"></script>
+    <script src="menu.js"></script>
 </body>
 </html>

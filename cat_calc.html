@@ -14,6 +14,46 @@
             <p>Протокол по шаблону Кардиологического Ветеринарного Общества</p>
         </div>
 
+        <div id="pets-menu-container">
+            <div class="short-block gradient-stroke pets-tabs-block">
+                <div class="short-block-wrapper">
+                    <div class="short-block-body" style="overflow: visible; position: relative;">
+                        <div class="pets-tabs">
+                            <button class="pets-tab-nav-btn" type="button" id="pets-tab-prev" title="Предыдущий режим">
+                                <iconify-icon icon="mdi:chevron-left"></iconify-icon>
+                            </button>
+                            <div class="pets-tab-dropdown">
+                                <button class="pets-tab-btn" type="button" id="pets-tab-btn" aria-expanded="false">
+                                    <span class="pets-tab-btn-content">
+                                        <iconify-icon icon="mdi:calculator-variant" id="pets-tab-icon"></iconify-icon>
+                                        <span id="pets-tab-text">Для кошек</span>
+                                    </span>
+                                    <iconify-icon icon="mdi:chevron-down"></iconify-icon>
+                                </button>
+                                <div class="pets-tab-dropdown-menu hidden" id="pets-tab-menu" style="display: none;">
+                                    <div class="pets-tab-dropdown-item" data-screen="old">
+                                        <iconify-icon icon="mdi:calculator-variant"></iconify-icon>
+                                        <span>Текущий калькулятор</span>
+                                    </div>
+                                    <div class="pets-tab-dropdown-item" data-screen="cats">
+                                        <iconify-icon icon="mdi:cat"></iconify-icon>
+                                        <span>Для кошек</span>
+                                    </div>
+                                    <div class="pets-tab-dropdown-item" data-screen="dogs">
+                                        <iconify-icon icon="mdi:dog"></iconify-icon>
+                                        <span>Для собак</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="pets-tab-nav-btn" type="button" id="pets-tab-next" title="Следующий режим">
+                                <iconify-icon icon="mdi:chevron-right"></iconify-icon>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="form-section">
             <div class="section-divider">
                 <h3>Кошки — протокол ЭхоКГ</h3>
@@ -392,6 +432,7 @@
 
     <script src="iconify-icon.min.js"></script>
     <script src="magic.js"></script>
+    <script src="menu.js"></script>
     <script>
         function showErrorCat(message, errorFields = []) {
             const errorEl = document.getElementById('error-message-cat');
@@ -824,6 +865,15 @@
         }
 
         document.addEventListener('DOMContentLoaded', function () {
+            initPetsMenu({
+                currentPage: 'cats',
+                onSelect: function (key) {
+                    if (key === 'old') window.location.href = 'index.html';
+                    else if (key === 'cats') window.location.href = 'cat_calc.html';
+                    else window.location.href = 'dog_calc.html';
+                },
+                skipFetch: true
+            });
             function updateCatLpAoField() {
                 const lpMaxShortInput = document.getElementById('cat-lp-max-short');
                 const aoInput = document.getElementById('cat-ao');
