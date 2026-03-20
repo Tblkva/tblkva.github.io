@@ -17,7 +17,7 @@
     <div class="container">
         <div class="header">
             <h1>Калькулятор для эхокардиографии</h1>
-            <p>Версия 0.7 - Расчеты для эхокардиографии</p>
+            <p>Версия 0.71 - Расчеты для эхокардиографии</p>
             <div class="contact-links">
                 <span>Для связи:</span>
                 <a href="https://github.com/Tblkva" target="_blank" rel="noopener noreferrer">GitHub</a>
@@ -89,7 +89,6 @@
                 <label>Левое предсердие (мм):</label>
                 <div style="display: flex; gap: 10px;">
                     <input type="text" id="lpAo1" placeholder="В диастолу" style="flex: 1;">
-                    <input type="text" id="lpAo2" placeholder="В систолу" style="flex: 1;">
                 </div>
             </div>
             <div class="input-group">
@@ -311,11 +310,8 @@
                 const weight = reppoint(document.getElementById('weight').value.split(' '));
                 
                 // Получаем обязательные значения
-                const lpAo = [
-                    parseFloat(document.getElementById('lpAo1').value.replace(',', '.')),
-                    parseFloat(document.getElementById('lpAo2').value.replace(',', '.')),
-                    parseFloat(document.getElementById('lpAo3').value.replace(',', '.'))
-                ];
+                const lpAoDiast = parseFloat(document.getElementById('lpAo1').value.replace(',', '.'));
+                const ao = parseFloat(document.getElementById('lpAo3').value.replace(',', '.'));
                 const la = reppoint(document.getElementById('la').value.split(' '));
                 
                 const socrfunc = [
@@ -385,10 +381,6 @@
                 if (!document.getElementById('lpAo1').value || document.getElementById('lpAo1').value.trim() === '') {
                     errors.push('Левое предсердие (диастола)');
                     errorFieldIds.push('lpAo1');
-                }
-                if (!document.getElementById('lpAo2').value || document.getElementById('lpAo2').value.trim() === '') {
-                    errors.push('Левое предсердие (систола)');
-                    errorFieldIds.push('lpAo2');
                 }
                 if (!document.getElementById('lpAo3').value || document.getElementById('lpAo3').value.trim() === '') {
                     errors.push('Аорта');
@@ -489,7 +481,7 @@
                 // Проверяем корректность числовых значений
                 const numericErrors = [];
                 
-                if (isNaN(lpAo[0]) || isNaN(lpAo[1]) || isNaN(lpAo[2])) {
+                if (isNaN(lpAoDiast) || isNaN(ao)) {
                     numericErrors.push('размеры левого предсердия и аорты');
                 }
                 if (isNaN(socrfunc[0]) || isNaN(socrfunc[1])) {
@@ -517,18 +509,18 @@
                 }
 
                 // Выполняем расчеты
-                const lpAo1 = lpAo[0] / lpAo[2]; // соотношение ЛП/Ао
                 const kdrn = ((socrfunc[0] / Math.pow(weight[0], 0.294)) / 10);
                 const ksrn = ((socrfunc[1] / Math.pow(weight[0], 0.315)) / 10);
                 const fs = (socrfunc[0] - socrfunc[1]) / socrfunc[0] * 100;
                 const fe = (lvVibros[0] - lvVibros[1]) / lvVibros[0] * 100;
                 const va = zastoi[0] / zastoi[1];
-                const laAo = la[0] / lpAo[2];
+                const lpAo1 = lpAoDiast / ao; // соотношение ЛП/Ао
+                const laAo = la[0] / ao;
 
                 // Формируем результаты в формате эхокардиографического заключения
                 let results = `Частота сердечных сокращений (ЧСС): ${hr} уд/мин
-Левое предсердие (ЛП): ${lpAo[0]} мм
-Аорта (Ао): ${lpAo[2]} мм
+Левое предсердие (ЛП): ${lpAoDiast} мм
+Аорта (Ао): ${ao} мм
 Соотношение ЛП/Ао: ${lpAo1.toFixed(2)}
 Легочная артерия (ЛА): ${la[0]} мм
 Соотношение ЛА/Ао: ${laAo.toFixed(2)}
