@@ -330,8 +330,6 @@
                     parseFloat(document.getElementById('stenki1').value.replace(',', '.')),
                     parseFloat(document.getElementById('stenki2').value.replace(',', '.'))
                 ];
-                const epss = reppoint(document.getElementById('epss').value.split(' '));
-                
                 const zastoi = [
                     parseFloat(document.getElementById('zastoi1').value.replace(',', '.')),
                     parseFloat(document.getElementById('zastoi2').value.replace(',', '.'))
@@ -426,11 +424,6 @@
                     errors.push('ЗСЛЖ');
                     errorFieldIds.push('stenki2');
                 }
-                if (!document.getElementById('epss').value || document.getElementById('epss').value.trim() === '') {
-                    errors.push('EPSS');
-                    errorFieldIds.push('epss');
-                }
-
                 // Проверяем обязательные поля венозного застоя
                 if (!document.getElementById('zastoi1').value || document.getElementById('zastoi1').value.trim() === '') {
                     errors.push('ЛА');
@@ -529,7 +522,6 @@
                 const ksrn = ((socrfunc[1] / Math.pow(weight[0], 0.315)) / 10);
                 const fs = (socrfunc[0] - socrfunc[1]) / socrfunc[0] * 100;
                 const fe = (lvVibros[0] - lvVibros[1]) / lvVibros[0] * 100;
-                const fslp = (lpAo[0] - lpAo[1]) / lpAo[0] * 100;
                 const va = zastoi[0] / zastoi[1];
                 const laAo = la[0] / lpAo[2];
 
@@ -538,7 +530,6 @@
 Левое предсердие (ЛП): ${lpAo[0]} мм
 Аорта (Ао): ${lpAo[2]} мм
 Соотношение ЛП/Ао: ${lpAo1.toFixed(2)}
-Фракция укорочения левого предсердия (FSлп): ${fslp.toFixed(2)}%
 Легочная артерия (ЛА): ${la[0]} мм
 Соотношение ЛА/Ао: ${laAo.toFixed(2)}
 
@@ -551,7 +542,6 @@
 
 Межжелудочковая перегородка (МЖП): ${stenki[0]} мм
 Задняя стенка левого желудочка (ЗСЛЖ): ${stenki[1]} мм
-EPSS: ${epss[0]} мм
 
 Крупные сосуды:
 Легочная вена (ЛВ): ${zastoi[0]} мм
